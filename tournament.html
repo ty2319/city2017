@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+<title>トーナメント表｜第42回 社会人野球日本選手権大会｜NTT西日本</title>
+<meta name="keywords" content="NTT西日本,日本選手権,試合日程,トーナメント" />
+<meta name="description" content="第42回 社会人野球日本選手権大会のトーナメント表です。" />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="第42回 社会人野球日本選手権大会" />
+<meta property="og:description" content="第42回 社会人野球日本選手権大会のトーナメント表です。" />
+<meta property="og:url" content="http://www.ntt-west.co.jp/symbol/hp/baseball/games/2015/city/" />
+<meta property="og:site_name" content="第42回 社会人野球日本選手権大会" />
+<meta property="og:country-name" content="Japan,日本" />
+<meta property="og:locality" content="Osaka,大阪" />
+<meta property="og:image" content="http://www.ntt-west.co.jp/favicon.ico" />
+<link rel="stylesheet" href="css/import.css" />
+<link rel="stylesheet" type="text/css" href="css/jquery.bracket.min.css" />
+</head>
+<body>
+<!--#include virtual="templates/header-nav.inc"-->
+<main role="main">
+	<article>
+		<header id="title">
+			<h3><span class="fa fa-sitemap"></span>Tournament Bracket</h3>
+			<p>トーナメント表</p>
+		</header>
+		<div id="minimal" style="padding-bottom: 10em !important;"></div>
+		<p id="pan">第42回 社会人野球日本選手権大会 ≫ トーナメント表</p>
+	</article>
+</main>
+<!--#include virtual="templates/footer.inc"--> 
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script> 
+<script type="text/javascript" src="js/common.js"></script> 
+<script type="text/javascript" src="js/jquery.bracket.min.js"></script> 
+<script type="text/javascript">
+	var minimalData = {
+		teams : [
+			["NTT東日本", "トヨタ自動車"],
+			["新日鐵住金東海REX", "三菱重工広島"],
+			["<i>ビッグ開発ﾍﾞｰｽﾎﾞｰﾙｸﾗﾌﾞ</i>", "日本生命"],
+			["日本通運", "JR北海道"],
+			["JFE西日本", "パナソニック"],
+			["富士重工業", "JR東海"],
+			["日本新薬", "Honda熊本"],
+			["東芝", "王子"],
+			["日立製作所", "三菱重工長崎"],
+			["鷺宮製作所", "東邦ガス"],
+			["大阪ガス", "JR四国"],
+			["新日鐵住金広畑", "Honda鈴鹿"],
+			["フェデックス", "JR西日本"],
+			["JR東日本東北", "新日鐵住金鹿島"],
+			["NTT西日本", "JX-ENEOS"],
+			["東京ガス", "ヤマハ"]
+		],
+		results : [
+			[
+				[1,3],[3,4],[0,3],[1,0],[0,6],[7,5],[7,3],[1,2],[3,2],[5,1],[1,0],[0,2],[1,3],[2,0],[1,0],[3,11]
+			],[
+				[4,3],[3,5],[2,1],[0,2],[0,2],[9,0],[5,0],[1,3]
+			],[
+				[2,3],[1,3],[0,3],[4,5]
+			],[
+			 	[5,4],[2,4]
+			],[
+				[2,3]
+			]
+		]
+	}
+    
+	$(function() {
+        $('div#minimal').bracket({
+          init: minimalData,
+		  skipConsolationRound: true
+		});		
+		$('div.jQBracket .round:nth-child(1) .match:nth-child(15) .team:nth-child(1),div.jQBracket .round:nth-child(2) .match:nth-child(8) .team:nth-child(1)').addClass('west');	
+		$('div.jQBracket .round:nth-child(1) .match:nth-child(1) .team:nth-child(1)').addClass('east');
+	});
+</script> 
+<!--[if lt IE 9]>
+<script type="text/javascript" src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+</body>
+</html>

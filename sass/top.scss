@@ -1,0 +1,269 @@
+@charset "utf-8";
+/* CSS Document */
+
+@import "settings";
+
+html {
+	
+	body {
+		overflow: hidden;
+		
+		&[class*=bg] {
+			background: none;
+		}
+
+		header#top {
+			position: $r;
+			z-index: 2;
+		}
+		
+			
+		main {
+			width: $max;
+			
+			& > span {
+				@include fixLB(4.5rem,0,0);
+				display: block;
+				color: $white;
+				font-size: 2rem;
+				width: $max / 4;
+				text-align: center;
+			}
+			
+			article {
+				background: none;
+				width: $max;
+			
+				& > ul {
+					@include fixLB(2.5rem,0,1);
+					display: table;
+					width: $max;
+					background-color: $navy;
+					
+					li {
+						display: table-cell;
+						text-align: center;
+						padding: 0.5rem;
+						color: $white;
+						width: $max / 4;
+						cursor: pointer;
+						
+						&:hover {
+							background-color: darken($blue , 20%);
+						}
+						
+						&.active {
+							background-color: $white;
+							color: $navy;
+						}
+					}
+				}
+				
+				.contents {
+					color: $white;
+					padding: 0 !important;
+					width: $max * 1.5;
+					margin-left: -$max / 4;
+					background: center center no-repeat scroll;
+					background-size: cover;
+						
+					@for $value from 1 to 5 {
+						
+						&:nth-of-type(#{$value}) {
+							background-image: url(#{$ip}top/#{$value}.jpg);
+						}
+					}
+					
+					&:first-of-type {
+						border: none !important;
+					}
+						
+					&.load {
+						width: $max;
+						margin-left: 0;
+						transition: width 20s ease , margin-left 20s ease;
+					}
+					
+					div {
+						margin: 0 auto;
+						padding: 20rem 2rem 5rem 2rem;
+						text-align: center;
+						text-shadow: -1px -1px 3px $black, 1px 1px 3px $black;
+					
+						header {
+							color: #fff;
+							margin: 0 0 3rem 0;
+							
+							h3 {
+								font-family: century;
+								font-size: 2rem;
+							}
+						
+							p {
+								font-family:"游明朝", YuMincho, "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN","HG明朝E","ＭＳ Ｐ明朝","ＭＳ 明朝",serif;
+								font-size: 0.9rem;
+							}
+						}
+						
+						a button {
+							color: lighten($black,20%);
+							background-color: $white;
+							display: block;
+							margin: 1rem 0 0 $max/4;
+							padding: 1rem;
+							text-align: center;
+							opacity: 0.8;
+							overflow: hidden;
+							width: $max / 2;
+							cursor: pointer;
+							border: none;
+							
+							&:hover {
+								opacity: 1;
+							}
+							
+							span {
+								margin-right: 1rem;
+							}
+						}
+						
+						dl {
+							background: none;
+							width: 37rem;
+							border: none;
+							margin: 0 auto;
+							padding: 0;
+							
+							dt {
+								color: $white;
+								float: left;
+								width: 8rem;
+								margin: 0;
+								padding: 0 1rem;
+								text-align: right;
+							}
+							
+							dd {
+								margin: 0 0 1rem 0;
+								padding: 0 0 1rem 0;
+								border-bottom: $white 1px dotted;
+								text-align: left;
+								overflow: visible;
+								
+								&:last-of-type {
+									border: none;
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		
+		#news {
+			@include abT(5.5rem,30%,1);
+			width: $max * 0.7;
+			background: none !important;
+			line-height: $max;
+			display: table;
+			overflow: hidden !important;
+			
+			@include media($ot) {
+				display: none;
+			}
+			
+			h3 {
+				padding: 0.2rem 1rem;
+				background-color: $white;
+				color: lighten($black, 20%);
+				font-weight: bold;
+				text-align: center;
+				font-family: century;
+				display: table-cell;
+				vertical-align: top;
+				position: $r;
+				z-index: 2;
+				width: 2rem;
+			}
+				
+			#prev,#next {
+				display: table-cell;
+				padding-left: 1rem;
+				cursor: pointer;
+				color: $white;
+				font-size: 1.5rem;
+				width: 1rem;
+			}
+			
+			#prev {
+				display: none;
+			}
+			
+			div {
+				display: table-cell;
+				background: none !important;
+				padding: 0;
+				text-shadow: -1px -1px 3px $black, 1px 1px 3px $black;
+				
+				ul {
+					margin-top: 0.5rem;
+					padding-left: 1rem;
+					display: table;
+						
+					li {
+						display: table-cell;
+						color: $white;
+						
+						a {
+							color: $white;
+							margin: 0 0.5rem 0 0;
+							padding: 0;
+							text-decoration: underline;
+						}
+					}
+				}
+			}
+		}
+		
+		footer {
+			@include fixB(0,0,10);
+			width: $max;
+		}
+	}
+	
+	#pv {
+		@include abR(165px,1%,4);
+		display: block;
+		cursor: pointer;
+		width: $max / 6;
+		min-width: 250px;
+		height: auto;
+	}
+	
+	iframe {
+		display: none;
+		@include fixT(50%,50%,6);
+		width: 640px;
+		height: 360px;
+		margin: -180px 0 0 -320px;
+	}
+	
+	#vs {
+		@include fixB(10%,0.5%,4);
+		display: block;
+		transform: rotate(12deg);
+		width: $max * 0.22;
+		min-width: 300px;
+		height: auto; 
+	}
+	
+	#exam {
+		@include fixB(0,200px,11);
+		margin-bottom: 0.8rem;
+	}
+
+	#hero {
+		@include abT(75%,50%,1);
+		margin-left: -80px;
+	}
+}
