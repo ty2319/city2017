@@ -1,59 +1,73 @@
 /* CSS Document */
+/* line 6, ../sass/results.scss */
 .tail .half, .head .half {
   padding: 0 3% !important;
   margin-left: -75%;
   overflow: hidden;
   text-align: center;
 }
+/* line 12, ../sass/results.scss */
 .tail .half h5, .head .half h5 {
   margin: 0;
 }
+/* line 17, ../sass/results.scss */
 .tail .half div section, .head .half div section {
   padding: 0;
   float: left;
 }
+/* line 21, ../sass/results.scss */
 .tail .half div section p, .head .half div section p {
   margin: 0;
 }
+/* line 27, ../sass/results.scss */
 .tail .half ul, .head .half ul {
   clear: both;
 }
+/* line 30, ../sass/results.scss */
 .tail .half ul .prev, .head .half ul .prev {
   float: left;
   margin-left: -2rem;
   display: none;
   margin-top: -25rem;
 }
+/* line 37, ../sass/results.scss */
 .tail .half ul .next, .head .half ul .next {
   float: right;
   margin-right: -2rem;
   margin-top: -25rem;
 }
+/* line 43, ../sass/results.scss */
 .tail .half ul a, .head .half ul a {
   color: #012052;
 }
+/* line 46, ../sass/results.scss */
 .tail .half ul a:hover, .head .half ul a:hover {
   color: #035be9;
 }
 
+/* line 53, ../sass/results.scss */
 table {
   border-collapse: collapse;
   border: #b3b3b3 solid 1px;
   width: 100%;
 }
+/* line 58, ../sass/results.scss */
 table caption span {
   font-size: 1.25rem;
 }
+/* line 62, ../sass/results.scss */
 table thead th {
   background-color: rgba(77, 77, 77, 0.8);
   color: #fff;
 }
+/* line 67, ../sass/results.scss */
 table th, table td {
   border-right: #b3b3b3 dotted 1px;
   padding: 8.4px 6px;
   text-align: center;
   width: auto;
 }
+/* line 74, ../sass/results.scss */
 table.battery {
   border: none;
   width: auto;
@@ -61,49 +75,63 @@ table.battery {
   border-spacing: 0 6px;
   margin-bottom: 60px !important;
 }
+/* line 81, ../sass/results.scss */
 table.battery th, table.battery td {
   border: none;
   text-align: left;
   padding: 4.8px;
   line-height: 100%;
 }
+/* line 88, ../sass/results.scss */
 table.battery .b_n {
   background-color: rgba(44, 126, 255, 0.8);
   color: #fff;
 }
+/* line 93, ../sass/results.scss */
 table.battery .b_e {
   background-color: rgba(77, 77, 77, 0.8);
   color: #fff;
 }
+/* line 99, ../sass/results.scss */
 table.score thead th {
   background-color: rgba(1, 32, 82, 0.9);
 }
+/* line 103, ../sass/results.scss */
 table .current {
   background-color: rgba(26, 26, 26, 0.8) !important;
   font-weight: bold;
 }
+/* line 107, ../sass/results.scss */
 table .current a {
   color: #fff;
 }
+/* line 114, ../sass/results.scss */
 table.blue caption {
   color: #2c7eff !important;
 }
+/* line 118, ../sass/results.scss */
 table.blue thead th {
   background-color: rgba(44, 126, 255, 0.8);
 }
+/* line 124, ../sass/results.scss */
 table.border caption {
   color: #666666 !important;
 }
+/* line 129, ../sass/results.scss */
 table .back_blue th, table .back_blue td {
   background-color: rgba(223, 235, 255, 0.8);
 }
 
+/* line 134, ../sass/results.scss */
 .ntt thead th {
   background-color: rgba(44, 126, 255, 0.8);
   color: #FFF;
 }
 
+/* line 139, ../sass/results.scss */
 .enemy thead th {
   background-color: rgba(77, 77, 77, 0.8);
   color: #FFF;
 }
+
+/*# sourceMappingURL=results.css.map */

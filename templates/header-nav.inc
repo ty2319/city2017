@@ -6,8 +6,8 @@
 		<li><a href="/share/privacy.html" target="_blank">プライバシーポリシー</a></li>
 	</ul>
 </header>
-<h2><a href="/symbol/hp/baseball/games/2016/japan/index.html"><img src="img/common/logo.png" alt="第42回 社会人野球日本選手権大会"></a></h2>
 <nav id="global" role="navigation">
+	<h2><a href="/symbol/hp/baseball/games/2017/city/index.html"><img src="img/common/logo.png" alt="第88回都市対抗野球大会"></a></h2>
 	<dl>
 		<dt class="menu-trigger">
 			<span></span>
@@ -18,7 +18,7 @@
 		<dd>
 			<dl>
 				<dt>メインメニュー<i>Main menu</i></dt>
-				<dd><a href="/symbol/hp/baseball/games/2016/japan/index.html"><span class="fa fa-home"></span>トップページ<i>Top Page</i></a></dd>
+				<dd><a href="/symbol/hp/baseball/games/2017/city/index.html"><span class="fa fa-home"></span>トップページ<i>Top Page</i></a></dd>
 				<dd><a href="/symbol/hp/baseball/games/2016/japan/tournament.html"><span class="fa fa-sitemap"></span>トーナメント表<i>Tournament Bracket</i></a></dd>
 				<dd><a href="/symbol/hp/baseball/games/2016/japan/results.html"><span class="fa fa-list-ol"></span>試合結果<i>Results</i></a></dd>
 				<dd><a href="/symbol/hp/baseball/games/2016/japan/gallery.html"><span class="fa fa-camera"></span>ギャラリー<i>Photo gallery</i></a></dd>

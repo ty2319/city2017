@@ -1,9 +1,11 @@
 /* CSS Document */
+/* line 6, ../sass/footer.scss */
 footer {
   color: #fff;
   font-size: 10.8px;
   clear: both;
 }
+/* line 11, ../sass/footer.scss */
 footer ul {
   width: 100%;
   min-width: 940px;
@@ -12,12 +14,15 @@ footer ul {
   background-color: #000;
   display: table;
 }
+/* line 19, ../sass/footer.scss */
 footer ul li {
   display: table-cell;
 }
+/* line 22, ../sass/footer.scss */
 footer ul li a {
   color: #FFF;
 }
+/* line 26, ../sass/footer.scss */
 footer ul li small {
   display: block;
   text-align: right;

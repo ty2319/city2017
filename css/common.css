@@ -1,5 +1,6 @@
 @charset "UTF-8";
 /* CSS Document */
+/* line 6, ../sass/common.scss */
 html {
   font-size: 16px;
   font-family: 'ヒラギノ角ゴ Pro W3','Hiragino Kaku Gothic Pro','メイリオ',Meiryo,'ＭＳ Ｐゴシック',sans-serif;
@@ -7,11 +8,13 @@ html {
   min-width: 940px;
   background-color: #000;
 }
+/* line 13, ../sass/common.scss */
 html body {
   background: center top no-repeat fixed;
   background-size: cover;
   line-height: 1.75rem;
 }
+/* line 18, ../sass/common.scss */
 html body .menu_open {
   pointer-events: none;
   transition: all .2s ease-out;
@@ -21,67 +24,85 @@ html body .menu_open {
   filter: blur(5px);
 }
 @media all and (max-width: 940px) {
+  /* line 13, ../sass/common.scss */
   html body {
     font-size: 0.75rem;
   }
 }
 @media all and (max-width: 1500px) {
+  /* line 13, ../sass/common.scss */
   html body {
     font-size: 0.875rem;
   }
 }
+/* line 37, ../sass/common.scss */
 html body.bg0 {
   background-image: url(../img/common/01.jpg);
 }
+/* line 37, ../sass/common.scss */
 html body.bg1 {
   background-image: url(../img/common/02.jpg);
 }
+/* line 37, ../sass/common.scss */
 html body.bg2 {
   background-image: url(../img/common/03.jpg);
 }
+/* line 37, ../sass/common.scss */
 html body.bg3 {
   background-image: url(../img/common/04.jpg);
 }
+/* line 37, ../sass/common.scss */
 html body.bg4 {
   background-image: url(../img/common/05.jpg);
 }
+/* line 37, ../sass/common.scss */
 html body.bg5 {
   background-image: url(../img/common/06.jpg);
 }
+/* line 37, ../sass/common.scss */
 html body.bg6 {
   background-image: url(../img/common/07.jpg);
 }
+/* line 37, ../sass/common.scss */
 html body.bg7 {
   background-image: url(../img/common/08.jpg);
 }
+/* line 37, ../sass/common.scss */
 html body.bg8 {
   background-image: url(../img/common/09.jpg);
 }
+/* line 42, ../sass/common.scss */
 html body.bg9 {
   background-image: url(../img/common/10.jpg);
 }
+/* line 46, ../sass/common.scss */
 html body[class*=bg] {
   background-position: center -300px;
   transition: background-position 40s ease 1s;
 }
+/* line 51, ../sass/common.scss */
 html body a {
   color: #0033cc;
   text-decoration: none;
 }
+/* line 55, ../sass/common.scss */
 html body a:hover {
   text-decoration: none;
 }
+/* line 60, ../sass/common.scss */
 html body img {
   border: none;
   line-height: 0;
   vertical-align: bottom;
 }
+/* line 66, ../sass/common.scss */
 html body #pagetop {
   position: fixed;
   bottom: -50px;
   right: 55px;
   z-index: 1;
 }
+/* line 69, ../sass/common.scss */
 html body #pagetop a {
   display: block;
   width: 50px;
@@ -93,6 +114,7 @@ html body #pagetop a {
   font-size: 24px;
   line-height: 50px;
 }
+/* line 82, ../sass/common.scss */
 html body #modal {
   position: fixed;
   top: 0;
@@ -102,6 +124,7 @@ html body #modal {
   height: 100%;
   background-color: rgba(0, 0, 0, 0.8);
 }
+/* line 89, ../sass/common.scss */
 html body #close {
   position: fixed;
   top: 50%;
@@ -114,6 +137,7 @@ html body #close {
   cursor: pointer;
   font-weight: lighter;
 }
+/* line 99, ../sass/common.scss */
 html body #hero {
   position: fixed;
   bottom: 75%;
@@ -122,3 +146,5 @@ html body #hero {
   width: 160px;
   height: 160px;
 }
+
+/*# sourceMappingURL=common.css.map */

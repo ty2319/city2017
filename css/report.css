@@ -1,22 +1,27 @@
 /* CSS Document */
+/* line 10, ../sass/report.scss */
 article > .contents > div {
   position: relative;
   padding-left: 3% !important;
   overflow: hidden;
 }
+/* line 15, ../sass/report.scss */
 article > .contents > div > img {
   padding: 0 !important;
   border: none !important;
   width: 48.5%;
 }
+/* line 21, ../sass/report.scss */
 article > .contents > div > section {
   padding: 0 3% !important;
   background-color: #fff !important;
   border: none !important;
 }
+/* line 26, ../sass/report.scss */
 article > .contents > div > section:not(.left):not(.right) {
   width: 48.5%;
 }
+/* line 31, ../sass/report.scss */
 article > .contents > div > .left {
   position: absolute;
   top: 0;
@@ -26,6 +31,7 @@ article > .contents > div > .left {
   border: none !important;
   display: block;
 }
+/* line 38, ../sass/report.scss */
 article > .contents > div > .right {
   position: absolute;
   top: 0;
@@ -35,10 +41,12 @@ article > .contents > div > .right {
   border: none !important;
   display: none;
 }
+/* line 44, ../sass/report.scss */
 article > .contents > div > .right > img {
   padding: 0 !important;
   border: none !important;
 }
+/* line 50, ../sass/report.scss */
 article > .contents > div h5 {
   margin: 2rem 0;
   padding: 1rem;
@@ -46,6 +54,7 @@ article > .contents > div h5 {
   border-top: #012052 3px double;
   border-bottom: #012052 3px double;
 }
+/* line 60, ../sass/report.scss */
 article > .contents > div a button {
   display: block;
   text-decoration: none;
@@ -59,9 +68,11 @@ article > .contents > div a button {
   cursor: pointer;
   border: none;
 }
+/* line 73, ../sass/report.scss */
 article > .contents > div a button:hover {
   opacity: 0.8;
 }
+/* line 79, ../sass/report.scss */
 article > .contents ul {
   display: table;
   background-color: rgba(26, 26, 26, 0.8);
@@ -70,14 +81,19 @@ article > .contents ul {
   position: relative;
   z-index: 1;
 }
+/* line 87, ../sass/report.scss */
 article > .contents ul li {
   display: table-cell;
   padding: 1rem 1.5rem;
   font-weight: bold;
 }
+/* line 93, ../sass/report.scss */
 article > .contents ul li.show a {
   color: #2c7eff;
 }
+/* line 98, ../sass/report.scss */
 article > .contents ul li a {
   color: #fff;
 }
+
+/*# sourceMappingURL=report.css.map */
