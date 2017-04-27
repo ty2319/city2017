@@ -3,9 +3,7 @@
 html {
   font-size: 16px;
   font-family: 'ヒラギノ角ゴ Pro W3','Hiragino Kaku Gothic Pro','メイリオ',Meiryo,'ＭＳ Ｐゴシック',sans-serif;
-  color: #333333;
-  min-width: 940px;
-  background-color: #000; }
+  color: #333333; }
   html body {
     background: center top no-repeat fixed;
     background-size: cover;

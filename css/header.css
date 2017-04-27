@@ -7,173 +7,251 @@ header#top {
   display: table;
   padding: 10px 10px 12px 10px;
   overflow: hidden;
-  border-bottom: 7px solid #012052;
 }
-/* line 15, ../sass/header.scss */
+/* line 14, ../sass/header.scss */
 header#top h1 {
   display: table-cell;
 }
-/* line 19, ../sass/header.scss */
+/* line 18, ../sass/header.scss */
 header#top #topnavi {
-  font-size: 9.6px;
+  font-size: 0.8em;
   color: #0033cc;
   display: table-cell;
   text-align: right;
   vertical-align: middle;
-  padding-top: 1rem;
+  padding-top: 0.5em;
 }
-/* line 27, ../sass/header.scss */
+@media all and (max-width: 500px) {
+  /* line 18, ../sass/header.scss */
+  header#top #topnavi {
+    padding-top: 0;
+  }
+}
+/* line 30, ../sass/header.scss */
 header#top #topnavi li {
   display: inline;
-  margin-left: 24px;
+  margin-left: 2em;
+}
+@media all and (max-width: 500px) {
+  /* line 30, ../sass/header.scss */
+  header#top #topnavi li {
+    display: block;
+    margin-bottom: -0.6em;
+  }
+  /* line 35, ../sass/header.scss */
+  header#top #topnavi li:nth-of-type(1) {
+    display: none;
+  }
 }
 
-/* line 34, ../sass/header.scss */
-h2 {
-  position: absolute;
-  top: 4.7rem;
-  left: 0;
-  z-index: 1;
-}
-
-/* line 38, ../sass/header.scss */
+/* line 45, ../sass/header.scss */
 #global {
   position: absolute;
-  top: 4.65rem;
+  top: 4.25rem;
   left: 0;
-  z-index: 5;
+  z-index: 1;
   color: #fff;
   width: 100%;
+  background-color: #000;
 }
-/* line 43, ../sass/header.scss */
+@media all and (max-width: 500px) {
+  /* line 45, ../sass/header.scss */
+  #global {
+    background: none;
+  }
+}
+/* line 55, ../sass/header.scss */
 #global.fix {
   position: fixed;
   top: 0;
   left: 0;
   z-index: 5;
 }
-/* line 46, ../sass/header.scss */
-#global.fix .menu-trigger {
-  background-color: rgba(0, 0, 0, 0.8);
+/* line 59, ../sass/header.scss */
+#global h2 {
+  margin-left: 10%;
+  background-color: #012052;
 }
-/* line 51, ../sass/header.scss */
+@media all and (max-width: 500px) {
+  /* line 59, ../sass/header.scss */
+  #global h2 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 5;
+    margin: 0.5%;
+    min-width: 60px;
+    background: none;
+  }
+}
+/* line 70, ../sass/header.scss */
+#global h2 img {
+  width: 30%;
+  min-width: 300px;
+  max-width: 484px;
+  height: auto;
+}
+@media all and (max-width: 500px) {
+  /* line 70, ../sass/header.scss */
+  #global h2 img {
+    margin: 5%;
+    width: 20%;
+    min-width: 60px;
+  }
+}
+/* line 84, ../sass/header.scss */
 #global > dl {
-  display: table;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: stretch;
+  align-content: flex-start;
   width: 100%;
 }
-/* line 55, ../sass/header.scss */
+/* line 92, ../sass/header.scss */
 #global > dl .menu-trigger, #global > dl .menu-trigger span {
   display: block;
   transition: all .4s;
   box-sizing: border-box;
 }
-/* line 61, ../sass/header.scss */
+/* line 98, ../sass/header.scss */
 #global > dl .menu-trigger {
   position: absolute;
   top: 0;
   left: 0;
-  z-index: 5;
+  z-index: 1;
   cursor: pointer;
   text-align: center;
-  padding: 10px 10px 5px 10px;
+  padding: 0.8% 1%;
 }
-/* line 67, ../sass/header.scss */
+@media all and (max-width: 1200px) {
+  /* line 98, ../sass/header.scss */
+  #global > dl .menu-trigger {
+    padding-top: 0.4%;
+    background-color: #000;
+  }
+}
+@media all and (max-width: 500px) {
+  /* line 98, ../sass/header.scss */
+  #global > dl .menu-trigger {
+    left: 100%;
+    margin-left: -4.5em;
+    padding: 1%;
+  }
+}
+/* line 115, ../sass/header.scss */
 #global > dl .menu-trigger span {
   height: 2px;
   background-color: #fff;
   border-radius: 2px;
-  margin: 10px;
-  width: 40px;
+  margin: 0.7em;
+  width: 3em;
 }
-/* line 74, ../sass/header.scss */
-#global > dl .menu-trigger span:nth-of-type(3) {
-  margin-bottom: 0;
-}
-/* line 79, ../sass/header.scss */
+/* line 123, ../sass/header.scss */
 #global > dl .menu-trigger.on {
   background: none;
 }
-/* line 82, ../sass/header.scss */
+/* line 126, ../sass/header.scss */
 #global > dl .menu-trigger.on span:nth-of-type(1) {
   -webkit-transform: translateY(12px) rotate(-315deg);
   transform: translateY(12px) rotate(-315deg);
 }
-/* line 87, ../sass/header.scss */
+/* line 131, ../sass/header.scss */
 #global > dl .menu-trigger.on span:nth-of-type(2) {
   opacity: 0;
 }
-/* line 91, ../sass/header.scss */
+/* line 135, ../sass/header.scss */
 #global > dl .menu-trigger.on span:nth-of-type(3) {
   -webkit-transform: translateY(-12px) rotate(315deg);
   transform: translateY(-12px) rotate(315deg);
 }
-/* line 97, ../sass/header.scss */
+/* line 141, ../sass/header.scss */
 #global > dl .menu-trigger i {
-  font-style: normal;
+  position: absolute;
+  top: 30%;
+  left: 4.7em;
+  z-index: 0;
+  font-size: 1.25em;
 }
-/* line 102, ../sass/header.scss */
+@media all and (max-width: 940px) {
+  /* line 141, ../sass/header.scss */
+  #global > dl .menu-trigger i {
+    display: none;
+  }
+}
+/* line 151, ../sass/header.scss */
 #global > dl > dd {
-  padding: 5rem 0.5rem;
+  padding: 5em 1em;
   display: none;
-  background-color: rgba(0, 0, 0, 0.8);
-  width: 33.33333%;
   vertical-align: top;
+  width: 33.33333%;
+  flex: 1 1 250px;
 }
-/* line 110, ../sass/header.scss */
-#global > dl > dd:nth-of-type(1) dl {
-  width: 20rem;
+@media all and (max-width: 500px) {
+  /* line 151, ../sass/header.scss */
+  #global > dl > dd {
+    padding: 2em 1em;
+    background-color: #000;
+  }
+  /* line 159, ../sass/header.scss */
+  #global > dl > dd:nth-of-type(1) {
+    padding: 7em 1em 1em;
+  }
 }
-/* line 115, ../sass/header.scss */
+/* line 167, ../sass/header.scss */
 #global > dl > dd:nth-of-type(2) {
   border-left: #fff 1px dotted;
   border-right: #fff 1px dotted;
 }
-/* line 119, ../sass/header.scss */
-#global > dl > dd:nth-of-type(2) dl {
-  width: 24rem;
+@media all and (max-width: 500px) {
+  /* line 167, ../sass/header.scss */
+  #global > dl > dd:nth-of-type(2) {
+    border: none;
+  }
 }
-/* line 125, ../sass/header.scss */
-#global > dl > dd:nth-of-type(3) dl {
-  width: 18rem;
-}
-/* line 130, ../sass/header.scss */
+/* line 176, ../sass/header.scss */
 #global > dl > dd dl {
   margin: 0 auto;
   display: none;
 }
-/* line 134, ../sass/header.scss */
+/* line 180, ../sass/header.scss */
 #global > dl > dd dl dt {
   font-weight: bold;
   margin-bottom: 1.5rem;
   padding: 0.5rem;
   border-top: #fff 1px solid;
   border-bottom: #fff 1px solid;
-  text-align: center;
 }
-/* line 143, ../sass/header.scss */
+/* line 188, ../sass/header.scss */
 #global > dl > dd dl dd {
   background: none;
-  margin: 0.5rem 0 0 1.5rem;
+  margin: 0.5em 0 0 1.5em;
   color: #737373;
 }
-/* line 148, ../sass/header.scss */
+/* line 193, ../sass/header.scss */
 #global > dl > dd dl dd a {
   color: #fff;
 }
-/* line 151, ../sass/header.scss */
+/* line 196, ../sass/header.scss */
 #global > dl > dd dl dd a.active {
   color: #2c7eff;
   text-decoration: line-through;
 }
-/* line 157, ../sass/header.scss */
+/* line 202, ../sass/header.scss */
 #global > dl > dd dl dd span {
   margin-right: 0.5rem;
 }
-/* line 163, ../sass/header.scss */
+/* line 208, ../sass/header.scss */
 #global > dl > dd i {
   font-style: normal;
   font-family: century;
   font-weight: normal;
   font-size: 0.6rem;
   margin-left: 1rem;
+}
+@media all and (max-width: 1200px) {
+  /* line 208, ../sass/header.scss */
+  #global > dl > dd i {
+    display: none;
+  }
 }
