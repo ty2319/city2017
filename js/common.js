@@ -34,6 +34,12 @@
 		$('.box2 dt').prepend('―　').append('　―');
 	},
 	
+	font = function() {
+		$('.contents').each(function() {
+            $('.half:odd' , this).css('border-left-width' , $(window).width() * 0.001);
+        });
+	},
+	
 	section = function() {
 		
         $('section .quarter:nth-child(8n),section .quarter:nth-child(8n-2),section .quarter:nth-child(8n-3),section .quarter:nth-child(8n-5)').not('table').addClass('back_gray');
@@ -51,12 +57,6 @@
 		$('.contents').each(function() {
 			var A = Math.floor(6*Math.random());
             $(this).addClass('bg'+A);
-        });
-	},
-	
-	font = function() {
-		$('.contents').each(function() {
-            $('.half:odd' , this).css('border-left-width' , $(window).width() * 0.001);
         });
 	},
 	
@@ -101,13 +101,13 @@
 			if(loc == '') {
 				loc = 'index';
 			}
-			if(href.match('japan') && href.match(loc)) {
+			if(href.match('city') && href.match(loc)) {
 				$(this).addClass('active');
 			}
 		});
 			
 		$('.menu-trigger:not(.on)').hover(function() {
-			$('#global > dl > dd').slideDown(500).css('display' , 'table-cell');
+			$('#global > dl > dd').slideDown(500);
 			$('#global > dl > dd > dl').slideDown(500);
 			$(this).addClass('on');
 			$('i' , this).text('close');
@@ -124,10 +124,18 @@
 				$('#global').nextAll().removeClass('menu_open');
 				$('.menu-trigger i').text('menu');
 			});
+			
+			$('h2').hover(function() {
+				$('#global > dl > dd').slideUp(500);
+				$('#global > dl > dd > dl').slideUp(500);
+				$('#global .on').removeClass('on');
+				$('#global').nextAll().removeClass('menu_open');
+				$('.menu-trigger i').text('menu');
+			});
 		});
 		
 		$('.menu-trigger').on('click' , function() {
-			$('#global > dl > dd').slideToggle(500).css('display' , 'table-cell');
+			$('#global > dl > dd').slideToggle(500);
 			$('#global > dl > dd > dl').slideToggle(500)
 			$(this).toggleClass('on');
 			$('#global').nextAll().toggleClass('menu_open');
@@ -142,6 +150,12 @@
 	
 	//title
 	title = function() {
+		
+		if ($(window).width() < 500) {
+			$('h2 img').attr('src' , 'img/common/logo2.png');
+		} else {
+			$('h2 img').attr('src' , 'img/common/logo.png');
+		}
 			
 		var ct	= $('.contents:first').offset().top + 7;
 		var A	= Math.floor(9*Math.random());

@@ -1,23 +1,14 @@
 @charset "UTF-8";
 /* CSS Document */
-/* line 8, ../sass/top.scss */
-html body {
-  overflow: hidden;
-}
-/* line 11, ../sass/top.scss */
+/* line 10, ../sass/top.scss */
 html body[class*=bg] {
   background: none;
 }
-/* line 15, ../sass/top.scss */
-html body header#top {
-  position: relative;
-  z-index: 2;
-}
-/* line 21, ../sass/top.scss */
+/* line 14, ../sass/top.scss */
 html body main {
   width: 100%;
 }
-/* line 24, ../sass/top.scss */
+/* line 17, ../sass/top.scss */
 html body main > span {
   position: fixed;
   bottom: 4.5rem;
@@ -29,12 +20,12 @@ html body main > span {
   width: 25%;
   text-align: center;
 }
-/* line 33, ../sass/top.scss */
+/* line 26, ../sass/top.scss */
 html body main article {
   background: none;
   width: 100%;
 }
-/* line 37, ../sass/top.scss */
+/* line 30, ../sass/top.scss */
 html body main article > ul {
   position: fixed;
   bottom: 2.5rem;
@@ -44,7 +35,7 @@ html body main article > ul {
   width: 100%;
   background-color: #012052;
 }
-/* line 43, ../sass/top.scss */
+/* line 36, ../sass/top.scss */
 html body main article > ul li {
   display: table-cell;
   text-align: center;
@@ -53,16 +44,16 @@ html body main article > ul li {
   width: 25%;
   cursor: pointer;
 }
-/* line 51, ../sass/top.scss */
+/* line 44, ../sass/top.scss */
 html body main article > ul li:hover {
   background-color: #004dc5;
 }
-/* line 55, ../sass/top.scss */
+/* line 48, ../sass/top.scss */
 html body main article > ul li.active {
   background-color: #fff;
   color: #012052;
 }
-/* line 62, ../sass/top.scss */
+/* line 55, ../sass/top.scss */
 html body main article .contents {
   color: #fff;
   padding: 0 !important;
@@ -71,56 +62,56 @@ html body main article .contents {
   background: center center no-repeat scroll;
   background-size: cover;
 }
-/* line 72, ../sass/top.scss */
+/* line 65, ../sass/top.scss */
 html body main article .contents:nth-of-type(1) {
   background-image: url(../img/top/1.jpg);
 }
-/* line 72, ../sass/top.scss */
+/* line 65, ../sass/top.scss */
 html body main article .contents:nth-of-type(2) {
   background-image: url(../img/top/2.jpg);
 }
-/* line 72, ../sass/top.scss */
+/* line 65, ../sass/top.scss */
 html body main article .contents:nth-of-type(3) {
   background-image: url(../img/top/3.jpg);
 }
-/* line 72, ../sass/top.scss */
+/* line 65, ../sass/top.scss */
 html body main article .contents:nth-of-type(4) {
   background-image: url(../img/top/4.jpg);
 }
-/* line 77, ../sass/top.scss */
+/* line 70, ../sass/top.scss */
 html body main article .contents:first-of-type {
   border: none !important;
 }
-/* line 81, ../sass/top.scss */
+/* line 74, ../sass/top.scss */
 html body main article .contents.load {
   width: 100%;
   margin-left: 0;
   -webkit-transition: width 20s ease , margin-left 20s ease;
           transition: width 20s ease , margin-left 20s ease;
 }
-/* line 87, ../sass/top.scss */
+/* line 80, ../sass/top.scss */
 html body main article .contents div {
   margin: 0 auto;
   padding: 20rem 2rem 5rem 2rem;
   text-align: center;
   text-shadow: -1px -1px 3px #000, 1px 1px 3px #000;
 }
-/* line 93, ../sass/top.scss */
+/* line 86, ../sass/top.scss */
 html body main article .contents div header {
   color: #fff;
   margin: 0 0 3rem 0;
 }
-/* line 97, ../sass/top.scss */
+/* line 90, ../sass/top.scss */
 html body main article .contents div header h3 {
   font-family: century;
   font-size: 2rem;
 }
-/* line 102, ../sass/top.scss */
+/* line 95, ../sass/top.scss */
 html body main article .contents div header p {
   font-family: "游明朝", YuMincho, "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN","HG明朝E","ＭＳ Ｐ明朝","ＭＳ 明朝",serif;
   font-size: 0.9rem;
 }
-/* line 108, ../sass/top.scss */
+/* line 101, ../sass/top.scss */
 html body main article .contents div a button {
   color: #333333;
   background-color: #fff;
@@ -134,15 +125,15 @@ html body main article .contents div a button {
   cursor: pointer;
   border: none;
 }
-/* line 121, ../sass/top.scss */
+/* line 114, ../sass/top.scss */
 html body main article .contents div a button:hover {
   opacity: 1;
 }
-/* line 125, ../sass/top.scss */
+/* line 118, ../sass/top.scss */
 html body main article .contents div a button span {
   margin-right: 1rem;
 }
-/* line 130, ../sass/top.scss */
+/* line 123, ../sass/top.scss */
 html body main article .contents div dl {
   background: none;
   width: 37rem;
@@ -150,7 +141,7 @@ html body main article .contents div dl {
   margin: 0 auto;
   padding: 0;
 }
-/* line 137, ../sass/top.scss */
+/* line 130, ../sass/top.scss */
 html body main article .contents div dl dt {
   color: #fff;
   float: left;
@@ -159,7 +150,7 @@ html body main article .contents div dl dt {
   padding: 0 1rem;
   text-align: right;
 }
-/* line 146, ../sass/top.scss */
+/* line 139, ../sass/top.scss */
 html body main article .contents div dl dd {
   margin: 0 0 1rem 0;
   padding: 0 0 1rem 0;
@@ -167,11 +158,11 @@ html body main article .contents div dl dd {
   text-align: left;
   overflow: visible;
 }
-/* line 153, ../sass/top.scss */
+/* line 146, ../sass/top.scss */
 html body main article .contents div dl dd:last-of-type {
   border: none;
 }
-/* line 163, ../sass/top.scss */
+/* line 156, ../sass/top.scss */
 html body footer {
   position: fixed;
   bottom: 0;
@@ -179,7 +170,7 @@ html body footer {
   z-index: 10;
   width: 100%;
 }
-/* line 169, ../sass/top.scss */
+/* line 162, ../sass/top.scss */
 html #exam {
   position: fixed;
   bottom: 0;
@@ -187,7 +178,7 @@ html #exam {
   z-index: 11;
   margin-bottom: 0.8rem;
 }
-/* line 174, ../sass/top.scss */
+/* line 167, ../sass/top.scss */
 html #hero {
   position: absolute;
   top: 75%;

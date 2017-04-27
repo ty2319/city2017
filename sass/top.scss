@@ -6,17 +6,10 @@
 html {
 	
 	body {
-		overflow: hidden;
 		
 		&[class*=bg] {
 			background: none;
 		}
-
-		header#top {
-			position: $r;
-			z-index: 2;
-		}
-		
 			
 		main {
 			width: $max;
