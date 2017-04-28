@@ -69,7 +69,7 @@ header#top {
 		
 		img {
 			width	 : $max * 0.3;
-			min-width: 300px;
+			min-width: 310px;
 			max-width: 484px;
 			height	 : auto;
 	
@@ -101,15 +101,15 @@ header#top {
 			text-align		: center;
 			padding			: $max*0.008 $max*0.01;
 	
-			@include media($ot) {
+			@include media($of) {
 				padding-top: $max*0.004;
-				background-color: $black;
 			}
 	
 			@include media($fh) {
 				left			: $max;
-				margin-left		: -4.5em;
+				margin-left		: -4.3em;
 				padding			: $max*0.01;
+				background-color: $black;
 			}
 			
 			span {
@@ -117,7 +117,7 @@ header#top {
 				background-color: #fff;
 				border-radius: 2px;
 				margin: 0.7em;
-				width: 3em;
+				width: 2.5em;
 			}
 			
 			&.on {
@@ -139,8 +139,12 @@ header#top {
 			}
 			
 			i {
-				@include abT(30%,4.7em,0);
+				@include abT(32%,4.7em,0);
 				font-size: 1.25em;
+				
+				@include media($of) {
+					@include abT(25%,4.2em,0);
+				}
 	
 					@include media($nf) {
 						display: none;

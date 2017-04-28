@@ -5,18 +5,22 @@
 
 footer {
 	color: $white;
-	font-size: 0.9em;
+	font-size: 0.8em;
 	clear: both;
 
 	ul {
-		width: $max;
-		margin: 0 auto;
-		padding: 10px 10px 0.5em 10px;
+		display			: flex;
+		flex-flow		: row wrap;
+		justify-content	: center;
+		align-items		: stretch;
+		align-content	: flex-start;
+		width			: $max;
+		margin			: 0 auto;
+		padding			: 10px 10px 0.5em 10px;
 		background-color: $black;
-		display: table;
 		
 		li {
-			display: table-cell;
+			flex: 1 1 250px;
 			
 			a {
 				color: #FFF;
@@ -25,6 +29,10 @@ footer {
 			small {
 				display: block;
 				text-align: right;
+				
+				@include media($fh) {					
+					text-align: left;
+				}
 			}
 		}
 	}

@@ -2,27 +2,37 @@
 /* line 6, ../sass/footer.scss */
 footer {
   color: #fff;
-  font-size: 0.9em;
+  font-size: 0.8em;
   clear: both;
 }
 /* line 11, ../sass/footer.scss */
 footer ul {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: stretch;
+  align-content: flex-start;
   width: 100%;
   margin: 0 auto;
   padding: 10px 10px 0.5em 10px;
   background-color: #000;
-  display: table;
 }
-/* line 18, ../sass/footer.scss */
+/* line 22, ../sass/footer.scss */
 footer ul li {
-  display: table-cell;
+  flex: 1 1 250px;
 }
-/* line 21, ../sass/footer.scss */
+/* line 25, ../sass/footer.scss */
 footer ul li a {
   color: #FFF;
 }
-/* line 25, ../sass/footer.scss */
+/* line 29, ../sass/footer.scss */
 footer ul li small {
   display: block;
   text-align: right;
+}
+@media all and (max-width: 500px) {
+  /* line 29, ../sass/footer.scss */
+  footer ul li small {
+    text-align: left;
+  }
 }
