@@ -132,6 +132,14 @@
 				$('#global').nextAll().removeClass('menu_open');
 				$('.menu-trigger i').text('menu');
 			});
+			
+			$('h2').hover(function() {
+				$('#global > dl > dd').slideUp(500);
+				$('#global > dl > dd > dl').slideUp(500);
+				$('#global .on').removeClass('on');
+				$('#global').nextAll().removeClass('menu_open');
+				$('.menu-trigger i').text('menu');
+			});
 		});
 		
 		$('.menu-trigger').on('click' , function() {
