@@ -43,7 +43,7 @@ header#top {
 }
 		
 #global {
-	@include abT(4.25rem,0,1);
+	@include abT(4.24rem,0,1);
 	color			: $white;
 	width			: $max;
 	background-color: $black;
@@ -139,8 +139,9 @@ header#top {
 			}
 			
 			i {
-				@include abT(32%,4.7em,0);
-				font-size: 1.25em;
+				@include abT(32%,5em,0);
+				font-size	: 1.25em;
+				padding		: 0 5em 5em 0;
 				
 				@include media($of) {
 					@include abT(25%,4.2em,0);

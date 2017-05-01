@@ -4,99 +4,114 @@
 @import "settings";
 
 html {
+	height: $max;
 	
 	body {
+		height: $max;
 		
 		&[class*=bg] {
 			background: none;
 		}
 			
 		main {
-			width: $max;
-			
-			& > span {
-				@include fixLB(4.5rem,0,0);
-				display: block;
-				color: $white;
-				font-size: 2rem;
-				width: $max / 4;
-				text-align: center;
-			}
+			width	: $max;
+			height	: $max;
 			
 			article {
-				background: none;
-				width: $max;
-			
-				& > ul {
-					@include fixLB(2.5rem,0,1);
-					display: table;
-					width: $max;
-					background-color: $navy;
+				display		: flex;
+				flex-flow	: column wrap;
+				background	: none;
+				width		: $max;
+				height		: $max;
+				overflow	: hidden;
+				
+				section:hover {
+					flex-grow: 5;
+					opacity	 : 0.7;
+				}
+				
+				div , header {
+					opacity: 1;
+				}
+				
+				& > div {
+					order	: -1;
+					height	: $max;
+					overflow: hidden;
+					padding : 0;
 					
-					li {
-						display: table-cell;
-						text-align: center;
-						padding: 0.5rem;
-						color: $white;
-						width: $max / 4;
-						cursor: pointer;
+					@keyframes my_anime1 {
+					  0% {
+						background-position: left center;
+					  }
+					  100% {
+						background-position: 50% 100%;
+					  }
+					}
+					
+					@keyframes my_anime2 {
+					  0% {
+						background-position: right bottom;
+						transform: translate(-50% , 420%) rotate(45deg);
+					  }
+					  100% {
+						background-position: 32% 55%;
+						transform: translate(-30% , 420%) rotate(45deg);
+					  }
+					}
+					
+					& > div {
+						width			: $max * 2;
+						height			: $max / 5;
+						opacity			: 0.8;
+						background-color: #0164ac !important;
+					}
+					
+					&.player0 {
+						background		: url(../img/top/ohshiro.jpg) no-repeat;
+						background-size : auto 120%;
+						animation		: my_anime1 10s infinite;
 						
-						&:hover {
-							background-color: darken($blue , 20%);
-						}
-						
-						&.active {
-							background-color: $white;
-							color: $navy;
+						& > div {
+							background:url(../img/top/takumi.jpg) no-repeat;
+							background-size: 40% auto;
+							
+							&.move {
+								animation: my_anime2 10s infinite;
+							}
 						}
 					}
 				}
 				
 				.contents {
 					color: $white;
-					padding: 0 !important;
-					width: $max * 1.5;
-					margin-left: -$max / 4;
-					background: center center no-repeat scroll;
-					background-size: cover;
+					width: $max / 2 !important;
+					background: black;
+					opacity: 0.1;
+					padding: 2em;
+					flex-grow: 1;
+					transition: all 0.7s;
+					
+					header {
+						color		: #fff;
+						margin		: 2em;
+						display		: table;
+						font-style	: italic;
 						
-					@for $value from 1 to 5 {
-						
-						&:nth-of-type(#{$value}) {
-							background-image: url(#{$ip}top/#{$value}.jpg);
+						h3 {
+							font-size	 : 2em;
+							padding-right: 1em;
+						}
+					
+						p {
+							font-size: 0.9em;
 						}
 					}
 					
-					&:first-of-type {
-						border: none !important;
-					}
-						
-					&.load {
-						width: $max;
-						margin-left: 0;
-						transition: width 20s ease , margin-left 20s ease;
-					}
-					
-					div {
+					div , dl {
 						margin: 0 auto;
-						padding: 20rem 2rem 5rem 2rem;
-						text-align: center;
+						width: $max * 0.8;
 						text-shadow: -1px -1px 3px $black, 1px 1px 3px $black;
-					
-						header {
-							color: #fff;
-							margin: 0 0 3rem 0;
-							
-							h3 {
-								font-family: century;
-								font-size: 2rem;
-							}
-						
-							p {
-								font-family:"游明朝", YuMincho, "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN","HG明朝E","ＭＳ Ｐ明朝","ＭＳ 明朝",serif;
-								font-size: 0.9rem;
-							}
-						}
 						
 						a button {
 							color: lighten($black,20%);
@@ -119,43 +134,35 @@ html {
 								margin-right: 1rem;
 							}
 						}
+					}
 						
-						dl {
-							background: none;
-							width: 37rem;
-							border: none;
-							margin: 0 auto;
-							padding: 0;
+					dl {
+						border: none;
+						padding: 0;
+						
+						dt {
+							color: $white;
+							float: left;
+							width: 8rem;
+							margin: 0;
+							padding: 0 1rem;
+							text-align: right;
+						}
+						
+						dd {
+							margin: 0 0 1rem 0;
+							padding: 0 0 1rem 0;
+							border-bottom: $white 1px dotted;
+							text-align: left;
+							overflow: visible;
 							
-							dt {
-								color: $white;
-								float: left;
-								width: 8rem;
-								margin: 0;
-								padding: 0 1rem;
-								text-align: right;
-							}
-							
-							dd {
-								margin: 0 0 1rem 0;
-								padding: 0 0 1rem 0;
-								border-bottom: $white 1px dotted;
-								text-align: left;
-								overflow: visible;
-								
-								&:last-of-type {
-									border: none;
-								}
+							&:last-of-type {
+								border: none;
 							}
 						}
 					}
 				}
 			}
-		}
-		
-		footer {
-			@include fixB(0,0,10);
-			width: $max;
 		}
 	}
 	

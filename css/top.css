@@ -1,129 +1,121 @@
-@charset "UTF-8";
 /* CSS Document */
-html body[class*=bg] {
-  background: none; }
-html body main {
-  width: 100%; }
-  html body main > span {
-    position: fixed;
-    bottom: 4.5rem;
-    left: 0;
-    z-index: 0;
-    display: block;
-    color: #fff;
-    font-size: 2rem;
-    width: 25%;
-    text-align: center; }
-  html body main article {
-    background: none;
-    width: 100%; }
-    html body main article > ul {
-      position: fixed;
-      bottom: 2.5rem;
-      left: 0;
-      z-index: 1;
-      display: table;
+html {
+  height: 100%; }
+  html body {
+    height: 100%; }
+    html body[class*=bg] {
+      background: none; }
+    html body main {
       width: 100%;
-      background-color: #012052; }
-      html body main article > ul li {
-        display: table-cell;
-        text-align: center;
-        padding: 0.5rem;
-        color: #fff;
-        width: 25%;
-        cursor: pointer; }
-        html body main article > ul li:hover {
-          background-color: #004dc5; }
-        html body main article > ul li.active {
-          background-color: #fff;
-          color: #012052; }
-    html body main article .contents {
-      color: #fff;
-      padding: 0 !important;
-      width: 150%;
-      margin-left: -25%;
-      background: center center no-repeat scroll;
-      background-size: cover; }
-      html body main article .contents:nth-of-type(1) {
-        background-image: url(../img/top/1.jpg); }
-      html body main article .contents:nth-of-type(2) {
-        background-image: url(../img/top/2.jpg); }
-      html body main article .contents:nth-of-type(3) {
-        background-image: url(../img/top/3.jpg); }
-      html body main article .contents:nth-of-type(4) {
-        background-image: url(../img/top/4.jpg); }
-      html body main article .contents:first-of-type {
-        border: none !important; }
-      html body main article .contents.load {
+      height: 100%; }
+      html body main article {
+        display: flex;
+        flex-flow: column wrap;
+        background: none;
         width: 100%;
-        margin-left: 0;
-        transition: width 20s ease , margin-left 20s ease; }
-      html body main article .contents div {
-        margin: 0 auto;
-        padding: 20rem 2rem 5rem 2rem;
-        text-align: center;
-        text-shadow: -1px -1px 3px #000, 1px 1px 3px #000; }
-        html body main article .contents div header {
-          color: #fff;
-          margin: 0 0 3rem 0; }
-          html body main article .contents div header h3 {
-            font-family: century;
-            font-size: 2rem; }
-          html body main article .contents div header p {
-            font-family: "游明朝", YuMincho, "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN","HG明朝E","ＭＳ Ｐ明朝","ＭＳ 明朝",serif;
-            font-size: 0.9rem; }
-        html body main article .contents div a button {
-          color: #333333;
-          background-color: #fff;
-          display: block;
-          margin: 1rem 0 0 25%;
-          padding: 1rem;
-          text-align: center;
-          opacity: 0.8;
+        height: 100%;
+        overflow: hidden; }
+        html body main article section:hover {
+          flex-grow: 5;
+          opacity: 0.7; }
+        html body main article div, html body main article header {
+          opacity: 1; }
+        html body main article > div {
+          order: -1;
+          height: 100%;
           overflow: hidden;
-          width: 50%;
-          cursor: pointer;
-          border: none; }
-          html body main article .contents div a button:hover {
-            opacity: 1; }
-          html body main article .contents div a button span {
-            margin-right: 1rem; }
-        html body main article .contents div dl {
-          background: none;
-          width: 37rem;
-          border: none;
-          margin: 0 auto;
           padding: 0; }
-          html body main article .contents div dl dt {
+@keyframes my_anime1 {
+  0% {
+    background-position: left center; }
+  100% {
+    background-position: 50% 100%; } }
+@keyframes my_anime2 {
+  0% {
+    background-position: right bottom;
+    transform: translate(-50%, 420%) rotate(45deg); }
+  100% {
+    background-position: 32% 55%;
+    transform: translate(-30%, 420%) rotate(45deg); } }
+          html body main article > div > div {
+            width: 200%;
+            height: 20%;
+            opacity: 0.8;
+            background-color: #0164ac !important; }
+          html body main article > div.player0 {
+            background: url(../img/top/ohshiro.jpg) no-repeat;
+            background-size: auto 120%;
+            animation: my_anime1 10s infinite; }
+            html body main article > div.player0 > div {
+              background: url(../img/top/takumi.jpg) no-repeat;
+              background-size: 40% auto; }
+              html body main article > div.player0 > div.move {
+                animation: my_anime2 10s infinite; }
+        html body main article .contents {
+          color: #fff;
+          width: 50% !important;
+          background: black;
+          opacity: 0.1;
+          padding: 2em;
+          flex-grow: 1;
+          transition: all 0.7s; }
+          html body main article .contents header {
             color: #fff;
-            float: left;
-            width: 8rem;
-            margin: 0;
-            padding: 0 1rem;
-            text-align: right; }
-          html body main article .contents div dl dd {
-            margin: 0 0 1rem 0;
-            padding: 0 0 1rem 0;
-            border-bottom: #fff 1px dotted;
-            text-align: left;
-            overflow: visible; }
-            html body main article .contents div dl dd:last-of-type {
+            margin: 2em;
+            display: table;
+            font-style: italic; }
+            html body main article .contents header h3 {
+              font-size: 2em;
+              padding-right: 1em; }
+            html body main article .contents header p {
+              font-size: 0.9em; }
+          html body main article .contents div, html body main article .contents dl {
+            margin: 0 auto;
+            width: 80%;
+            text-shadow: -1px -1px 3px #000, 1px 1px 3px #000; }
+            html body main article .contents div a button, html body main article .contents dl a button {
+              color: #333333;
+              background-color: #fff;
+              display: block;
+              margin: 1rem 0 0 25%;
+              padding: 1rem;
+              text-align: center;
+              opacity: 0.8;
+              overflow: hidden;
+              width: 50%;
+              cursor: pointer;
               border: none; }
-html body footer {
-  position: fixed;
-  bottom: 0;
-  right: 0;
-  z-index: 10;
-  width: 100%; }
-html #exam {
-  position: fixed;
-  bottom: 0;
-  right: 200px;
-  z-index: 11;
-  margin-bottom: 0.8rem; }
-html #hero {
-  position: absolute;
-  top: 75%;
-  left: 50%;
-  z-index: 1;
-  margin-left: -80px; }
+              html body main article .contents div a button:hover, html body main article .contents dl a button:hover {
+                opacity: 1; }
+              html body main article .contents div a button span, html body main article .contents dl a button span {
+                margin-right: 1rem; }
+          html body main article .contents dl {
+            border: none;
+            padding: 0; }
+            html body main article .contents dl dt {
+              color: #fff;
+              float: left;
+              width: 8rem;
+              margin: 0;
+              padding: 0 1rem;
+              text-align: right; }
+            html body main article .contents dl dd {
+              margin: 0 0 1rem 0;
+              padding: 0 0 1rem 0;
+              border-bottom: #fff 1px dotted;
+              text-align: left;
+              overflow: visible; }
+              html body main article .contents dl dd:last-of-type {
+                border: none; }
+  html #exam {
+    position: fixed;
+    bottom: 0;
+    right: 200px;
+    z-index: 11;
+    margin-bottom: 0.8rem; }
+  html #hero {
+    position: absolute;
+    top: 75%;
+    left: 50%;
+    z-index: 1;
+    margin-left: -80px; }
