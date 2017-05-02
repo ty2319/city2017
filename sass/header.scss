@@ -68,10 +68,11 @@ header#top {
 			}
 		
 		img {
-			width	 : $max * 0.3;
-			min-width: 310px;
-			max-width: 484px;
-			height	 : auto;
+			width	  : $max * 0.3;
+			min-width : 340px;
+			max-width : 484px;
+			height	  : auto;
+			margin-top: -0.3em;
 	
 			@include media($fh) {	
 				margin		: $max * 0.05;
@@ -124,8 +125,8 @@ header#top {
 				background: none;
 				
 				span:nth-of-type(1) {
-					-webkit-transform: translateY(12px) rotate(-315deg);
-					transform: translateY(12px) rotate(-315deg);
+					-webkit-transform: translateY(0.85em) rotate(-315deg);
+					transform: translateY(0.85em) rotate(-315deg);
 				}
 				
 				span:nth-of-type(2) {
@@ -133,8 +134,8 @@ header#top {
 				}
 				
 				span:nth-of-type(3) {
-					-webkit-transform: translateY(-12px) rotate(315deg);
-					transform: translateY(-12px) rotate(315deg);
+					-webkit-transform: translateY(-0.85em) rotate(315deg);
+					transform: translateY(-0.85em) rotate(315deg);
 				}
 			}
 			

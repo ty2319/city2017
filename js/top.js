@@ -1,8 +1,10 @@
 $(function() {
 	
+	$('article div , article section').removeClass('contents');
+	
 	if ($(window).width() > 500) {
-		$('main,article').height($(window).height() - $('header#top').height() - $('h2 img').height() - $('footer').height());
-		$('article > div').show().height($('article').height());
+		$('main,article').height($(window).height() - $('header#top').outerHeight() - $('footer').outerHeight());
+		$('article > div').show();
 	} else {
 		$('article > div').hide();
 		$('article').height($(this).children().height());

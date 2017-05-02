@@ -1,19 +1,20 @@
 /* CSS Document */
 html {
+  width: 100%;
   height: 100%; }
   html body {
+    width: 100%;
     height: 100%; }
     html body[class*=bg] {
       background: none; }
     html body main {
       width: 100%;
-      height: 100%; }
+      overflow: hidden; }
       html body main article {
         display: flex;
         flex-flow: column wrap;
         background: none;
         width: 100%;
-        height: 100%;
         overflow: hidden; }
         html body main article section:hover {
           flex-grow: 5;
@@ -22,9 +23,16 @@ html {
           opacity: 1; }
         html body main article > div {
           order: -1;
+          width: 50% !important;
           height: 100%;
           overflow: hidden;
-          padding: 0; }
+          padding: 0;
+          flex-grow: 1; }
+          html body main article > div > div {
+            width: 200%;
+            height: 20%;
+            opacity: 0.8;
+            background-color: #0164ac !important; }
 @keyframes my_anime1 {
   0% {
     background-position: left center; }
@@ -37,13 +45,8 @@ html {
   100% {
     background-position: 32% 55%;
     transform: translate(-30%, 420%) rotate(45deg); } }
-          html body main article > div > div {
-            width: 200%;
-            height: 20%;
-            opacity: 0.8;
-            background-color: #0164ac !important; }
           html body main article > div.player0 {
-            background: url(../img/top/ohshiro.jpg) no-repeat;
+            background: url(../img/top/ohshiro.jpg) no-repeat !important;
             background-size: auto 120%;
             animation: my_anime1 10s infinite; }
             html body main article > div.player0 > div {
@@ -51,29 +54,30 @@ html {
               background-size: 40% auto; }
               html body main article > div.player0 > div.move {
                 animation: my_anime2 10s infinite; }
-        html body main article .contents {
+        html body main article section {
           color: #fff;
           width: 50% !important;
+          height: 50%;
           background: black;
           opacity: 0.1;
           padding: 2em;
           flex-grow: 1;
           transition: all 0.7s; }
-          html body main article .contents header {
+          html body main article section header {
             color: #fff;
             margin: 2em;
             display: table;
             font-style: italic; }
-            html body main article .contents header h3 {
+            html body main article section header h3 {
               font-size: 2em;
               padding-right: 1em; }
-            html body main article .contents header p {
+            html body main article section header p {
               font-size: 0.9em; }
-          html body main article .contents div, html body main article .contents dl {
+          html body main article section div, html body main article section dl {
             margin: 0 auto;
             width: 80%;
             text-shadow: -1px -1px 3px #000, 1px 1px 3px #000; }
-            html body main article .contents div a button, html body main article .contents dl a button {
+            html body main article section div a button, html body main article section dl a button {
               color: #333333;
               background-color: #fff;
               display: block;
@@ -85,27 +89,27 @@ html {
               width: 50%;
               cursor: pointer;
               border: none; }
-              html body main article .contents div a button:hover, html body main article .contents dl a button:hover {
+              html body main article section div a button:hover, html body main article section dl a button:hover {
                 opacity: 1; }
-              html body main article .contents div a button span, html body main article .contents dl a button span {
+              html body main article section div a button span, html body main article section dl a button span {
                 margin-right: 1rem; }
-          html body main article .contents dl {
+          html body main article section dl {
             border: none;
             padding: 0; }
-            html body main article .contents dl dt {
+            html body main article section dl dt {
               color: #fff;
               float: left;
               width: 8rem;
               margin: 0;
               padding: 0 1rem;
               text-align: right; }
-            html body main article .contents dl dd {
+            html body main article section dl dd {
               margin: 0 0 1rem 0;
               padding: 0 0 1rem 0;
               border-bottom: #fff 1px dotted;
               text-align: left;
               overflow: visible; }
-              html body main article .contents dl dd:last-of-type {
+              html body main article section dl dd:last-of-type {
                 border: none; }
   html #exam {
     position: fixed;
