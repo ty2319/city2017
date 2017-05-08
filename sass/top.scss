@@ -31,16 +31,19 @@ html {
 					opacity	 : 0.7;
 				}
 				
+				.contents {
+					width	: $max / 2 !important;
+					overflow: hidden;
+					padding : 0;
+				}
+				
 				div , header {
 					opacity: 1;
 				}
 				
 				&> div {
 					order		: -1;
-					width		: $max / 2 !important;
 					height		: $max;
-					overflow	: hidden;
-					padding		: 0;
 					flex-grow	: 1;
 					
 					&> div {
@@ -72,7 +75,7 @@ html {
 					
 					&.player0 {
 						background		: url(../img/top/ohshiro.jpg) no-repeat !important;
-						background-size : auto 120%;
+						background-size : $max*0.7 $max*1.2;
 						animation		: my_anime1 10s infinite;
 						
 						& > div {
@@ -88,7 +91,6 @@ html {
 				
 				section {
 					color: $white;
-					width: $max / 2 !important;
 					height: $max / 2;
 					background: black;
 					opacity: 0.1;

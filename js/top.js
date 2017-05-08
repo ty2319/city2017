@@ -1,7 +1,5 @@
 $(function() {
 	
-	$('article div , article section').removeClass('contents');
-	
 	if ($(window).width() > 500) {
 		$('main,article').height($(window).height() - $('header#top').outerHeight() - $('footer').outerHeight());
 		$('article > div').show();
