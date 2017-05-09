@@ -1,7 +1,7 @@
 $(function() {
 	
 	if ($(window).width() > 500) {
-		$('main,article').height($(window).height() - $('header#top').outerHeight() - $('footer').outerHeight());
+		$('main,article').height($(window).height() - $('header#top').outerHeight() - $('#global').outerHeight() - $('footer').outerHeight());
 		$('article > div').show();
 	} else {
 		$('article > div').hide();

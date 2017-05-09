@@ -4,11 +4,11 @@
 @import "settings";
 
 html {
-	width: $max;
+	width : $max;
 	height: $max;
 	
 	body {
-		width: $max;
+		width : $max;
 		height: $max;
 		
 		&[class*=bg] {
@@ -16,20 +16,16 @@ html {
 		}
 			
 		main {
-			width	: $max;
-			overflow: hidden;
+			width : $max;
+			height: $max;
 			
 			article {
 				display		: flex;
 				flex-flow	: column wrap;
 				background	: none;
 				width		: $max;
+				height		: $max;
 				overflow	: hidden;
-				
-				section:hover {
-					flex-grow: 5;
-					opacity	 : 0.7;
-				}
 				
 				.contents {
 					width	: $max / 2 !important;
@@ -91,12 +87,17 @@ html {
 				
 				section {
 					color: $white;
-					height: $max / 2;
+					height: $max / 10;
 					background: black;
 					opacity: 0.1;
 					padding: 2em;
 					flex-grow: 1;
-					transition: all 0.7s;
+					transition: all 1s;
+				
+					&:hover {
+						flex-grow: 5;
+						opacity	 : 0.7;
+					}
 					
 					header {
 						color		: #fff;
