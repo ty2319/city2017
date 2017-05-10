@@ -26,24 +26,20 @@ html body main article {
   width: 100%;
   height: 100%;
   overflow: hidden;
+  background-color: black;
 }
-/* line 30, ../sass/top.scss */
+/* line 31, ../sass/top.scss */
 html body main article .contents {
   width: 50% !important;
-  overflow: hidden;
   padding: 0;
 }
 /* line 36, ../sass/top.scss */
-html body main article div, html body main article header {
-  opacity: 1;
-}
-/* line 40, ../sass/top.scss */
 html body main article > div {
   order: -1;
   height: 100%;
   flex-grow: 1;
 }
-/* line 45, ../sass/top.scss */
+/* line 41, ../sass/top.scss */
 html body main article > div > div {
   width: 200%;
   height: 20%;
@@ -68,59 +64,53 @@ html body main article > div > div {
     transform: translate(-30%, 420%) rotate(45deg);
   }
 }
-/* line 72, ../sass/top.scss */
+/* line 68, ../sass/top.scss */
 html body main article > div.player0 {
   background: url(../img/top/ohshiro.jpg) no-repeat !important;
-  background-size: 70% 120%;
+  background-size: auto 120% !important;
   animation: my_anime1 10s infinite;
 }
-/* line 77, ../sass/top.scss */
+/* line 73, ../sass/top.scss */
 html body main article > div.player0 > div {
   background: url(../img/top/takumi.jpg) no-repeat;
   background-size: 40% auto;
 }
-/* line 81, ../sass/top.scss */
+/* line 77, ../sass/top.scss */
 html body main article > div.player0 > div.move {
   animation: my_anime2 10s infinite;
 }
-/* line 88, ../sass/top.scss */
+/* line 84, ../sass/top.scss */
 html body main article section {
   color: #fff;
   height: 10%;
-  background: black;
-  opacity: 0.1;
   padding: 2em;
   flex-grow: 1;
   transition: all 1s;
 }
-/* line 97, ../sass/top.scss */
-html body main article section:hover {
-  flex-grow: 5;
-  opacity: 0.7;
-}
-/* line 102, ../sass/top.scss */
+/* line 91, ../sass/top.scss */
 html body main article section header {
   color: #fff;
   margin: 2em;
-  display: table;
   font-style: italic;
 }
-/* line 108, ../sass/top.scss */
+/* line 96, ../sass/top.scss */
 html body main article section header h3 {
   font-size: 2em;
   padding-right: 1em;
+  display: inline-block;
 }
-/* line 113, ../sass/top.scss */
+/* line 102, ../sass/top.scss */
 html body main article section header p {
   font-size: 0.9em;
+  display: inline-block;
 }
-/* line 118, ../sass/top.scss */
+/* line 108, ../sass/top.scss */
 html body main article section div, html body main article section dl {
   margin: 0 auto;
   width: 80%;
   text-shadow: -1px -1px 3px #000, 1px 1px 3px #000;
 }
-/* line 123, ../sass/top.scss */
+/* line 113, ../sass/top.scss */
 html body main article section div a button, html body main article section dl a button {
   color: #333333;
   background-color: #fff;
@@ -134,20 +124,20 @@ html body main article section div a button, html body main article section dl a
   cursor: pointer;
   border: none;
 }
-/* line 136, ../sass/top.scss */
+/* line 126, ../sass/top.scss */
 html body main article section div a button:hover, html body main article section dl a button:hover {
   opacity: 1;
 }
-/* line 140, ../sass/top.scss */
+/* line 130, ../sass/top.scss */
 html body main article section div a button span, html body main article section dl a button span {
   margin-right: 1rem;
 }
-/* line 146, ../sass/top.scss */
+/* line 136, ../sass/top.scss */
 html body main article section dl {
   border: none;
   padding: 0;
 }
-/* line 150, ../sass/top.scss */
+/* line 140, ../sass/top.scss */
 html body main article section dl dt {
   color: #fff;
   float: left;
@@ -156,7 +146,7 @@ html body main article section dl dt {
   padding: 0 1rem;
   text-align: right;
 }
-/* line 159, ../sass/top.scss */
+/* line 149, ../sass/top.scss */
 html body main article section dl dd {
   margin: 0 0 1rem 0;
   padding: 0 0 1rem 0;
@@ -164,11 +154,20 @@ html body main article section dl dd {
   text-align: left;
   overflow: visible;
 }
-/* line 166, ../sass/top.scss */
+/* line 156, ../sass/top.scss */
 html body main article section dl dd:last-of-type {
   border: none;
 }
-/* line 176, ../sass/top.scss */
+/* line 162, ../sass/top.scss */
+html body main article section:hover {
+  flex-grow: 5;
+  opacity: 0.5;
+}
+/* line 166, ../sass/top.scss */
+html body main article section:hover div, html body main article section:hover header {
+  color: rbga(255, 255, 255, 1);
+}
+/* line 175, ../sass/top.scss */
 html #exam {
   position: fixed;
   bottom: 0;
@@ -176,7 +175,7 @@ html #exam {
   z-index: 11;
   margin-bottom: 0.8rem;
 }
-/* line 181, ../sass/top.scss */
+/* line 180, ../sass/top.scss */
 html #hero {
   position: absolute;
   top: 75%;

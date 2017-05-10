@@ -2,6 +2,7 @@ $(function() {
 	
 	if ($(window).width() > 500) {
 		$('main,article').height($(window).height() - $('header#top').outerHeight() - $('#global').outerHeight() - $('footer').outerHeight());
+		$('main').css('margin-top' , $('#global').outerHeight());
 		$('article > div').show();
 	} else {
 		$('article > div').hide();

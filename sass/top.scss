@@ -26,15 +26,11 @@ html {
 				width		: $max;
 				height		: $max;
 				overflow	: hidden;
+				background-color: black;
 				
 				.contents {
 					width	: $max / 2 !important;
-					overflow: hidden;
 					padding : 0;
-				}
-				
-				div , header {
-					opacity: 1;
 				}
 				
 				&> div {
@@ -71,7 +67,7 @@ html {
 					
 					&.player0 {
 						background		: url(../img/top/ohshiro.jpg) no-repeat !important;
-						background-size : $max*0.7 $max*1.2;
+						background-size : auto 120% !important;
 						animation		: my_anime1 10s infinite;
 						
 						& > div {
@@ -86,32 +82,26 @@ html {
 				}
 				
 				section {
-					color: $white;
-					height: $max / 10;
-					background: black;
-					opacity: 0.1;
-					padding: 2em;
-					flex-grow: 1;
-					transition: all 1s;
-				
-					&:hover {
-						flex-grow: 5;
-						opacity	 : 0.7;
-					}
+					color		: $white;
+					height		: $max / 10;
+					padding		: 2em;
+					flex-grow	: 1;
+					transition	: all 1s;
 					
 					header {
 						color		: #fff;
 						margin		: 2em;
-						display		: table;
 						font-style	: italic;
 						
 						h3 {
 							font-size	 : 2em;
 							padding-right: 1em;
+							display		 : inline-block;
 						}
 					
 						p {
 							font-size: 0.9em;
+							display	 : inline-block;
 						}
 					}
 					
@@ -166,6 +156,15 @@ html {
 							&:last-of-type {
 								border: none;
 							}
+						}
+					}
+					
+					&:hover {
+						flex-grow: 5;
+						opacity	 : 0.5;
+				
+						div , header {
+							color: rbga(255,255,255,1);
 						}
 					}
 				}
