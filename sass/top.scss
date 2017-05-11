@@ -8,16 +8,17 @@ html {
 	height: $max;
 	
 	body {
-		width : $max;
-		height: $max;
+		width	: $max;
+		height	: $max;
 		
 		&[class*=bg] {
 			background: none;
 		}
 			
 		main {
-			width : $max;
-			height: $max;
+			width	: $max;
+			height	: $max;
+			overflow: hidden;
 			
 			article {
 				display		: flex;
@@ -82,76 +83,75 @@ html {
 				}
 				
 				section {
-					color		: $white;
-					height		: $max / 10;
-					padding		: 2em;
-					flex-grow	: 1;
-					transition	: all 1s;
+					color				: $white;
+					height				: $max / 10;
+					padding				: 2em;
+					flex-grow			: 1;
+					transition			: all 1s;
+					position			: $r;
+					background-position	: center;
 					
 					header {
 						color		: #fff;
 						margin		: 2em;
 						font-style	: italic;
+						position	: $r;
+						z-index		: 2;
+						text-align	: left;
+						text-shadow	: -1px -1px 3px $black, 1px 1px 3px $black;
 						
 						h3 {
 							font-size	 : 2em;
 							padding-right: 1em;
-							display		 : inline-block;
+							display		 : inline;
 						}
 					
 						p {
 							font-size: 0.9em;
-							display	 : inline-block;
+							display	 : inline;
 						}
 					}
 					
 					div , dl {
-						margin: 0 auto;
-						width: $max * 0.8;
-						text-shadow: -1px -1px 3px $black, 1px 1px 3px $black;
-						
-						a button {
-							color: lighten($black,20%);
-							background-color: $white;
-							display: block;
-							margin: 1rem 0 0 $max/4;
-							padding: 1rem;
-							text-align: center;
-							opacity: 0.8;
-							overflow: hidden;
-							width: $max / 2;
-							cursor: pointer;
-							border: none;
+						transition	: all 1s;
+						margin		: 0 auto;
+						width		: $max * 0.9;
+						position	: $r;
+						z-index		: 2;
+						display		: none;
+					
+						ul {
+							display			: flex;
+							justify-content	: space-around;
+							flex-flow		: row wrap;
 							
-							&:hover {
-								opacity: 1;
-							}
-							
-							span {
-								margin-right: 1rem;
+							li {
+								flex: 0 0 250px;
 							}
 						}
 					}
 						
 					dl {
-						border: none;
-						padding: 0;
+						border		: none !important;
+						background	: none !important;
+						margin		: 2em auto !important;
+						padding		: 0 !important;
 						
 						dt {
-							color: $white;
+							color: $white !important;
 							float: left;
-							width: 8rem;
-							margin: 0;
-							padding: 0 1rem;
-							text-align: right;
+							width: 8em;
+							margin: 0 !important;
+							padding: 0 1em;
+							text-align: right !important;
 						}
 						
 						dd {
-							margin: 0 0 1rem 0;
-							padding: 0 0 1rem 0;
+							margin: 0 0 1em 0;
+							padding: 0 0 1em 8em;
 							border-bottom: $white 1px dotted;
-							text-align: left;
-							overflow: visible;
+							text-align: left !important;
+							overflow: visible !important;
 							
 							&:last-of-type {
 								border: none;
@@ -160,11 +160,43 @@ html {
 					}
 					
 					&:hover {
-						flex-grow: 5;
-						opacity	 : 0.5;
+						flex-grow	: 2;
+						overflow	: auto;
 				
-						div , header {
-							color: rbga(255,255,255,1);
+						div , dl , a {
+							display: block;
+						}
+					}
+					
+					#modal {
+						@include abT(0,0,0);
+					}
+						
+					a {
+						display: none;
+						
+						button {
+							color			: lighten($black,20%);
+							background-color: $white;
+							display			: block;
+							margin			: 2em auto 0 auto;
+							padding			: 1em;
+							text-align		: center;
+							opacity			: 0.7;
+							overflow		: hidden;
+							cursor			: pointer;
+							border			: none;
+							width			: $max / 2.5;
+							min-width		: 250px;
+							transition		: all 1s;
+						
+							&:hover {
+								opacity: 1;
+							}
+						
+							span {
+								margin-right: 1rem;
+							}
 						}
 					}
 				}

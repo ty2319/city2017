@@ -1,13 +1,11 @@
 $(function() {
 	
-	if ($(window).width() > 500) {
-		$('main,article').height($(window).height() - $('header#top').outerHeight() - $('#global').outerHeight() - $('footer').outerHeight());
-		$('main').css('margin-top' , $('#global').outerHeight());
-		$('article > div').show();
-	} else {
-		$('article > div').hide();
-		$('article').height($(this).children().height());
-	}
+	$('section').hover(function() {	
+		$(this).prepend('<div id="modal"></div>');
+		$('div#modal').height($(this).parent().height());
+	} , function() {
+		$('div#modal' , this).remove();
+	});
 	
 	var num = Math.floor(2*Math.random());
 	
@@ -35,3 +33,14 @@ $(function() {
 		$('article > div > div').addClass('move');
 	},10000);
 });
+
+$(window).on('load resize' , function() {	
+	
+	if ($(window).width() > 500) {
+		$('main,article').height($(window).height() - $('header#top').outerHeight() - $('#global').outerHeight() - $('footer').outerHeight() + 6);
+		$('main').css('margin-top' , $('#global').outerHeight() - 6);
+		$('article > div').show();
+	} else {
+		$('article > div').hide();
+		$('article').height($(this).children().height());
+	}});
