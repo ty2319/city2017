@@ -34,13 +34,25 @@ html body main article .contents {
   width: 50% !important;
   padding: 0;
 }
-/* line 37, ../sass/top.scss */
+@media all and (max-width: 500px) {
+  /* line 32, ../sass/top.scss */
+  html body main article .contents {
+    width: 100% !important;
+  }
+}
+/* line 41, ../sass/top.scss */
 html body main article > div {
   order: -1;
   height: 100%;
   flex-grow: 1;
 }
-/* line 42, ../sass/top.scss */
+@media all and (max-width: 500px) {
+  /* line 41, ../sass/top.scss */
+  html body main article > div {
+    display: none;
+  }
+}
+/* line 50, ../sass/top.scss */
 html body main article > div > div {
   width: 200%;
   height: 20%;
@@ -65,79 +77,93 @@ html body main article > div > div {
     transform: translate(-30%, 420%) rotate(45deg);
   }
 }
-/* line 69, ../sass/top.scss */
+/* line 77, ../sass/top.scss */
 html body main article > div.player0 {
   background: url(../img/top/ohshiro.jpg) no-repeat !important;
   background-size: auto 120% !important;
   animation: my_anime1 10s infinite;
 }
-/* line 74, ../sass/top.scss */
+/* line 82, ../sass/top.scss */
 html body main article > div.player0 > div {
   background: url(../img/top/takumi.jpg) no-repeat;
   background-size: 40% auto;
 }
-/* line 78, ../sass/top.scss */
+/* line 86, ../sass/top.scss */
 html body main article > div.player0 > div.move {
   animation: my_anime2 10s infinite;
 }
-/* line 85, ../sass/top.scss */
+/* line 93, ../sass/top.scss */
 html body main article section {
   color: #fff;
   height: 10%;
-  padding: 2em;
   flex-grow: 1;
-  transition: all 1s;
-  position: relative;
-  background-position: center;
+  background-position: center !important;
+  background-attachment: scroll !important;
+  transition: flex-grow 1s;
 }
-/* line 94, ../sass/top.scss */
+/* line 101, ../sass/top.scss */
 html body main article section header {
   color: #fff;
-  margin: 2em;
-  font-style: italic;
-  position: relative;
-  z-index: 2;
+  margin: 0;
+  padding: 2em;
   text-align: left;
   text-shadow: -1px -1px 3px #000, 1px 1px 3px #000;
 }
-/* line 103, ../sass/top.scss */
+@media all and (max-width: 500px) {
+  /* line 101, ../sass/top.scss */
+  html body main article section header {
+    padding: 5em 0 2em 0;
+    text-align: center;
+  }
+}
+/* line 113, ../sass/top.scss */
 html body main article section header h3 {
   font-size: 2em;
   padding-right: 1em;
   display: inline;
+  font-weight: normal;
 }
-/* line 109, ../sass/top.scss */
+@media all and (max-width: 500px) {
+  /* line 113, ../sass/top.scss */
+  html body main article section header h3 {
+    padding: 0;
+    font-size: 142.85714%;
+  }
+}
+/* line 125, ../sass/top.scss */
 html body main article section header p {
   font-size: 0.9em;
   display: inline;
 }
-/* line 115, ../sass/top.scss */
+@media all and (max-width: 500px) {
+  /* line 125, ../sass/top.scss */
+  html body main article section header p {
+    display: none;
+  }
+}
+/* line 135, ../sass/top.scss */
 html body main article section div, html body main article section dl {
-  transition: all 1s;
-  margin: 0 auto;
-  width: 90%;
-  position: relative;
-  z-index: 2;
+  width: 100%;
+  margin: 0 !important;
+  padding: 0 5% 2em 5% !important;
   display: none;
 }
-/* line 123, ../sass/top.scss */
+/* line 141, ../sass/top.scss */
 html body main article section div ul, html body main article section dl ul {
   display: flex;
   justify-content: space-around;
   flex-flow: row wrap;
 }
-/* line 128, ../sass/top.scss */
+/* line 146, ../sass/top.scss */
 html body main article section div ul li, html body main article section dl ul li {
   flex: 0 0 250px;
 }
-/* line 134, ../sass/top.scss */
+/* line 152, ../sass/top.scss */
 html body main article section dl {
   border: none !important;
   background: none !important;
-  margin: 2em auto !important;
-  padding: 0 !important;
 }
-/* line 140, ../sass/top.scss */
+/* line 156, ../sass/top.scss */
 html body main article section dl dt {
   color: #fff !important;
   float: left;
@@ -146,7 +172,7 @@ html body main article section dl dt {
   padding: 0 1em;
   text-align: right !important;
 }
-/* line 149, ../sass/top.scss */
+/* line 165, ../sass/top.scss */
 html body main article section dl dd {
   margin: 0 0 1em 0;
   padding: 0 0 1em 8em;
@@ -154,36 +180,41 @@ html body main article section dl dd {
   text-align: left !important;
   overflow: visible !important;
 }
-/* line 156, ../sass/top.scss */
+/* line 172, ../sass/top.scss */
 html body main article section dl dd:last-of-type {
   border: none;
 }
-/* line 162, ../sass/top.scss */
+/* line 178, ../sass/top.scss */
 html body main article section:hover {
-  flex-grow: 2;
+  flex-grow: 4;
   overflow: auto;
 }
-/* line 166, ../sass/top.scss */
-html body main article section:hover div, html body main article section:hover dl, html body main article section:hover a {
+/* line 182, ../sass/top.scss */
+html body main article section:hover header, html body main article section:hover div, html body main article section:hover dl, html body main article section:hover a {
   display: block;
 }
-/* line 171, ../sass/top.scss */
-html body main article section #modal {
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 0;
+/* line 186, ../sass/top.scss */
+html body main article section:hover header, html body main article section:hover div, html body main article section:hover dl, html body main article section:hover > a {
+  background: rgba(0, 0, 0, 0.8) !important;
 }
-/* line 175, ../sass/top.scss */
+/* line 191, ../sass/top.scss */
 html body main article section a {
   display: none;
+  margin: 0;
+  padding: 2em 0;
 }
-/* line 178, ../sass/top.scss */
+@media all and (max-width: 500px) {
+  /* line 191, ../sass/top.scss */
+  html body main article section a {
+    padding: 1em 0 0;
+  }
+}
+/* line 200, ../sass/top.scss */
 html body main article section a button {
   color: #333333;
   background-color: #fff;
   display: block;
-  margin: 2em auto 0 auto;
+  margin: 0 auto;
   padding: 1em;
   text-align: center;
   opacity: 0.7;
@@ -192,17 +223,16 @@ html body main article section a button {
   border: none;
   width: 40%;
   min-width: 250px;
-  transition: all 1s;
 }
-/* line 193, ../sass/top.scss */
+/* line 214, ../sass/top.scss */
 html body main article section a button:hover {
   opacity: 1;
 }
-/* line 197, ../sass/top.scss */
+/* line 218, ../sass/top.scss */
 html body main article section a button span {
   margin-right: 1rem;
 }
-/* line 207, ../sass/top.scss */
+/* line 228, ../sass/top.scss */
 html #exam {
   position: fixed;
   bottom: 0;
@@ -210,7 +240,7 @@ html #exam {
   z-index: 11;
   margin-bottom: 0.8rem;
 }
-/* line 212, ../sass/top.scss */
+/* line 233, ../sass/top.scss */
 html #hero {
   position: absolute;
   top: 75%;
