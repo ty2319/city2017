@@ -51,29 +51,29 @@ html {
 						background-position: left center;
 					  }
 					  100% {
-						background-position: 50% 100%;
+						background-position: $max/2 $max;
 					  }
 					}
 					
 					@keyframes my_anime2 {
 					  0% {
 						background-position: right bottom;
-						transform: translate(-50% , 420%) rotate(45deg);
+						transform: translate(-$max/2 , $max*4.2) rotate(45deg);
 					  }
 					  100% {
-						background-position: 32% 55%;
-						transform: translate(-30% , 420%) rotate(45deg);
+						background-position: $max*0.32 $max*0.55 !important;
+						transform: translate(-$max*0.3 , $max*4.2) rotate(45deg);
 					  }
 					}
 					
 					&.player0 {
 						background		: url(../img/top/ohshiro.jpg) no-repeat !important;
-						background-size : auto 120% !important;
+						background-size : auto $max*1.2 !important;
 						animation		: my_anime1 10s infinite;
 						
 						& > div {
-							background:url(../img/top/takumi.jpg) no-repeat;
-							background-size: 40% auto;
+							background		: url(../img/top/takumi.jpg) no-repeat;
+							background-size : $max * 0.4;
 							
 							&.move {
 								animation: my_anime2 10s infinite;
@@ -83,20 +83,25 @@ html {
 				}
 				
 				section {
-					color				: $white;
-					height				: $max / 10;
-					padding				: 2em;
-					flex-grow			: 1;
-					transition			: all 1s;
-					position			: $r;
-					background-position	: center;
+					color				 : $white;
+					height				 : $max / 10;
+					padding				 : 2em;
+					flex-grow			 : 1;
+					transition			 : flex-grow 1s;
+					background-position	 : center;
+					
+					&:nth-of-type(1) {
+						background-image: url(../img/top/back1.jpg) !important;
+					}
+					
+					&:nth-of-type(2) {
+						background-image: url(../img/top/back2.jpg) !important;
+					}
 					
 					header {
 						color		: #fff;
 						margin		: 2em;
 						font-style	: italic;
-						position	: $r;
-						z-index		: 2;
 						text-align	: left;
 						text-shadow	: -1px -1px 3px $black, 1px 1px 3px $black;
 						
@@ -116,9 +121,8 @@ html {
 						transition	: all 1s;
 						margin		: 0 auto;
 						width		: $max * 0.9;
-						position	: $r;
-						z-index		: 2;
 						display		: none;
+						text-shadow	: -1px -1px 3px $black, 1px 1px 3px $black;
 					
 						ul {
 							display			: flex;
@@ -160,16 +164,24 @@ html {
 					}
 					
 					&:hover {
-						flex-grow	: 2;
+						flex-grow	: 3;
 						overflow	: auto;
+					
+						&:nth-of-type(1) {
+							background-image : url(../img/common/dot.png) , url(../img/top/back1.jpg) !important;
+							background-repeat: repeat , no-repeat;
+							background-size	 : auto , cover;
+						}
+						
+						&:nth-of-type(2) {
+							background-image : url(../img/common/dot.png) , url(../img/top/back2.jpg) !important;
+							background-repeat: repeat , no-repeat;
+							background-size	 : auto , cover;
+						}
 				
 						div , dl , a {
 							display: block;
 						}
-					}
-					
-					#modal {
-						@include abT(0,0,0);
 					}
 						
 					a {
