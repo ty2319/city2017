@@ -30,8 +30,9 @@ $(function() {
 $(window).on('load resize' , function() {
 	
 	if ($(window).width() > 500) {
-		$('main,article').height($(window).height() - $('header#top').outerHeight() - $('footer').outerHeight());
+		$('article').height($(window).height() - $('header#top').outerHeight() - $('footer').outerHeight());
 		$('article').css('padding-top' , $('#global').outerHeight() - 6);
 	} else {
-		$('article').height($(this).children().height());
-	}});
+		$('article').css('padding-top' , $('article > div').height());
+	}
+});
