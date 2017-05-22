@@ -10,7 +10,7 @@ footer {
 
 	ul {
 		display			: flex;
-		flex-flow		: row wrap;
+		flex-flow		: row nowrap;
 		justify-content	: center;
 		align-items		: stretch;
 		align-content	: flex-start;
@@ -20,7 +20,7 @@ footer {
 		background-color: $black;
 		
 		li {
-			flex: 1 1 250px;
+			flex: 1 1 200px;
 			
 			a {
 				color: #FFF;
@@ -29,10 +29,6 @@ footer {
 			small {
 				display: block;
 				text-align: right;
-				
-				@include media($fh) {					
-					text-align: left;
-				}
 			}
 		}
 	}

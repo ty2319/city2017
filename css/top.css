@@ -39,6 +39,7 @@ html body main article {
 html body main article .contents {
   width: 50% !important;
   padding: 0;
+  border: none !important;
 }
 @media all and (max-width: 500px) {
   /* line 36, ../sass/top.scss */
@@ -47,39 +48,47 @@ html body main article .contents {
     padding-bottom: 2em;
   }
 }
-/* line 46, ../sass/top.scss */
+/* line 47, ../sass/top.scss */
 html body main article > div {
   order: -1;
   height: 100%;
   flex-grow: 1;
 }
 @media all and (max-width: 500px) {
-  /* line 46, ../sass/top.scss */
+  /* line 47, ../sass/top.scss */
   html body main article > div {
     position: absolute;
     top: 0;
     left: 0;
     z-index: 0;
-    height: 50%;
+    height: 300px;
     display: block;
   }
 }
-/* line 57, ../sass/top.scss */
+/* line 58, ../sass/top.scss */
 html body main article > div > div {
   width: 200%;
   height: 20%;
-  opacity: 0.8;
+  opacity: 0.85;
   background-color: #0164ac !important;
 }
-@keyframes my_anime1 {
+@keyframes right_left {
   0% {
-    background-position: left center;
+    background-position: 0 center;
   }
   100% {
     background-position: 50% 100%;
   }
 }
-@keyframes my_anime2 {
+@keyframes left_right {
+  0% {
+    background-position: 100% center;
+  }
+  100% {
+    background-position: 50% 100%;
+  }
+}
+@keyframes leftback {
   0% {
     background-position: 150%;
     transform: translate(-50%, 420%) rotate(45deg);
@@ -89,22 +98,107 @@ html body main article > div > div {
     transform: translate(-30%, 420%) rotate(45deg);
   }
 }
-/* line 84, ../sass/top.scss */
+@keyframes rightback {
+  0% {
+    background-position: -60%;
+    transform: translate(20%, 420%) rotate(-45deg);
+  }
+  100% {
+    background-position: 70% 60%;
+    transform: translate(-20%, 420%) rotate(-45deg);
+  }
+}
+/* line 105, ../sass/top.scss */
 html body main article > div.player0 {
   background: url(../img/top/ohshiro.jpg) no-repeat !important;
   background-size: auto 120% !important;
-  animation: my_anime1 10s infinite;
+  animation: right_left 10s infinite;
 }
-/* line 89, ../sass/top.scss */
+/* line 110, ../sass/top.scss */
 html body main article > div.player0 > div {
   background: url(../img/top/takumi.jpg) no-repeat;
   background-size: 40%;
 }
-/* line 93, ../sass/top.scss */
+/* line 114, ../sass/top.scss */
 html body main article > div.player0 > div.move {
-  animation: my_anime2 10s infinite;
+  animation: leftback 10s infinite;
 }
-/* line 100, ../sass/top.scss */
+/* line 120, ../sass/top.scss */
+html body main article > div.player1 {
+  background: url(../img/top/umetsu.jpg) no-repeat !important;
+  background-size: auto 120% !important;
+  animation: left_right 10s infinite;
+}
+/* line 125, ../sass/top.scss */
+html body main article > div.player1 > div {
+  background: url(../img/top/masataka.jpg) no-repeat;
+  background-size: 40%;
+}
+/* line 129, ../sass/top.scss */
+html body main article > div.player1 > div.move {
+  animation: rightback 10s infinite;
+}
+/* line 135, ../sass/top.scss */
+html body main article > div.player2 {
+  background: url(../img/top/akamine.jpg) no-repeat !important;
+  background-size: auto 120% !important;
+  animation: left_right 10s infinite;
+}
+/* line 140, ../sass/top.scss */
+html body main article > div.player2 > div {
+  background: url(../img/top/shin.jpg) no-repeat;
+  background-size: 40%;
+}
+/* line 144, ../sass/top.scss */
+html body main article > div.player2 > div.move {
+  animation: rightback 10s infinite;
+}
+/* line 150, ../sass/top.scss */
+html body main article > div.player3 {
+  background: url(../img/top/kariya.jpg) no-repeat !important;
+  background-size: auto 120% !important;
+  animation: left_right 10s infinite;
+}
+/* line 155, ../sass/top.scss */
+html body main article > div.player3 > div {
+  background: url(../img/top/yuuto.jpg) no-repeat;
+  background-size: 40%;
+}
+/* line 159, ../sass/top.scss */
+html body main article > div.player3 > div.move {
+  animation: rightback 10s infinite;
+}
+/* line 165, ../sass/top.scss */
+html body main article > div.player4 {
+  background: url(../img/top/takamoto.jpg) no-repeat !important;
+  background-size: auto 120% !important;
+  animation: left_right 10s infinite;
+}
+/* line 170, ../sass/top.scss */
+html body main article > div.player4 > div {
+  background: url(../img/top/yasuhiro.jpg) no-repeat;
+  background-size: 40%;
+}
+/* line 174, ../sass/top.scss */
+html body main article > div.player4 > div.move {
+  animation: rightback 10s infinite;
+}
+/* line 180, ../sass/top.scss */
+html body main article > div.player5 {
+  background: url(../img/top/kageyama.jpg) no-repeat !important;
+  background-size: auto 120% !important;
+  animation: right_left 10s infinite;
+}
+/* line 185, ../sass/top.scss */
+html body main article > div.player5 > div {
+  background: url(../img/top/takuya.jpg) no-repeat;
+  background-size: 40%;
+}
+/* line 189, ../sass/top.scss */
+html body main article > div.player5 > div.move {
+  animation: leftback 10s infinite;
+}
+/* line 196, ../sass/top.scss */
 html body main article section {
   color: #fff;
   height: 10%;
@@ -113,20 +207,20 @@ html body main article section {
   transition: flex-grow 1s;
 }
 @media all and (max-width: 500px) {
-  /* line 100, ../sass/top.scss */
+  /* line 196, ../sass/top.scss */
   html body main article section {
     height: auto;
   }
 }
-/* line 111, ../sass/top.scss */
+/* line 207, ../sass/top.scss */
 html body main article section:nth-of-type(1) {
   background-image: url(../img/top/back1.jpg) !important;
 }
-/* line 115, ../sass/top.scss */
+/* line 211, ../sass/top.scss */
 html body main article section:nth-of-type(2) {
   background-image: url(../img/top/back2.jpg) !important;
 }
-/* line 119, ../sass/top.scss */
+/* line 215, ../sass/top.scss */
 html body main article section header {
   color: #fff;
   margin: 2em;
@@ -134,19 +228,19 @@ html body main article section header {
   text-align: left;
   text-shadow: -1px -1px 3px #000, 1px 1px 3px #000;
 }
-/* line 126, ../sass/top.scss */
+/* line 222, ../sass/top.scss */
 html body main article section header h3 {
   font-size: 2em;
   padding-right: 1em;
   display: inline;
   font-weight: normal;
 }
-/* line 133, ../sass/top.scss */
+/* line 229, ../sass/top.scss */
 html body main article section header p {
   font-size: 0.9em;
   display: inline;
 }
-/* line 139, ../sass/top.scss */
+/* line 235, ../sass/top.scss */
 html body main article section div, html body main article section dl {
   transition: all 1s;
   margin: 0 auto;
@@ -155,87 +249,87 @@ html body main article section div, html body main article section dl {
   text-shadow: -1px -1px 3px #000, 1px 1px 3px #000;
 }
 @media all and (max-width: 500px) {
-  /* line 139, ../sass/top.scss */
+  /* line 235, ../sass/top.scss */
   html body main article section div, html body main article section dl {
     display: block;
   }
 }
-/* line 150, ../sass/top.scss */
+/* line 246, ../sass/top.scss */
 html body main article section div ul, html body main article section dl ul {
   display: flex;
   justify-content: space-around;
   flex-flow: row wrap;
 }
-/* line 155, ../sass/top.scss */
+/* line 251, ../sass/top.scss */
 html body main article section div ul li, html body main article section dl ul li {
   flex: 0 0 250px;
 }
-/* line 161, ../sass/top.scss */
+/* line 257, ../sass/top.scss */
 html body main article section dl {
   border: none !important;
   background: none !important;
   margin: 2em auto !important;
   padding: 0 !important;
 }
-/* line 167, ../sass/top.scss */
+/* line 263, ../sass/top.scss */
 html body main article section dl dt {
   color: #fff !important;
   float: left;
-  width: 8em;
+  width: 9em;
   margin: 0 !important;
   padding: 0 1em;
   text-align: right !important;
 }
-/* line 176, ../sass/top.scss */
+/* line 272, ../sass/top.scss */
 html body main article section dl dd {
   margin: 0 0 1em 0;
-  padding: 0 0 1em 8em;
+  padding: 0 0 1em 9em;
   border-bottom: #fff 1px solid;
   text-align: left !important;
   overflow: visible !important;
 }
-/* line 183, ../sass/top.scss */
+/* line 279, ../sass/top.scss */
 html body main article section dl dd:last-of-type {
   border: none;
 }
-/* line 189, ../sass/top.scss */
+/* line 285, ../sass/top.scss */
 html body main article section:hover {
   flex-grow: 5;
   overflow: auto;
 }
 @media all and (max-width: 500px) {
-  /* line 189, ../sass/top.scss */
+  /* line 285, ../sass/top.scss */
   html body main article section:hover {
     flex-grow: 1;
   }
 }
-/* line 197, ../sass/top.scss */
+/* line 293, ../sass/top.scss */
 html body main article section:hover:nth-of-type(1) {
   background-image: url(../img/common/dot.png), url(../img/top/back1.jpg) !important;
   background-repeat: repeat , no-repeat;
   background-size: auto , cover;
 }
-/* line 203, ../sass/top.scss */
+/* line 299, ../sass/top.scss */
 html body main article section:hover:nth-of-type(2) {
   background-image: url(../img/common/dot.png), url(../img/top/back2.jpg) !important;
   background-repeat: repeat , no-repeat;
   background-size: auto , cover;
 }
-/* line 209, ../sass/top.scss */
+/* line 305, ../sass/top.scss */
 html body main article section:hover div, html body main article section:hover dl, html body main article section:hover a {
   display: block;
 }
-/* line 214, ../sass/top.scss */
+/* line 310, ../sass/top.scss */
 html body main article section a {
   display: none;
 }
 @media all and (max-width: 500px) {
-  /* line 214, ../sass/top.scss */
+  /* line 310, ../sass/top.scss */
   html body main article section a {
     display: block;
   }
 }
-/* line 221, ../sass/top.scss */
+/* line 317, ../sass/top.scss */
 html body main article section a button {
   color: #333333;
   background-color: #fff;
@@ -251,15 +345,15 @@ html body main article section a button {
   min-width: 250px;
   transition: all 1s;
 }
-/* line 236, ../sass/top.scss */
+/* line 332, ../sass/top.scss */
 html body main article section a button:hover {
   opacity: 1;
 }
-/* line 240, ../sass/top.scss */
+/* line 336, ../sass/top.scss */
 html body main article section a button span {
   margin-right: 1rem;
 }
-/* line 250, ../sass/top.scss */
+/* line 346, ../sass/top.scss */
 html #exam {
   position: fixed;
   bottom: 0;
@@ -267,7 +361,7 @@ html #exam {
   z-index: 11;
   margin-bottom: 0.8rem;
 }
-/* line 255, ../sass/top.scss */
+/* line 351, ../sass/top.scss */
 html #hero {
   position: absolute;
   top: 75%;

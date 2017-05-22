@@ -1,6 +1,6 @@
 $(function() {
 	
-	var num = Math.floor(2*Math.random());
+	var num = Math.floor(6*Math.random());
 	
 	$('article > div > div').addClass('move');
 	$('article > div').addClass('player'+ num);
@@ -12,13 +12,13 @@ $(function() {
 		
 		pre = num;
 	
-		num = Math.floor(2*Math.random());
+		num = Math.floor(6*Math.random());
 		
 		if (pre == num) {
 			num = num + 1;
 			
-			if (num == 1) {
-				num = 0;
+			if (num == 5) {
+				num = 1;
 			}
 		}
 		
@@ -30,9 +30,10 @@ $(function() {
 $(window).on('load resize' , function() {
 	
 	if ($(window).width() > 500) {
-		$('article').height($(window).height() - $('header#top').outerHeight() - $('footer').outerHeight());
-		$('article').css('padding-top' , $('#global').outerHeight() - 6);
+		$('main,article').outerHeight($(window).height() - $('header#top').outerHeight() - $('footer').outerHeight());
+		$('article').css('padding-top' , $('#global').outerHeight());
 	} else {
 		$('article').css('padding-top' , $('article > div').height());
+		$('body').css('height' , 'auto');
 	}
 });

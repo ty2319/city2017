@@ -36,6 +36,7 @@ html {
 				.contents {
 					width	: $max / 2 !important;
 					padding : 0;
+					border	: none !important;
 					
 					@include media($fh) {
 						width			: $max !important;
@@ -50,27 +51,36 @@ html {
 					
 					@include media($fh) {
 						@include abT(0,0,0);
-						height: $max / 2;
+						height : 300px;
 						display: block;
 					}
 					
 					&> div {
 						width			: $max * 2;
 						height			: $max / 5;
-						opacity			: 0.8;
+						opacity			: 0.85;
 						background-color: #0164ac !important;
 					}
 					
-					@keyframes my_anime1 {
+					@keyframes right_left {
 					  0% {
-						background-position: left center;
+						background-position: 0 center;
 					  }
 					  100% {
 						background-position: $max/2 $max;
 					  }
 					}
 					
-					@keyframes my_anime2 {
+					@keyframes left_right {
+					  0% {
+						background-position: $max center;
+					  }
+					  100% {
+						background-position: $max/2 $max;
+					  }
+					}
+					
+					@keyframes leftback {
 					  0% {
 						background-position : $max*1.5;
 						transform			: translate(-$max/2 , $max*4.2) rotate(45deg);
@@ -81,17 +91,103 @@ html {
 					  }
 					}
 					
+					@keyframes rightback {
+					  0% {
+						background-position : -$max*0.1 -$max*0.5;
+						transform			: translate($max*0.2 , $max*4.2) rotate(-45deg);
+					  }
+					  100% {
+						background-position : $max*0.7 $max*0.6;
+						transform			: translate(-$max*0.2 , $max*4.2) rotate(-45deg);
+					  }
+					}
+					
 					&.player0 {
 						background		: url(../img/top/ohshiro.jpg) no-repeat !important;
 						background-size : auto $max*1.2 !important;
-						animation		: my_anime1 10s infinite;
+						animation		: right_left 10s infinite;
 						
 						& > div {
 							background		: url(../img/top/takumi.jpg) no-repeat;
 							background-size : $max * 0.4;
 							
 							&.move {
-								animation: my_anime2 10s infinite;
+								animation: leftback 10s infinite;
+							}
+						}
+					}
+					
+					&.player1 {
+						background		: url(../img/top/umetsu.jpg) no-repeat !important;
+						background-size : auto $max*1.2 !important;
+						animation		: left_right 10s infinite;
+						
+						& > div {
+							background		: url(../img/top/masataka.jpg) no-repeat;
+							background-size : $max * 0.4;
+							
+							&.move {
+								animation: rightback 10s infinite;
+							}
+						}
+					}
+					
+					&.player2 {
+						background		: url(../img/top/akamine.jpg) no-repeat !important;
+						background-size : auto $max*1.2 !important;
+						animation		: left_right 10s infinite;
+						
+						& > div {
+							background		: url(../img/top/shin.jpg) no-repeat;
+							background-size : $max * 0.4;
+							
+							&.move {
+								animation: rightback 10s infinite;
+							}
+						}
+					}
+					
+					&.player3 {
+						background		: url(../img/top/kariya.jpg) no-repeat !important;
+						background-size : auto $max*1.2 !important;
+						animation		: left_right 10s infinite;
+						
+						& > div {
+							background		: url(../img/top/yuuto.jpg) no-repeat;
+							background-size : $max * 0.4;
+							
+							&.move {
+								animation: rightback 10s infinite;
+							}
+						}
+					}
+					
+					&.player4 {
+						background		: url(../img/top/takamoto.jpg) no-repeat !important;
+						background-size : auto $max*1.2 !important;
+						animation		: left_right 10s infinite;
+						
+						& > div {
+							background		: url(../img/top/yasuhiro.jpg) no-repeat;
+							background-size : $max * 0.4;
+							
+							&.move {
+								animation: rightback 10s infinite;
+							}
+						}
+					}
+					
+					&.player5 {
+						background		: url(../img/top/kageyama.jpg) no-repeat !important;
+						background-size : auto $max*1.2 !important;
+						animation		: right_left 10s infinite;
+						
+						& > div {
+							background		: url(../img/top/takuya.jpg) no-repeat;
+							background-size : $max * 0.4;
+							
+							&.move {
+								animation: leftback 10s infinite;
 							}
 						}
 					}
@@ -167,7 +263,7 @@ html {
 						dt {
 							color: $white !important;
 							float: left;
-							width: 8em;
+							width: 9em;
 							margin: 0 !important;
 							padding: 0 1em;
 							text-align: right !important;
@@ -175,7 +271,7 @@ html {
 						
 						dd {
 							margin: 0 0 1em 0;
-							padding: 0 0 1em 8em;
+							padding: 0 0 1em 9em;
 							border-bottom: $white 1px solid;
 							text-align: left !important;
 							overflow: visible !important;
