@@ -80,10 +80,19 @@ html {
 					  }
 					}
 					
+					@keyframes top_bottom {
+					  0% {
+						background-position: $max/2 -$max/2;
+					  }
+					  100% {
+						background-position: $max/2 0;
+					  }
+					}
+					
 					@keyframes leftback {
 					  0% {
 						background-position : $max*1.5;
-						transform			: translate(-$max/2 , $max*4.2) rotate(45deg);
+						transform			: translate(-$max*0.7 , $max*4.2) rotate(45deg);
 					  }
 					  100% {
 						background-position : $max*0.32 $max*0.5;
@@ -184,6 +193,21 @@ html {
 						
 						& > div {
 							background		: url(../img/top/takuya.jpg) no-repeat;
+							background-size : $max * 0.4;
+							
+							&.move {
+								animation: leftback 10s infinite;
+							}
+						}
+					}
+					
+					&.player6 {
+						background		: url(../img/top/nakamura.jpg) no-repeat !important;
+						background-size : auto $max*1.2 !important;
+						animation		: top_bottom 10s infinite;
+						
+						& > div {
+							background		: url(../img/top/atsuto.jpg) no-repeat;
 							background-size : $max * 0.4;
 							
 							&.move {
