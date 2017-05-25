@@ -215,6 +215,36 @@ html {
 							}
 						}
 					}
+					
+					&.player7 {
+						background		: url(../img/top/nakanishi.jpg) no-repeat !important;
+						background-size : auto $max*1.2 !important;
+						animation		: top_bottom 10s infinite;
+						
+						& > div {
+							background		: url(../img/top/junpei.jpg) no-repeat;
+							background-size : $max * 0.4;
+							
+							&.move {
+								animation: leftback 10s infinite;
+							}
+						}
+					}
+					
+					&.player8 {
+						background		: url(../img/top/yoshimoto.jpg) no-repeat !important;
+						background-size : auto $max*1.2 !important;
+						animation		: left_right 10s infinite;
+						
+						& > div {
+							background		: url(../img/top/kazuhiko.jpg) no-repeat;
+							background-size : $max * 0.4;
+							
+							&.move {
+								animation: rightback 10s infinite;
+							}
+						}
+					}
 				}
 				
 				section {
