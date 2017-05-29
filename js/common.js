@@ -71,9 +71,16 @@
 			if ($(this).scrollTop() > 300) {
 				if (flag == false) {
 					flag = true;
-					pagetop.stop().animate({
-						'bottom': '50px'
-					}, 200);
+					
+					if ($(window).width() > 500) {
+						pagetop.stop().animate({
+							'bottom': '50px'
+						}, 200);
+					} else {
+						pagetop.stop().animate({
+							'bottom': '10px'
+						}, 200);
+					}
 				}
 			} else {
 				if (flag) {

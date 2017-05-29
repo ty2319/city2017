@@ -4,10 +4,12 @@
 @import "settings";
 
 html {
+	width : $max;
 	height: $max;
 	
 	body {
-		height: $max;
+		width	: $max;
+		height	: $max;
 		
 		&[class*=bg] {
 			background: none;
@@ -25,139 +27,368 @@ html {
 				height		: $max;
 				overflow	: hidden;
 				
-				section:hover {
-					flex-grow: 5;
-					opacity	 : 0.7;
+				@include media($fh) {
+					display	: block;
+					overflow: visible;
+					position: $r;
 				}
 				
-				div , header {
-					opacity: 1;
-				}
-				
-				& > div {
-					order	: -1;
-					height	: $max;
-					overflow: hidden;
+				.contents {
+					width	: $max / 2 !important;
 					padding : 0;
+					border	: none !important;
 					
-					@keyframes my_anime1 {
-					  0% {
-						background-position: left center;
-					  }
-					  100% {
-						background-position: 50% 100%;
-					  }
+					@include media($fh) {
+						width			: $max !important;
+						padding-bottom	: 2em;
+					}
+				}
+				
+				&> div {
+					order		: -1;
+					height		: $max;
+					flex-grow	: 1;
+					
+					@include media($fh) {
+						@include abT(0,0,0);
+						height : 300px;
+						display: block;
 					}
 					
-					@keyframes my_anime2 {
-					  0% {
-						background-position: right bottom;
-						transform: translate(-50% , 420%) rotate(45deg);
-					  }
-					  100% {
-						background-position: 32% 55%;
-						transform: translate(-30% , 420%) rotate(45deg);
-					  }
-					}
-					
-					& > div {
+					&> div {
 						width			: $max * 2;
 						height			: $max / 5;
-						opacity			: 0.8;
+						opacity			: 0.85;
 						background-color: #0164ac !important;
 					}
 					
+					@keyframes right_left {
+					  0% {
+						background-position: 0 center;
+					  }
+					  100% {
+						background-position: $max/2 $max;
+					  }
+					}
+					
+					@keyframes left_right {
+					  0% {
+						background-position: $max center;
+					  }
+					  100% {
+						background-position: $max/2 $max;
+					  }
+					}
+					
+					@keyframes top_bottom {
+					  0% {
+						background-position: $max/2 -$max/2;
+					  }
+					  100% {
+						background-position: $max/2 0;
+					  }
+					}
+					
+					@keyframes leftback {
+					  0% {
+						background-position : $max*1.5;
+						transform			: translate(-$max*0.7 , $max*4.2) rotate(45deg);
+					  }
+					  100% {
+						background-position : $max*0.32 $max*0.5;
+						transform			: translate(-$max*0.3 , $max*4.2) rotate(45deg);
+					  }
+					}
+					
+					@keyframes rightback {
+					  0% {
+						background-position : -$max*0.1 -$max*0.5;
+						transform			: translate($max*0.2 , $max*4.2) rotate(-45deg);
+					  }
+					  100% {
+						background-position : $max*0.7 $max*0.6;
+						transform			: translate(-$max*0.2 , $max*4.2) rotate(-45deg);
+					  }
+					}
+					
 					&.player0 {
-						background		: url(../img/top/ohshiro.jpg) no-repeat;
-						background-size : auto 120%;
-						animation		: my_anime1 10s infinite;
+						background		: url(../img/top/ohshiro.jpg) no-repeat !important;
+						background-size : auto $max*1.2 !important;
+						animation		: right_left 10s infinite;
 						
 						& > div {
-							background:url(../img/top/takumi.jpg) no-repeat;
-							background-size: 40% auto;
+							background		: url(../img/top/takumi.jpg) no-repeat;
+							background-size : $max * 0.4;
 							
 							&.move {
-								animation: my_anime2 10s infinite;
+								animation: leftback 10s infinite;
+							}
+						}
+					}
+					
+					&.player1 {
+						background		: url(../img/top/umetsu.jpg) no-repeat !important;
+						background-size : auto $max*1.2 !important;
+						animation		: left_right 10s infinite;
+						
+						& > div {
+							background		: url(../img/top/masataka.jpg) no-repeat;
+							background-size : $max * 0.4;
+							
+							&.move {
+								animation: rightback 10s infinite;
+							}
+						}
+					}
+					
+					&.player2 {
+						background		: url(../img/top/akamine.jpg) no-repeat !important;
+						background-size : auto $max*1.2 !important;
+						animation		: left_right 10s infinite;
+						
+						& > div {
+							background		: url(../img/top/shin.jpg) no-repeat;
+							background-size : $max * 0.4;
+							
+							&.move {
+								animation: rightback 10s infinite;
+							}
+						}
+					}
+					
+					&.player3 {
+						background		: url(../img/top/kariya.jpg) no-repeat !important;
+						background-size : auto $max*1.2 !important;
+						animation		: left_right 10s infinite;
+						
+						& > div {
+							background		: url(../img/top/yuuto.jpg) no-repeat;
+							background-size : $max * 0.4;
+							
+							&.move {
+								animation: rightback 10s infinite;
+							}
+						}
+					}
+					
+					&.player4 {
+						background		: url(../img/top/takamoto.jpg) no-repeat !important;
+						background-size : auto $max*1.2 !important;
+						animation		: left_right 10s infinite;
+						
+						& > div {
+							background		: url(../img/top/yasuhiro.jpg) no-repeat;
+							background-size : $max * 0.4;
+							
+							&.move {
+								animation: rightback 10s infinite;
+							}
+						}
+					}
+					
+					&.player5 {
+						background		: url(../img/top/kageyama.jpg) no-repeat !important;
+						background-size : auto $max*1.2 !important;
+						animation		: right_left 10s infinite;
+						
+						& > div {
+							background		: url(../img/top/takuya.jpg) no-repeat;
+							background-size : $max * 0.4;
+							
+							&.move {
+								animation: leftback 10s infinite;
+							}
+						}
+					}
+					
+					&.player6 {
+						background		: url(../img/top/nakamura.jpg) no-repeat !important;
+						background-size : auto $max*1.2 !important;
+						animation		: top_bottom 10s infinite;
+						
+						& > div {
+							background		: url(../img/top/atsuto.jpg) no-repeat;
+							background-size : $max * 0.4;
+							
+							&.move {
+								animation: leftback 10s infinite;
+							}
+						}
+					}
+					
+					&.player7 {
+						background		: url(../img/top/nakanishi.jpg) no-repeat !important;
+						background-size : auto $max*1.2 !important;
+						animation		: top_bottom 10s infinite;
+						
+						& > div {
+							background		: url(../img/top/junpei.jpg) no-repeat;
+							background-size : $max * 0.4;
+							
+							&.move {
+								animation: leftback 10s infinite;
+							}
+						}
+					}
+					
+					&.player8 {
+						background		: url(../img/top/yoshimoto.jpg) no-repeat !important;
+						background-size : auto $max*1.2 !important;
+						animation		: left_right 10s infinite;
+						
+						& > div {
+							background		: url(../img/top/kazuhiko.jpg) no-repeat;
+							background-size : $max * 0.4;
+							
+							&.move {
+								animation: rightback 10s infinite;
 							}
 						}
 					}
 				}
 				
-				.contents {
-					color: $white;
-					width: $max / 2 !important;
-					background: black;
-					opacity: 0.1;
-					padding: 2em;
-					flex-grow: 1;
-					transition: all 0.7s;
+				section {
+					color				 : $white;
+					height				 : $max / 10;
+					padding				 : 2em;
+					flex-grow			 : 1;
+					transition			 : flex-grow 1s;
+					
+					@include media($fh) {
+						height: auto;
+					}
+					
+					&:nth-of-type(1) {
+						background-image: url(../img/top/back1.jpg) !important;
+					}
+					
+					&:nth-of-type(2) {
+						background-image: url(../img/top/back2.jpg) !important;
+					}
 					
 					header {
 						color		: #fff;
 						margin		: 2em;
-						display		: table;
 						font-style	: italic;
+						text-align	: left;
+						text-shadow	: -1px -1px 3px $black, 1px 1px 3px $black;
 						
 						h3 {
 							font-size	 : 2em;
 							padding-right: 1em;
+							display		 : inline;
+							font-weight	 : normal;
 						}
 					
 						p {
 							font-size: 0.9em;
+							display	 : inline;
 						}
 					}
 					
 					div , dl {
-						margin: 0 auto;
-						width: $max * 0.8;
-						text-shadow: -1px -1px 3px $black, 1px 1px 3px $black;
+						transition	: all 1s;
+						margin		: 0 auto;
+						width		: $max * 0.9;
+						display		: none;
+						text-shadow	: -1px -1px 3px $black, 1px 1px 3px $black;
 						
-						a button {
-							color: lighten($black,20%);
-							background-color: $white;
+						@include media($fh) {
 							display: block;
-							margin: 1rem 0 0 $max/4;
-							padding: 1rem;
-							text-align: center;
-							opacity: 0.8;
-							overflow: hidden;
-							width: $max / 2;
-							cursor: pointer;
-							border: none;
+						}
+					
+						ul {
+							display			: flex;
+							justify-content	: space-around;
+							flex-flow		: row wrap;
 							
-							&:hover {
-								opacity: 1;
-							}
-							
-							span {
-								margin-right: 1rem;
+							li {
+								flex: 0 0 250px;
 							}
 						}
 					}
 						
 					dl {
-						border: none;
-						padding: 0;
+						border		: none !important;
+						background	: none !important;
+						margin		: 2em auto !important;
+						padding		: 0 !important;
 						
 						dt {
-							color: $white;
+							color: $white !important;
 							float: left;
-							width: 8rem;
-							margin: 0;
-							padding: 0 1rem;
-							text-align: right;
+							width: 9em;
+							margin: 0 !important;
+							padding: 0 1em;
+							text-align: right !important;
 						}
 						
 						dd {
-							margin: 0 0 1rem 0;
-							padding: 0 0 1rem 0;
-							border-bottom: $white 1px dotted;
-							text-align: left;
-							overflow: visible;
+							margin: 0 0 1em 0;
+							padding: 0 0 1em 9em;
+							border-bottom: $white 1px solid;
+							text-align: left !important;
+							overflow: visible !important;
 							
 							&:last-of-type {
 								border: none;
+							}
+						}
+					}
+					
+					&:hover {
+						flex-grow: 5;
+						overflow : auto;
+						
+						@include media($fh) {
+							flex-grow: 1;
+						}
+					
+						&:nth-of-type(1) {
+							background-image : url(../img/common/dot.png) , url(../img/top/back1.jpg) !important;
+							background-repeat: repeat , no-repeat;
+							background-size	 : auto , cover;
+						}
+						
+						&:nth-of-type(2) {
+							background-image : url(../img/common/dot.png) , url(../img/top/back2.jpg) !important;
+							background-repeat: repeat , no-repeat;
+							background-size	 : auto , cover;
+						}
+				
+						div , dl , a {
+							display: block;
+						}
+					}
+						
+					a {
+						display: none;
+						
+						@include media($fh) {
+							display: block;
+						}
+						
+						button {
+							color			: lighten($black,20%);
+							background-color: $white;
+							display			: block;
+							margin			: 2em auto 0 auto;
+							padding			: 1em;
+							text-align		: center;
+							opacity			: 0.7;
+							overflow		: hidden;
+							cursor			: pointer;
+							border			: none;
+							width			: $max / 2.5;
+							min-width		: 250px;
+							transition		: all 1s;
+						
+							&:hover {
+								opacity: 1;
+							}
+						
+							span {
+								margin-right: 1rem;
 							}
 						}
 					}
