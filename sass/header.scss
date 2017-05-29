@@ -55,6 +55,20 @@ header#top {
 	&.fix {
 		@include fixT(0,0,5);
 	}
+	
+	.new {
+		@include abR(0,0,2);
+		width			: 1.5em !important;
+		height			: 1.5em !important;
+		font-size		: 0.75em;
+		font-weight		: normal;
+		text-align		: center;
+		line-height		: 0.8em;
+		color			: $white;
+		background-color: #F00 !important;
+		border-radius	: 1.5em !important;
+		padding-top		: 0.4em !important;
+	}
 
 	h2 {
 		margin-left		: $max * 0.1;
@@ -113,11 +127,11 @@ header#top {
 			}
 			
 			span {
-				height: 2px;
+				height			: 2px;
 				background-color: #fff;
-				border-radius: 2px;
-				margin: 0.7em;
-				width: 2.5em;
+				border-radius	: 2px;
+				margin			: 0.7em;
+				width			: 2.5em;
 			}
 			
 			&.on {
@@ -194,6 +208,7 @@ header#top {
 					background: none;
 					margin: 0.5em 0 0 1.5em;
 					color: lighten($black , 45%);
+					position: $r;
 					
 					a {
 						color: $white;
