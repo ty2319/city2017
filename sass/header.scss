@@ -239,11 +239,15 @@ header#top {
 	}
 	
 	#live {
-		@include abR(0,10%,2);
+		@include abR(-0.2em,0,2);
 		display: block;
-		width	  : $max * 0.2;
-		min-width : 200px;
-		max-width : 348px;
+		width	  : $max * 0.15;
+		min-width : 180px;
+		max-width : 260px;
 		height	  : auto;
+		
+		@include media($fh) {
+			@include abR(-0.2em,5.4em,2);
+		}
 	}
 }

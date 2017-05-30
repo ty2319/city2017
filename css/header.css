@@ -284,12 +284,21 @@ header#top #topnavi li {
 /* line 241, ../sass/header.scss */
 #global #live {
   position: absolute;
-  top: 0;
-  right: 10%;
+  top: -0.2em;
+  right: 0;
   z-index: 2;
   display: block;
-  width: 20%;
-  min-width: 200px;
-  max-width: 348px;
+  width: 15%;
+  min-width: 180px;
+  max-width: 260px;
   height: auto;
+}
+@media all and (max-width: 500px) {
+  /* line 241, ../sass/header.scss */
+  #global #live {
+    position: absolute;
+    top: -0.2em;
+    right: 5.4em;
+    z-index: 2;
+  }
 }

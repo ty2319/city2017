@@ -60,6 +60,11 @@ html {
 						height			: $max / 5;
 						opacity			: 0.85;
 						background-color: #0164ac !important;
+						background-size : $max * 0.3 !important;
+							
+						@include media($of) {
+							background-size : $max * 0.4 !important;
+						}
 					}
 					
 					@keyframes right_left {
@@ -95,8 +100,12 @@ html {
 						transform			: translate(-$max*0.7 , $max*4.2) rotate(45deg);
 					  }
 					  100% {
-						background-position : $max*0.32 $max*0.5;
+						background-position : $max*0.4 $max*0.5;
 						transform			: translate(-$max*0.3 , $max*4.2) rotate(45deg);
+						
+						@include media($of) {
+							background-position : $max*0.32 $max*0.5;
+						}
 					  }
 					}
 					
@@ -106,8 +115,12 @@ html {
 						transform			: translate($max*0.2 , $max*4.2) rotate(-45deg);
 					  }
 					  100% {
-						background-position : $max*0.7 $max*0.6;
+						background-position : $max*0.64 $max*0.61;
 						transform			: translate(-$max*0.2 , $max*4.2) rotate(-45deg);
+						
+						@include media($of) {
+							background-position : $max*0.7 $max*0.6;
+						}
 					  }
 					}
 					
@@ -118,7 +131,6 @@ html {
 						
 						& > div {
 							background		: url(../img/top/takumi.jpg) no-repeat;
-							background-size : $max * 0.4;
 							
 							&.move {
 								animation: leftback 10s infinite;
@@ -133,7 +145,6 @@ html {
 						
 						& > div {
 							background		: url(../img/top/masataka.jpg) no-repeat;
-							background-size : $max * 0.4;
 							
 							&.move {
 								animation: rightback 10s infinite;
@@ -148,7 +159,6 @@ html {
 						
 						& > div {
 							background		: url(../img/top/shin.jpg) no-repeat;
-							background-size : $max * 0.4;
 							
 							&.move {
 								animation: rightback 10s infinite;
@@ -163,7 +173,6 @@ html {
 						
 						& > div {
 							background		: url(../img/top/yuuto.jpg) no-repeat;
-							background-size : $max * 0.4;
 							
 							&.move {
 								animation: rightback 10s infinite;
@@ -178,7 +187,6 @@ html {
 						
 						& > div {
 							background		: url(../img/top/yasuhiro.jpg) no-repeat;
-							background-size : $max * 0.4;
 							
 							&.move {
 								animation: rightback 10s infinite;
@@ -193,7 +201,6 @@ html {
 						
 						& > div {
 							background		: url(../img/top/takuya.jpg) no-repeat;
-							background-size : $max * 0.4;
 							
 							&.move {
 								animation: leftback 10s infinite;
@@ -208,7 +215,6 @@ html {
 						
 						& > div {
 							background		: url(../img/top/atsuto.jpg) no-repeat;
-							background-size : $max * 0.4;
 							
 							&.move {
 								animation: leftback 10s infinite;
@@ -223,7 +229,6 @@ html {
 						
 						& > div {
 							background		: url(../img/top/junpei.jpg) no-repeat;
-							background-size : $max * 0.4;
 							
 							&.move {
 								animation: leftback 10s infinite;
@@ -238,7 +243,6 @@ html {
 						
 						& > div {
 							background		: url(../img/top/kazuhiko.jpg) no-repeat;
-							background-size : $max * 0.4;
 							
 							&.move {
 								animation: rightback 10s infinite;
