@@ -237,4 +237,13 @@ header#top {
 			}
 		}
 	}
+	
+	#live {
+		@include abR(0,10%,2);
+		display: block;
+		width	  : $max * 0.2;
+		min-width : 200px;
+		max-width : 348px;
+		height	  : auto;
+	}
 }

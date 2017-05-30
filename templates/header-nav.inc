@@ -45,4 +45,5 @@
 			</dl>
 		</dd>
 	</dl>
+	<img src="img/common/live.gif" id="live">
 </nav>
