@@ -273,9 +273,9 @@ html {
 					header {
 						color		: #fff;
 						margin		: 2em;
-						font-style	: italic;
 						text-align	: left;
 						text-shadow	: -1px -1px 3px $black, 1px 1px 3px $black;
+						transform	: skewX(-10deg);
 						
 						h3 {
 							font-size	 : 2em;

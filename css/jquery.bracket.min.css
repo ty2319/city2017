@@ -40,6 +40,33 @@ div.jQBracket{
 		overflow: visible;
 	}
 	
+	@media screen and (max-width: 900px) {
+		div.jQBracket .bracket {
+			transform: scale(0.7,0.7);
+			margin: -10em -9em -10em 0;
+			overflow: hidden;
+		}
+		
+	}
+	
+	@media screen and (max-width: 600px) {
+		div.jQBracket .bracket {
+			transform: scale(0.5,0.5);
+			margin: -20em 0;
+			overflow: hidden;
+		}
+		
+	}
+	
+	@media screen and (max-width: 400px) {
+		div.jQBracket .bracket {
+			transform: scale(0.3,0.3);
+			margin: -40em 8.5em -40em 0;
+			overflow: hidden;
+		}
+		
+	}
+	
 	div.jQBracket .loserBracket {
 		float: right;
 		clear: left;
