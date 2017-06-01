@@ -204,8 +204,6 @@
 		
 		$('body').addClass('bg'+A);
 		
-		$('header#title').addClass('load');
-		
 		$('header#title #scroll').on('click' , function() {
 			$("html, body").stop(true).animate({scrollTop: ct}, 500, "swing");
 		});

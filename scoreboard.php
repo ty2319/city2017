@@ -87,9 +87,7 @@ $count_ini = pg_fetch_result($rs1,0,0);
         }, 60000);
 	});
 </script>
-<!--[if lt IE 9]>
-<script type="text/javascript" src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-<![endif]-->
+
 <!--[if lt IE 7]>
 <script type="text/javascript" src="/symbol/hp/baseball/games/2012/city/js/jquery.exfixed-1.3.2.js" type="text/javascript"></script>
 <script type="text/javascript">
