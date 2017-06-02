@@ -42,6 +42,10 @@ article {
 				font-size	: 2.5em;
 				font-weight : normal;
 				
+				@include media($fh) {
+					font-size	: 1.5em;
+				}
+				
 				span {
 					display		 : block;
 					font-size	 : 3em;
@@ -74,6 +78,10 @@ article {
 		border-color: lighten($black,50%);
 		border-style: dotted;
 		padding: 10rem $max*0.03 !important;
+		
+		@include media($fh) {
+			width: $max;
+		}
 	
 		h5,dl,ul,p,table {
 			margin: 1rem 0;
@@ -86,6 +94,10 @@ article {
 		clear: none;
 		padding: 0 $max*0.015 !important;
 		float: left;
+		
+		@include media($fh) {
+			width: $max;
+		}
 		
 		&:nth-of-type(3n-1) {
 			border-left: lighten($black,50%) dotted 1px;
@@ -115,6 +127,10 @@ article {
 		float: left;
 		clear: none;
 		padding: 1rem !important;
+		
+		@include media($fh) {
+			width: $max;
+		}
 		
 		dl,p {
 			margin-top: 1rem;

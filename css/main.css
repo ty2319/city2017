@@ -31,6 +31,9 @@ article {
     article header#title h3 {
       font-size: 2.5em;
       font-weight: normal; }
+      @media all and (max-width: 500px) {
+        article header#title h3 {
+          font-size: 1.5em; } }
       article header#title h3 span {
         display: block;
         font-size: 3em;
@@ -53,6 +56,9 @@ article {
     border-color: gray;
     border-style: dotted;
     padding: 10rem 3% !important; }
+    @media all and (max-width: 500px) {
+      article .half {
+        width: 100%; } }
     article .half h5, article .half dl, article .half ul, article .half p, article .half table {
       margin: 1rem 0; }
   article .one_third {
@@ -61,6 +67,9 @@ article {
     clear: none;
     padding: 0 1.5% !important;
     float: left; }
+    @media all and (max-width: 500px) {
+      article .one_third {
+        width: 100%; } }
     article .one_third:nth-of-type(3n-1) {
       border-left: gray dotted 1px;
       border-right: gray dotted 1px; }
@@ -78,6 +87,9 @@ article {
     float: left;
     clear: none;
     padding: 1rem !important; }
+    @media all and (max-width: 500px) {
+      article .quarter {
+        width: 100%; } }
     article .quarter dl, article .quarter p {
       margin-top: 1rem; }
     article .quarter img {
