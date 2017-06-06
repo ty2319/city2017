@@ -44,6 +44,7 @@ article {
 				
 				@include media($fh) {
 					font-size	: 1.5em;
+					line-height : 1.5em; 
 				}
 				
 				span {
@@ -72,28 +73,23 @@ article {
 		
 	.half {
 		width: $max / 2;
-		min-width: $nf / 2;
-		float: left;
-		clear: none;
 		border-color: lighten($black,50%);
 		border-style: dotted;
-		padding: 10rem $max*0.03 !important;
+		padding: 10em $max*0.03 !important;
 		
 		@include media($fh) {
-			width: $max;
+			border-top	: none;
+			width		: $max;
 		}
 	
 		h5,dl,ul,p,table {
-			margin: 1rem 0;
+			margin: 1em 0;
 		}
 	}
 		
 	.one_third {
-		width: $max / 3;
-		min-width: $nf * 0.27;
-		clear: none;
-		padding: 0 $max*0.015 !important;
-		float: left;
+		width			: $max / 3;
+		justify-content : space-around;
 		
 		@include media($fh) {
 			width: $max;
@@ -148,7 +144,7 @@ article {
 		width: $max !important;
 		
 		h4 {
-			margin-top: 8rem;
+			margin-top: 8em;
 		}
 		
 		.half {
@@ -156,7 +152,7 @@ article {
 		}
 		
 		h5 {
-			margin-top: 5rem;
+			margin-top: 5em;
 		}
 		
 		&> img {
@@ -177,18 +173,19 @@ article {
 	}
 		
 	section header,div.contents header {
-		text-align: center;
-		margin-bottom: 7rem;
-		color: $navy;
+		text-align	 : center;
+		margin-bottom: 7em;
+		color		 : $navy;
+		width		 : $max;
 		
 		h4 {
-			font-size: 2rem;
-			line-height: $max;
+			font-size	: 2em;
+			line-height : $max;
 		}
 		
 		p {
-			font-family: century;
-			margin: 0.5rem 0 0 !important;
+			font-family : century;
+			margin		: 0.5em 0 0 !important;
 		}
 	}
 
@@ -198,7 +195,9 @@ article {
 		background: center top no-repeat fixed;
 		overflow: hidden;
 		background-size: cover;
-		padding: 8rem $max*0.03;
+		padding: 8em $max*0.03;
+		display		: flex;
+		flex-flow	: row wrap;
 		
 		@for $value from 0 through 5 {
 			
@@ -208,15 +207,14 @@ article {
 		}
 		
 		section {
-			padding: 5rem 0;
+			padding: 5em 0;
 			background: none;
 			
 			&.half {
-				padding: 1rem $max*0.03 !important;
-				min-width: 441px;
+				padding: 1em $max*0.03 !important;
 				
 				&:nth-of-type(2) {
-					margin-bottom: 5rem;
+					margin-bottom: 5em;
 				}
 			}
 		}
@@ -255,21 +253,20 @@ article {
 		}
 				
 		h5,caption {
-			color: $navy;
-			margin-bottom: 1rem;
-			padding: 0.5rem;
-			font-size: 1.25rem;
-			text-align: center;
-			font-family:"游明朝", YuMincho, "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN","HG明朝E","ＭＳ Ｐ明朝","ＭＳ 明朝",serif;
+			color		 : $navy;
+			margin-bottom: 1em;
+			padding		 : 0.5em;
+			font-size	 : 1.25em;
+			text-align	 : center;
 		}
 		
 		dl,.frame,.box {
-			padding: 1rem;
+			padding: 1em;
 			border: #999 3px double;
 			overflow: hidden;
 			zoom: 1;
 			background-color: $modal2;
-			margin: 0.5rem;
+			margin: 0.5em;
 		}
 						
 		dt {
@@ -277,7 +274,7 @@ article {
 			font-weight: bold;
 			clear: both;
 			text-align: center;
-			margin-top: 2rem;
+			margin-top: 2em;
 			
 			&:first-child {
 				margin: 0;
@@ -292,26 +289,26 @@ article {
 				color: $blue;
 				
 				span {
-					margin-right: $FS/2;
+					margin-right: 0.5em;
 				}
 			}
 		}
 		
 		.box {
-			margin: 3rem 0 !important;
+			margin: 3em 0 !important;
 			
 			dt {
 				float: left;
 				margin-top: 0;
-				width: 6rem;
+				width: 6em;
 				text-align: right;
 			}
 		
 			dd {
 				text-align: left;
-				margin: 0 0 0.5rem 0;
+				margin: 0 0 0.5em 0;
 				border-bottom: #666 1px dotted;
-				padding-left: 6rem;
+				padding-left: 6em;
 				overflow: visible;
 			}
 		}

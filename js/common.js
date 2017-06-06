@@ -36,7 +36,11 @@
 	
 	font = function() {
 		$('.contents').each(function() {
-            $('.half:odd' , this).css('border-left-width' , $(window).width() * 0.001);
+            
+			if ($(window).width() > 500) {
+				$('.half:odd' , this).css('border-left-width' , $(window).width() * 0.001);
+			} else {
+				$('.half:odd' , this).css('border-top-width' , $(window).width() * 0.001);}
         });
 	},
 	
@@ -301,6 +305,14 @@
 			$('div#modal').remove();
 			$('span',this).fadeOut('slow');
 		});
+		
+		$('#side').on( 'touchstart', function(){
+			$('body').append('<div id="modal"></div>');
+			$('span',this).fadeIn('slow');
+    	}).on('touchend', function(){
+        	$('div#modal').remove();
+			$('span',this).fadeOut('slow');
+    	});
 	}
 	
 	$(document).ready(function() {
@@ -310,8 +322,8 @@
 		goTop();
 		nav();
 		title();
-		smoothScroll();
 		side();
+		smoothScroll();
 	});	
 	
 	$(window).resize(function() {

@@ -337,19 +337,13 @@
 	</article>
 </main>
 <!--#include virtual="templates/footer.inc"--> 
-<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script> 
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script> 
 <script type="text/javascript" src="js/common.js"></script> 
-<script type="text/javascript" src="js/jquery.tile.js"></script> 
 <script type="text/javascript">
 $(window).on("load resize", function() {
 	$('#part p,#etc p,#defence dl').css('margin-bottom','2rem');
 	$('#offence section').addClass('center');
-	$('#offence .half').tile(2);
-　　$("#part section").tile(); 
-　　$("#part section h5").tile(); 
-　　$("#offence .one_third dl").tile().css('margin-bottom','7rem'); //要素数を指定
-　　$("#etc section").tile(4);
-　　$("#etc section h5").tile(4);
+　　$("#offence .one_third dl").css('margin-bottom','7rem'); 
 	$('.one_third').css('border' , 'none');
 });
 
