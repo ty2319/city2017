@@ -13,7 +13,7 @@
 		if (isIE) {
 		$("html").addClass('ie');
 			if (isIE6) {
-				$("html").addClass('ie6');
+				$("html").addClass('ie6a');
 			} else if (isIE7) {
 				$("html").addClass('ie7');
 			} else if (isIE8) {
@@ -36,11 +36,7 @@
 	
 	font = function() {
 		$('.contents').each(function() {
-            
-			if ($(window).width() > 500) {
-				$('.half:odd' , this).css('border-left-width' , $(window).width() * 0.001);
-			} else {
-				$('.half:odd' , this).css('border-top-width' , $(window).width() * 0.001);}
+			$('.half:even' , this).css('border' ,'none');
         });
 	},
 	
