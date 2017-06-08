@@ -34,17 +34,18 @@
 		$('.box2 dt').prepend('―　').append('　―');
 	},
 	
-	font = function() {
-		$('.contents').each(function() {
-			$('.half:even' , this).css('border' ,'none');
-        });
-	},
-	
 	section = function() {
 		
-        $('section .quarter:nth-child(8n),section .quarter:nth-child(8n-2),section .quarter:nth-child(8n-3),section .quarter:nth-child(8n-5)').not('table').addClass('back_gray');
-		
-        $('section .quarter:nth-child(8n+1),section .quarter:nth-child(8n-1),section .quarter:nth-child(8n-4),section .quarter:nth-child(8n-6)').not('table').addClass('back_white');
+		if ($(window).width() > 940) {		
+        	$('section .quarter:nth-child(8n),section .quarter:nth-child(8n-2),section .quarter:nth-child(8n-3),section .quarter:nth-child(8n-5)').not('table').addClass('back_gray');
+			$('section .quarter:nth-child(8n+1),section .quarter:nth-child(8n-1),section .quarter:nth-child(8n-4),section .quarter:nth-child(8n-6)').not('table').addClass('back_white');
+		} else if (500 < $(window).width() <= 940) {		
+        	$('section .quarter:nth-child(4n-1),section .quarter:nth-child(4n-2)').not('table').addClass('back_gray');
+			$('section .quarter:nth-child(4n),section .quarter:nth-child(4n-3)').not('table').addClass('back_white');
+		} else if (500 <= $(window).width()) {		
+        	$('section .quarter:nth-child(even)').not('table').addClass('back_gray');
+			$('section .quarter:nth-child(odd)').not('table').addClass('back_white');
+		} 
 		
 		$('article').children('section:not(.half,.one_third,.quarter),div').addClass('contents');
 		
