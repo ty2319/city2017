@@ -74,7 +74,7 @@ article {
 	.half {
 		width		: $max / 2 !important;
 		border-top	: none;
-		padding		: 10em $max*0.03 !important;
+		padding		: 2em $max*0.03 !important;
 		
 		&:nth-of-type(even) {
 			border-left : 1px dotted lighten($black,50%);
@@ -99,25 +99,30 @@ article {
 		width			: $max / 3 !important;
 		justify-content : space-around;
 		
+		&:nth-of-type(3n-1) {
+			border-left	 : lighten($black,50%) dotted 1px;
+			border-right : lighten($black,50%) dotted 1px;
+			border-top	 : none;
+			border-bottom: none;
+		
+			@include media($nf) {
+				border-left		: none;
+				border-right	: none;
+				border-top		: lighten($black,50%) solid 1px;
+				border-bottom	: lighten($black,50%) solid 1px;
+			}
+		}
+		
 		@include media($nf) {
 			width: $max !important;
 		}
 		
-		&:nth-of-type(3n-1) {
-			border-left: lighten($black,50%) dotted 1px;
-			border-right: lighten($black,50%) dotted 1px;
-		}
-		
-		section {
-			padding-top: 0 !important;
-		
-			h5 {
-				margin-top: 0 !important;
-			}
+		h5 {
+			margin-top: 0 !important;
 		}
 		
 		p {
-			margin: 0 1rem 2rem 1rem;
+			margin-bottom: 2em;
 		}
 		
 		img {
@@ -180,11 +185,7 @@ article {
 	div.contents,.double {
 		padding: 0 !important;
 		width: $max !important;
-		
-		h4 {
-			margin-top: 8em;
-		}
-		
+				
 		.half {
 			padding-top: 0 !important;
 		}
@@ -244,7 +245,7 @@ article {
 			}
 		}
 		
-		& > hr {
+		hr {
 			width		 : $max;
 			display		 : block;
 			border-top	 : 1px dotted lighten($black,50%);
@@ -257,7 +258,7 @@ article {
 		
 		section {
 			width		: $max;
-			padding		: 5em 0 !important;
+			padding		: 5em 0;
 			background	: none;
 			
 			&:not(.half):not(.one_third):not(.quarter) {
@@ -266,19 +267,23 @@ article {
 			
 			&.half {
 				margin-bottom: 4em;
-				padding		 : 1em 0 !important;
+				padding		 : 1em 0;
 				
 				&:nth-of-type(odd) {
-					padding-right: $max * 0.03 !important;
+					padding-right: $max * 0.03;
 				}
 				
 				&:nth-of-type(even) {
-					padding-left: $max * 0.03 !important;
+					padding-left: $max * 0.03;
 					
 					@include media($six) {
-						padding-top: 4em !important;
+						padding-top: 4em;
 					}
 				}
+			}
+			
+			&.one_third {
+				padding: 7em 2em;
 			}
 			
 			& > div {
@@ -294,10 +299,9 @@ article {
 		
 		& > div {
 			margin-bottom: 4em;
-			padding		 : 1em 0 !important;
 			
 			&:nth-of-type(odd) {
-					padding-right: $max * 0.03 !important;
+				padding-right: $max * 0.03 !important;
 			}
 			
 			&:nth-of-type(even) {
