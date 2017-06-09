@@ -84,6 +84,10 @@ article {
 			border-left : none !important;
 			border-top	: 1px dotted lighten($black,50%);
 			width		: $max !important;
+		
+			&:nth-of-type(odd) {
+				border-top : none;
+			} 
 		}
 	
 		h5,dl,ul,p,table {
@@ -126,12 +130,40 @@ article {
 		width	: $max / 4 !important;
 		padding : 1em !important;
 		
+		&:nth-of-type(8n-1),&:nth-of-type(8n-3),&:nth-of-type(8n-4),&:nth-of-type(8n-6) {
+			background-color: lighten($modal,80%);
+		}
+		
+		&:nth-of-type(8n),&:nth-of-type(8n-2),&:nth-of-type(8n-5),&:nth-of-type(8n-7) {
+			background-color: lighten($modal2,80%);
+		}
+		
 		@include media($nf) {
 			width: $max / 2 !important;
+		
+			&:nth-of-type(4n-1),&:nth-of-type(4n-2) {
+				background-color: lighten($modal,80%);
+			}
+			
+			&:nth-of-type(4n),&:nth-of-type(4n-3) {
+				background-color: lighten($modal2,80%);
+			}
 		}
 		
 		@include media($fh) {
-			width: $max;
+			width: $max !important;
+		
+			&:nth-of-type(even) {
+				background-color: lighten($modal,80%);
+			}
+			
+			&:nth-of-type(odd) {
+				background-color: lighten($modal2,80%);
+			}
+			
+			&:nth-of-type(even) {
+				padding-top: 5em !important;
+			}
 		}
 		
 		dl,p {
@@ -242,6 +274,10 @@ article {
 				
 				&:nth-of-type(even) {
 					padding-left: $max * 0.03 !important;
+					
+					@include media($six) {
+						padding-top: 4em !important;
+					}
 				}
 			}
 			

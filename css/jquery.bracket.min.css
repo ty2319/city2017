@@ -70,7 +70,7 @@ div.jQBracket{
 	@media screen and (max-width: 450px) {
 		div.jQBracket .bracket {
 			transform: scale(0.32,0.32);
-			margin: -40em 8.5em -40em 0;
+			margin: -40em 7.5em -40em 0;
 			overflow: hidden;
 		}
 		
