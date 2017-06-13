@@ -193,34 +193,33 @@ article .quarter img {
 }
 /* line 185, ../sass/main.scss */
 article div.contents, article .double {
-  padding: 0 !important;
   width: 100% !important;
 }
-/* line 189, ../sass/main.scss */
+/* line 188, ../sass/main.scss */
 article div.contents .half, article .double .half {
   padding-top: 0 !important;
 }
-/* line 193, ../sass/main.scss */
+/* line 192, ../sass/main.scss */
 article div.contents h5, article .double h5 {
   margin-top: 5em;
 }
-/* line 197, ../sass/main.scss */
+/* line 196, ../sass/main.scss */
 article div.contents > img, article .double > img {
   height: auto;
   padding: 0 3% 5rem 0 !important;
   border: none;
 }
-/* line 204, ../sass/main.scss */
+/* line 203, ../sass/main.scss */
 article .double .one_third {
   padding-bottom: 5rem !important;
 }
-/* line 207, ../sass/main.scss */
+/* line 206, ../sass/main.scss */
 article .double .one_third p {
   overflow: hidden;
   background: url(/symbol/hp/baseball/games/2016/city/img/mascot/line.gif) left 55px;
   line-height: 28px;
 }
-/* line 214, ../sass/main.scss */
+/* line 213, ../sass/main.scss */
 article section header, article div.contents header {
   text-align: center;
   margin-bottom: 7em;
@@ -228,17 +227,17 @@ article section header, article div.contents header {
   width: 100%;
   transform: skewX(-10deg);
 }
-/* line 221, ../sass/main.scss */
+/* line 220, ../sass/main.scss */
 article section header h4, article div.contents header h4 {
   font-size: 2em;
   line-height: 100%;
 }
-/* line 226, ../sass/main.scss */
+/* line 225, ../sass/main.scss */
 article section header p, article div.contents header p {
   font-family: century;
   margin: 0.5em 0 0 !important;
 }
-/* line 232, ../sass/main.scss */
+/* line 231, ../sass/main.scss */
 article .contents {
   width: 100%;
   background: center top no-repeat fixed;
@@ -248,131 +247,131 @@ article .contents {
   display: flex;
   flex-flow: row wrap;
 }
-/* line 243, ../sass/main.scss */
+/* line 242, ../sass/main.scss */
 article .contents.bg0 {
   background-image: url(../img/common/10.png);
 }
-/* line 243, ../sass/main.scss */
+/* line 242, ../sass/main.scss */
 article .contents.bg1 {
   background-image: url(../img/common/11.png);
 }
-/* line 243, ../sass/main.scss */
+/* line 242, ../sass/main.scss */
 article .contents.bg2 {
   background-image: url(../img/common/12.png);
 }
-/* line 243, ../sass/main.scss */
+/* line 242, ../sass/main.scss */
 article .contents.bg3 {
   background-image: url(../img/common/13.png);
 }
-/* line 243, ../sass/main.scss */
+/* line 242, ../sass/main.scss */
 article .contents.bg4 {
   background-image: url(../img/common/14.png);
 }
-/* line 243, ../sass/main.scss */
+/* line 242, ../sass/main.scss */
 article .contents.bg5 {
   background-image: url(../img/common/15.png);
 }
-/* line 248, ../sass/main.scss */
+/* line 247, ../sass/main.scss */
 article .contents hr {
   width: 100%;
   display: block;
   border-top: 1px dotted gray;
   margin-bottom: 4em;
 }
-/* line 255, ../sass/main.scss */
+/* line 254, ../sass/main.scss */
 article .contents > p, article .contents > dl {
   width: 100%;
 }
-/* line 259, ../sass/main.scss */
+/* line 258, ../sass/main.scss */
 article .contents section {
   width: 100%;
   padding: 5em 0;
   background: none;
 }
-/* line 264, ../sass/main.scss */
+/* line 263, ../sass/main.scss */
 article .contents section:not(.half):not(.one_third):not(.quarter) {
   border-top: #666 1px dotted;
 }
-/* line 268, ../sass/main.scss */
+/* line 267, ../sass/main.scss */
 article .contents section.half {
   margin-bottom: 4em;
   padding: 1em 0;
 }
-/* line 272, ../sass/main.scss */
+/* line 271, ../sass/main.scss */
 article .contents section.half:nth-of-type(odd) {
   padding-right: 3%;
 }
-/* line 276, ../sass/main.scss */
+/* line 275, ../sass/main.scss */
 article .contents section.half:nth-of-type(even) {
   padding-left: 3%;
 }
 @media all and (max-width: 600px) {
-  /* line 276, ../sass/main.scss */
+  /* line 275, ../sass/main.scss */
   article .contents section.half:nth-of-type(even) {
     padding-top: 4em;
   }
 }
-/* line 285, ../sass/main.scss */
+/* line 284, ../sass/main.scss */
 article .contents section.one_third {
   padding: 7em 2em;
 }
-/* line 289, ../sass/main.scss */
+/* line 288, ../sass/main.scss */
 article .contents section > div {
   display: flex;
   flex-flow: row nowrap;
   margin: 1em 0;
 }
 @media all and (max-width: 940px) {
-  /* line 289, ../sass/main.scss */
+  /* line 288, ../sass/main.scss */
   article .contents section > div {
     flex-flow: row wrap;
   }
 }
-/* line 300, ../sass/main.scss */
+/* line 299, ../sass/main.scss */
 article .contents > div {
   margin-bottom: 4em;
 }
-/* line 303, ../sass/main.scss */
+/* line 302, ../sass/main.scss */
 article .contents > div:nth-of-type(odd) {
   padding-right: 3% !important;
 }
-/* line 307, ../sass/main.scss */
+/* line 306, ../sass/main.scss */
 article .contents > div:nth-of-type(even) {
   padding-left: 3% !important;
 }
-/* line 311, ../sass/main.scss */
+/* line 310, ../sass/main.scss */
 article .contents > div img {
   display: block;
   width: 100%;
   height: auto;
   margin-top: 1em;
 }
-/* line 319, ../sass/main.scss */
+/* line 318, ../sass/main.scss */
 article .contents > img:not(.one_third):not(.half) {
   width: 100%;
   height: auto;
   margin-bottom: 2em;
 }
-/* line 325, ../sass/main.scss */
+/* line 324, ../sass/main.scss */
 article .contents .back_gray, article .contents .back_gray th, article .contents .back_gray td {
   background-color: rgba(204, 204, 204, 0.8);
 }
-/* line 329, ../sass/main.scss */
+/* line 328, ../sass/main.scss */
 article .contents .back_white, article .contents .back_white th, article .contents .back_white td {
   background-color: rgba(255, 255, 255, 0.3);
 }
-/* line 333, ../sass/main.scss */
+/* line 332, ../sass/main.scss */
 article .contents figure {
   font-size: 0.8rem;
   line-height: 1rem;
   margin-bottom: 3rem;
   text-align: center;
 }
-/* line 339, ../sass/main.scss */
+/* line 338, ../sass/main.scss */
 article .contents figure figcaption {
   margin-top: 0.5rem;
 }
-/* line 344, ../sass/main.scss */
+/* line 343, ../sass/main.scss */
 article .contents h5, article .contents caption {
   color: #012052;
   margin-bottom: 1em;
@@ -380,7 +379,7 @@ article .contents h5, article .contents caption {
   font-size: 1.25em;
   text-align: center;
 }
-/* line 352, ../sass/main.scss */
+/* line 351, ../sass/main.scss */
 article .contents dl, article .contents .frame, article .contents .box {
   padding: 1em;
   border: #999 3px double !important;
@@ -389,7 +388,7 @@ article .contents dl, article .contents .frame, article .contents .box {
   background-color: rgba(255, 255, 255, 0.3);
   margin: 0.5em;
 }
-/* line 361, ../sass/main.scss */
+/* line 360, ../sass/main.scss */
 article .contents dt {
   color: #012052;
   font-weight: bold;
@@ -397,35 +396,35 @@ article .contents dt {
   text-align: center;
   margin-top: 2em;
 }
-/* line 368, ../sass/main.scss */
+/* line 367, ../sass/main.scss */
 article .contents dt:first-child {
   margin: 0;
 }
-/* line 373, ../sass/main.scss */
+/* line 372, ../sass/main.scss */
 article .contents dd {
   overflow: hidden;
   text-align: center;
 }
-/* line 377, ../sass/main.scss */
+/* line 376, ../sass/main.scss */
 article .contents dd a {
   color: #2c7eff;
 }
-/* line 380, ../sass/main.scss */
+/* line 379, ../sass/main.scss */
 article .contents dd a span {
   margin-right: 0.5em;
 }
-/* line 386, ../sass/main.scss */
+/* line 385, ../sass/main.scss */
 article .contents .box {
   margin: 3em 0 !important;
 }
-/* line 389, ../sass/main.scss */
+/* line 388, ../sass/main.scss */
 article .contents .box dt {
   float: left;
   margin-top: 0;
   width: 6em;
   text-align: right;
 }
-/* line 396, ../sass/main.scss */
+/* line 395, ../sass/main.scss */
 article .contents .box dd {
   text-align: left;
   margin: 0 0 0.5em 0;
@@ -433,20 +432,20 @@ article .contents .box dd {
   padding-left: 6em;
   overflow: visible;
 }
-/* line 406, ../sass/main.scss */
+/* line 405, ../sass/main.scss */
 article dfn img {
   vertical-align: middle;
 }
-/* line 410, ../sass/main.scss */
+/* line 409, ../sass/main.scss */
 article .center {
   text-align: center;
 }
-/* line 414, ../sass/main.scss */
+/* line 413, ../sass/main.scss */
 article .zerofive {
   padding-top: 0.5rem !important;
   padding-top: 1rem !important;
 }
-/* line 419, ../sass/main.scss */
+/* line 418, ../sass/main.scss */
 article .bottom {
   padding-bottom: 1rem !important;
 }

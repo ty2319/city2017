@@ -1,8 +1,8 @@
 $(window).on('load resize', function() {
 	
-	$('.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar').height($(window).width()*0.47);
+	$('.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar').height($(window).width() / 2);
 	
-	$('article div section').height($('img.half').height()).mCustomScrollbar({theme: "minimal-dark"});
+	$('article div section').height($('article div img').height()).mCustomScrollbar({theme: "minimal-dark"});
 });
 
 $(function() {
@@ -24,12 +24,12 @@ $(function() {
 		} , 300);
 		
 		if (num > num2) {
-			$(target).animate({left: '3%'}, 600 , 'swing');
+			$(target).animate({left: '0'}, 600 , 'swing');
 		} else if (num < num2) {
 			$(target).nextAll('.left').animate({left: '100%'}, 600 , 'swing');
 		} else if (num == num2) {
 			if (num > num3){
-				$(target).animate({left: '3%'}, 600 , 'swing');
+				$(target).animate({left: '0'}, 600 , 'swing');
 			} else {
 				$(target).nextAll('.left').animate({left: '100%'}, 600 , 'swing');
 			}
