@@ -47,6 +47,10 @@ html {
     html body[class*=bg] {
       background-position: center -300px;
       transition: background-position 40s ease 1s; }
+    @media all and (max-width: 600px) {
+      html body[class*=bg] {
+        background-position: center;
+        transition: none; } }
     html body a {
       color: #0033cc;
       text-decoration: none; }
