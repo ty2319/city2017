@@ -40,7 +40,7 @@ div.jQBracket{
 		overflow: visible;
 	}
 	
-	@media screen and (max-width: 900px) {
+	@media screen and (max-width: 940px) {
 		div.jQBracket .bracket {
 			transform: scale(0.7,0.7);
 			margin: -10em -9em -10em 0;
@@ -49,19 +49,28 @@ div.jQBracket{
 		
 	}
 	
+	@media screen and (max-width: 750px) {
+		div.jQBracket .bracket {
+			transform: scale(0.6,0.6);
+			margin: -15em -5em -15em 0;
+			overflow: hidden;
+		}
+		
+	}
+	
 	@media screen and (max-width: 600px) {
 		div.jQBracket .bracket {
-			transform: scale(0.5,0.5);
+			transform: scale(0.45,0.45);
 			margin: -20em 0;
 			overflow: hidden;
 		}
 		
 	}
 	
-	@media screen and (max-width: 400px) {
+	@media screen and (max-width: 450px) {
 		div.jQBracket .bracket {
-			transform: scale(0.3,0.3);
-			margin: -40em 8.5em -40em 0;
+			transform: scale(0.32,0.32);
+			margin: -40em 7.5em -40em 0;
 			overflow: hidden;
 		}
 		

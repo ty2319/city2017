@@ -49,6 +49,13 @@ html {
 			background-position : center -300px;
 			transition			: background-position 40s ease 1s;
 		}
+		
+		@include media($six) {
+			&[class*=bg] {
+				background-position : center;
+				transition			: none;
+			}
+		}
 
 		a {
 			color: #0033cc;

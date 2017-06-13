@@ -9,35 +9,33 @@ article {
 		
 		&>div {
 			position: $r;
-			padding-left: $max * 0.03 !important;
 			overflow: hidden;
+			width: $max;
 	
 			&> img {
 				padding: 0 !important;
 				border: none !important;
-				width: $max * 0.485;
+				width: $max * 0.47;
+				height: auto;
 			}
 			
 			&> section {
-				padding: 0 $max*0.03 !important;
 				background-color: $white !important;
 				border: none !important;
 				
 				&:not(.left):not(.right) {
-					width: $max * 0.485;
+					width: $max $max * 0.47;
 				}
 			}
 						
 			&> .left {
-				@include abT(0,100%,1);
-				width: $max * 0.47;
+				width: $max $max * 0.47;
 				border: none !important;
 				display: block;
 			}
 			
 			&> .right {
-				@include abT(0,50%,0);
-				width: $max * 0.47;
+				width: $max $max * 0.47;
 				border: none !important;
 				display: none;
 				
@@ -80,7 +78,7 @@ article {
 			display: table;
 			background-color: lighten($modal , 10%);
 			text-align: center;
-			margin: -3.75rem auto 5rem auto;
+			margin: 0 auto 5rem auto;
 			position: $r;
 			z-index: 1;
 			

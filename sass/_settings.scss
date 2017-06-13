@@ -4,6 +4,8 @@ $max: 100%;
 
 $fh: 500px;
 
+$six: 600px;
+
 $nf: 940px;
 
 $ot: 1200px;
@@ -189,6 +191,12 @@ $ip: '../img/';
 @mixin media($mediaSize) {
   @if $mediaSize <= $fh{
     @media all and (max-width: $fh) {
+      @content
+    }
+  }
+  
+  @else if $mediaSize <= $six{
+    @media all and (max-width: $six) {
       @content
     }
   }
