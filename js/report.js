@@ -1,11 +1,13 @@
 $(window).on('load resize', function() {
 	
-	$('.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar').height($(window).width() / 2);
+	$('article div img').width($(window).width() * 0.94 / 2);
 	
-	$('article div section').height($('article div img').height()).mCustomScrollbar({theme: "minimal-dark"});
+	$('article div section').height($('article div img').width());
 });
 
 $(function() {
+	
+	$('article div section').mCustomScrollbar({theme: "minimal-dark"});
 	
 	var num2	= 0;
 	var num3	= 0; 

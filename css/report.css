@@ -1,44 +1,54 @@
 /* CSS Document */
-/* line 10, ../sass/report.scss */
+/* line 8, ../sass/report.scss */
+article > .contents {
+  display: block;
+}
+/* line 11, ../sass/report.scss */
 article > .contents > div {
   position: relative;
   overflow: hidden;
-  width: 100%;
 }
 /* line 15, ../sass/report.scss */
 article > .contents > div > img {
+  margin: 0 !important;
   padding: 0 !important;
-  border: none !important;
-  width: 47%;
+  width: 50%;
   height: auto;
 }
 /* line 22, ../sass/report.scss */
 article > .contents > div > section {
+  margin: 0 !important;
+  padding: 0 3% !important;
   background-color: #fff !important;
   border: none !important;
+  height: auto;
 }
-/* line 26, ../sass/report.scss */
+/* line 29, ../sass/report.scss */
 article > .contents > div > section:not(.left):not(.right) {
-  width: 100% 47%;
+  width: 50%;
 }
-/* line 31, ../sass/report.scss */
+/* line 34, ../sass/report.scss */
 article > .contents > div > .left {
-  width: 100% 47%;
-  border: none !important;
-  display: block;
+  position: absolute;
+  top: 0;
+  left: 100%;
+  z-index: 1;
+  width: 50%;
 }
-/* line 37, ../sass/report.scss */
+/* line 39, ../sass/report.scss */
 article > .contents > div > .right {
-  width: 100% 47%;
-  border: none !important;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  z-index: 0;
+  width: 50%;
   display: none;
 }
-/* line 42, ../sass/report.scss */
+/* line 44, ../sass/report.scss */
 article > .contents > div > .right > img {
   padding: 0 !important;
-  border: none !important;
 }
-/* line 48, ../sass/report.scss */
+/* line 49, ../sass/report.scss */
 article > .contents > div h5 {
   margin: 2rem 0;
   padding: 1rem;
@@ -46,7 +56,7 @@ article > .contents > div h5 {
   border-top: #012052 3px double;
   border-bottom: #012052 3px double;
 }
-/* line 58, ../sass/report.scss */
+/* line 59, ../sass/report.scss */
 article > .contents > div a button {
   display: block;
   text-decoration: none;
@@ -60,30 +70,30 @@ article > .contents > div a button {
   cursor: pointer;
   border: none;
 }
-/* line 71, ../sass/report.scss */
+/* line 72, ../sass/report.scss */
 article > .contents > div a button:hover {
   opacity: 0.8;
 }
-/* line 77, ../sass/report.scss */
+/* line 78, ../sass/report.scss */
 article > .contents ul {
   display: table;
   background-color: rgba(26, 26, 26, 0.8);
   text-align: center;
-  margin: 0 auto 5rem auto;
+  margin: -8em auto 5em auto;
   position: relative;
   z-index: 1;
 }
-/* line 85, ../sass/report.scss */
+/* line 86, ../sass/report.scss */
 article > .contents ul li {
   display: table-cell;
   padding: 1rem 1.5rem;
   font-weight: bold;
 }
-/* line 91, ../sass/report.scss */
+/* line 92, ../sass/report.scss */
 article > .contents ul li.show a {
   color: #2c7eff;
 }
-/* line 96, ../sass/report.scss */
+/* line 97, ../sass/report.scss */
 article > .contents ul li a {
   color: #fff;
 }
