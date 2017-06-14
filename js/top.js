@@ -31,7 +31,7 @@ $(window).on('load resize' , function() {
 	
 	if ($(window).width() > 500) {
 		$('main,article').outerHeight($(window).height() - $('header#top').outerHeight() - $('footer').outerHeight());
-		$('article').css('padding-top' , $('#global').outerHeight());
+		$('article').css('padding-top' , $('#global').outerHeight() - 1);
 	} else {
 		$('article').css('padding-top' , $('article > div').height());
 		$('body').css('height' , 'auto');

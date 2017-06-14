@@ -48,12 +48,10 @@ html {
 		&[class*=bg] {
 			background-position : center -300px;
 			transition			: background-position 40s ease 1s;
-		}
-		
-		@include media($six) {
-			&[class*=bg] {
-				background-position : center;
-				transition			: none;
+			
+			@include media($six) {
+				background-size		: 1000px auto;
+				background-position : right 0;
 			}
 		}
 

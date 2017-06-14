@@ -57,14 +57,10 @@ html {
 					
 					&> div {
 						width			: $max * 2;
-						height			: $max / 5;
+						height			: $max / 4.5;
 						opacity			: 0.85;
 						background-color: #0164ac !important;
-						background-size : $max * 0.3 !important;
-							
-						@include media($of) {
-							background-size : $max * 0.4 !important;
-						}
+						background-size : $max * 0.6 !important;
 					}
 					
 					@keyframes right_left {
@@ -85,42 +81,25 @@ html {
 					  }
 					}
 					
-					@keyframes top_bottom {
-					  0% {
-						background-position: $max/2 -$max/2;
-					  }
-					  100% {
-						background-position: $max/2 0;
-					  }
-					}
-					
 					@keyframes leftback {
 					  0% {
 						background-position : $max*1.5;
 						transform			: translate(-$max*0.7 , $max*4.2) rotate(45deg);
 					  }
 					  100% {
-						background-position : $max*0.4 $max*0.5;
-						transform			: translate(-$max*0.3 , $max*4.2) rotate(45deg);
-						
-						@include media($of) {
-							background-position : $max*0.32 $max*0.5;
-						}
+						background-position : $max*0.4 $max*0.6;
+						transform			: translate(-$max*0.25 , $max*3.5) rotate(45deg);
 					  }
 					}
 					
 					@keyframes rightback {
 					  0% {
 						background-position : -$max*0.1 -$max*0.5;
-						transform			: translate($max*0.2 , $max*4.2) rotate(-45deg);
+						transform			: translate($max*0.8 , $max*3.5) rotate(-45deg);
 					  }
 					  100% {
-						background-position : $max*0.64 $max*0.61;
-						transform			: translate(-$max*0.2 , $max*4.2) rotate(-45deg);
-						
-						@include media($of) {
-							background-position : $max*0.7 $max*0.6;
-						}
+						background-position : $max*0.71 $max*0.65;
+						transform			: translate($max*0.27 , $max*3.5) rotate(-45deg);
 					  }
 					}
 					
@@ -211,7 +190,7 @@ html {
 					&.player6 {
 						background		: url(../img/top/nakamura.jpg) no-repeat !important;
 						background-size : auto $max*1.2 !important;
-						animation		: top_bottom 10s infinite;
+						animation		: right_left 10s infinite;
 						
 						& > div {
 							background		: url(../img/top/atsuto.jpg) no-repeat;
@@ -225,7 +204,7 @@ html {
 					&.player7 {
 						background		: url(../img/top/nakanishi.jpg) no-repeat !important;
 						background-size : auto $max*1.2 !important;
-						animation		: top_bottom 10s infinite;
+						animation		: right_left 10s infinite;
 						
 						& > div {
 							background		: url(../img/top/junpei.jpg) no-repeat;
@@ -254,7 +233,7 @@ html {
 				section {
 					color				 : $white;
 					height				 : $max / 10;
-					padding				 : 2em;
+					padding				 : 2em !important;
 					flex-grow			 : 1;
 					transition			 : flex-grow 1s;
 					
@@ -271,11 +250,15 @@ html {
 					}
 					
 					header {
-						color		: #fff;
-						margin		: 2em;
-						text-align	: left;
-						text-shadow	: -1px -1px 3px $black, 1px 1px 3px $black;
-						transform	: skewX(-10deg);
+						color		 : #fff;
+						margin-bottom: 2em;
+						text-align	 : left;
+						text-shadow	 : -1px -1px 3px $black, 1px 1px 3px $black;
+						transform	 : skewX(-10deg);
+						
+						@include media($fh) {
+							margin-top: 2em;
+						}
 						
 						h3 {
 							font-size	 : 2em;
@@ -293,7 +276,6 @@ html {
 					div , dl {
 						transition	: all 1s;
 						margin		: 0 auto;
-						width		: $max * 0.9;
 						display		: none;
 						text-shadow	: -1px -1px 3px $black, 1px 1px 3px $black;
 						
@@ -313,10 +295,8 @@ html {
 					}
 						
 					dl {
-						border		: none !important;
 						background	: none !important;
 						margin		: 2em auto !important;
-						padding		: 0 !important;
 						
 						dt {
 							color: $white !important;
@@ -367,6 +347,7 @@ html {
 						
 					a {
 						display: none;
+						margin : 2em auto 0 auto;
 						
 						@include media($fh) {
 							display: block;
@@ -376,7 +357,6 @@ html {
 							color			: lighten($black,20%);
 							background-color: $white;
 							display			: block;
-							margin			: 2em auto 0 auto;
 							padding			: 1em;
 							text-align		: center;
 							opacity			: 0.7;
