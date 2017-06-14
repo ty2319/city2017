@@ -4,69 +4,93 @@
 @import "settings";
 	
 article {
-	
+
 	&>.contents {
 		
 		&>div {
+			width	: $max;
 			position: $r;
 			overflow: hidden;
-			width: $max;
 	
 			&> img {
-				padding: 0 !important;
-				border: none !important;
-				width: $max * 0.47;
-				height: auto;
+				margin	: 0 !important;
+				padding	: 0 !important;
+				width	: $max * 0.515;
+				
+				@include media($six) {
+					width: $max;
+				}
 			}
 			
 			&> section {
+				margin			: 0 !important;
+				padding			: 0 $max*0.03 !important;
 				background-color: $white !important;
-				border: none !important;
+				border			: none !important;
+				overflow		: auto;
 				
 				&:not(.left):not(.right) {
-					width: $max $max * 0.47;
+					width : $max / 2;
+				}
+				
+				@include media($six) {
+					height: auto !important;
 				}
 			}
 						
 			&> .left {
-				width: $max $max * 0.47;
-				border: none !important;
-				display: block;
+				@include abT(0,100%,1);
+				width: $max / 2;
+				
+				@include media($six) {
+					position: static;
+					width	: $max;
+				}
 			}
 			
 			&> .right {
-				width: $max $max * 0.47;
-				border: none !important;
-				display: none;
+				@include abT(0,50%,0);
+				width	: $max / 2;
+				display : none;
+				
+				@include media($six) {
+					position: static;
+					width	: $max;
+				}
 				
 				&> img {
 					padding: 0 !important;
-					border: none !important;
 				}
 			}
 			
 			h5 {
-				margin: 2rem 0;
-				padding: 1rem;
-				color: $navy;
-				border-top: $navy 3px double;
+				margin		 : 2.5em 0;
+				padding		 : 1em;
+				color		 : $navy;
+				border-top	 : $navy 3px double;
 				border-bottom: $navy 3px double;
 			}
 			
-			
+			p {
+				margin-bottom: 1em;
+				
+				&:last-of-type {
+					margin-bottom: 4em;
+				}
+			}
 			
 			a button {
-				display: block;
-				text-decoration: none;
+				display			: block;
+				text-decoration : none;
 				background-color: $blue;
-				margin-bottom: 2rem;
-				padding: 0.5rem;
-				text-align: center;
-				color: $white;
-				overflow: hidden;
-				width: $max;
-				cursor: pointer;
-				border: none;
+				margin-bottom	: 2em;
+				padding			: 0.5em;
+				text-align		: center;
+				color			: $white;
+				overflow		: hidden;
+				width			: $max;
+				cursor			: pointer;
+				border			: none;
 	
 				&:hover {
 					opacity: 0.8;
@@ -75,17 +99,17 @@ article {
 		}
 
 		ul {
-			display: table;
+			display			: table;
 			background-color: lighten($modal , 10%);
-			text-align: center;
-			margin: 0 auto 5rem auto;
-			position: $r;
-			z-index: 1;
+			text-align		: center;
+			margin			: -7.7em auto 5em auto;
+			position		: $r;
+			z-index			: 1;
 			
 			li {
-				display: table-cell;
-				padding: 1rem 1.5rem;
-				font-weight: bold;
+				display		: table-cell;
+				padding		: 1em 1.5em;
+				font-weight	: bold;
 					
 				&.show {
 					a {
