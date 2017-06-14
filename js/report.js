@@ -1,13 +1,14 @@
 $(window).on('load resize', function() {
 	
-	$('article div img').width($(window).width() * 0.94 / 2);
-	
 	$('article div section').height($('article div img').width());
+	
+	if ($(window).width() < 600) {
+		$('.contents ul').hide();
+		$('.right').show();
+	}
 });
 
 $(function() {
-	
-	$('article div section').mCustomScrollbar({theme: "minimal-dark"});
 	
 	var num2	= 0;
 	var num3	= 0; 

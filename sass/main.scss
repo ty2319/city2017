@@ -19,6 +19,7 @@ article {
 	width		: $max;
 	position	: $r;
 	background	: url(#{$ip}common/dot.png);
+	overflow	: hidden;
 
 	#pan {
 		@include fixB(0,0,1);

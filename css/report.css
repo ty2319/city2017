@@ -1,10 +1,7 @@
 /* CSS Document */
-/* line 8, ../sass/report.scss */
-article > .contents {
-  display: block;
-}
-/* line 11, ../sass/report.scss */
+/* line 10, ../sass/report.scss */
 article > .contents > div {
+  width: 100%;
   position: relative;
   overflow: hidden;
 }
@@ -12,22 +9,33 @@ article > .contents > div {
 article > .contents > div > img {
   margin: 0 !important;
   padding: 0 !important;
-  width: 50%;
-  height: auto;
+  width: 51.5%;
 }
-/* line 22, ../sass/report.scss */
+@media all and (max-width: 600px) {
+  /* line 15, ../sass/report.scss */
+  article > .contents > div > img {
+    width: 100%;
+  }
+}
+/* line 25, ../sass/report.scss */
 article > .contents > div > section {
   margin: 0 !important;
   padding: 0 3% !important;
   background-color: #fff !important;
   border: none !important;
-  height: auto;
+  overflow: auto;
 }
-/* line 29, ../sass/report.scss */
+/* line 32, ../sass/report.scss */
 article > .contents > div > section:not(.left):not(.right) {
   width: 50%;
 }
-/* line 34, ../sass/report.scss */
+@media all and (max-width: 600px) {
+  /* line 25, ../sass/report.scss */
+  article > .contents > div > section {
+    height: auto !important;
+  }
+}
+/* line 41, ../sass/report.scss */
 article > .contents > div > .left {
   position: absolute;
   top: 0;
@@ -35,7 +43,14 @@ article > .contents > div > .left {
   z-index: 1;
   width: 50%;
 }
-/* line 39, ../sass/report.scss */
+@media all and (max-width: 600px) {
+  /* line 41, ../sass/report.scss */
+  article > .contents > div > .left {
+    position: static;
+    width: 100%;
+  }
+}
+/* line 51, ../sass/report.scss */
 article > .contents > div > .right {
   position: absolute;
   top: 0;
@@ -44,25 +59,40 @@ article > .contents > div > .right {
   width: 50%;
   display: none;
 }
-/* line 44, ../sass/report.scss */
+@media all and (max-width: 600px) {
+  /* line 51, ../sass/report.scss */
+  article > .contents > div > .right {
+    position: static;
+    width: 100%;
+  }
+}
+/* line 61, ../sass/report.scss */
 article > .contents > div > .right > img {
   padding: 0 !important;
 }
-/* line 49, ../sass/report.scss */
+/* line 66, ../sass/report.scss */
 article > .contents > div h5 {
-  margin: 2rem 0;
-  padding: 1rem;
+  margin: 2.5em 0;
+  padding: 1em;
   color: #012052;
   border-top: #012052 3px double;
   border-bottom: #012052 3px double;
 }
-/* line 59, ../sass/report.scss */
+/* line 74, ../sass/report.scss */
+article > .contents > div p {
+  margin-bottom: 1em;
+}
+/* line 77, ../sass/report.scss */
+article > .contents > div p:last-of-type {
+  margin-bottom: 4em;
+}
+/* line 82, ../sass/report.scss */
 article > .contents > div a button {
   display: block;
   text-decoration: none;
   background-color: #2c7eff;
-  margin-bottom: 2rem;
-  padding: 0.5rem;
+  margin-bottom: 2em;
+  padding: 0.5em;
   text-align: center;
   color: #fff;
   overflow: hidden;
@@ -70,30 +100,30 @@ article > .contents > div a button {
   cursor: pointer;
   border: none;
 }
-/* line 72, ../sass/report.scss */
+/* line 95, ../sass/report.scss */
 article > .contents > div a button:hover {
   opacity: 0.8;
 }
-/* line 78, ../sass/report.scss */
+/* line 101, ../sass/report.scss */
 article > .contents ul {
   display: table;
   background-color: rgba(26, 26, 26, 0.8);
   text-align: center;
-  margin: -8em auto 5em auto;
+  margin: -7.7em auto 5em auto;
   position: relative;
   z-index: 1;
 }
-/* line 86, ../sass/report.scss */
+/* line 109, ../sass/report.scss */
 article > .contents ul li {
   display: table-cell;
-  padding: 1rem 1.5rem;
+  padding: 1em 1.5em;
   font-weight: bold;
 }
-/* line 92, ../sass/report.scss */
+/* line 115, ../sass/report.scss */
 article > .contents ul li.show a {
   color: #2c7eff;
 }
-/* line 97, ../sass/report.scss */
+/* line 120, ../sass/report.scss */
 article > .contents ul li a {
   color: #fff;
 }
