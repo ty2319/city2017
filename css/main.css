@@ -422,7 +422,7 @@ article .contents .box {
 article .contents .box dt {
   float: left;
   margin-top: 0;
-  width: 6em;
+  width: 7em;
   text-align: right;
 }
 /* line 396, ../sass/main.scss */
@@ -430,7 +430,7 @@ article .contents .box dd {
   text-align: left;
   margin: 0 0 0.5em 0;
   border-bottom: #666 1px dotted;
-  padding-left: 6em;
+  padding-left: 7em;
   overflow: visible;
 }
 /* line 403, ../sass/main.scss */

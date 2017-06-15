@@ -134,12 +134,12 @@
 		$.getJSON('/symbol/hp/baseball/games/2017/city/js/update.json').done(function(json, status, request) {
 			$(json).each(function(i, data) {
 				var elem	= '.' + data.class, // class
-				date		= new Date( data.date ), // date
-				ago			= date.setDate(date.getDate() + 7); // 更新日 + 7日
+					date	= new Date( data.date ), // date
+					ago		= date.setDate(date.getDate() + 5); // 更新日 + 5日
 		
 				if ( today < ago ) { // 今日(today)がago(更新日 + 7日)より前なら
-				  $('#global').find(elem).append('<span class="new">N</span>'); // クラス「new」を付ける
-				  cnt++;
+					$('#global').find(elem).append('<span class="new">N</span>'); // クラス「new」を付ける
+					cnt++;
 				}
 		
 			});

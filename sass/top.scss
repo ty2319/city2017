@@ -87,7 +87,7 @@ html {
 						transform			: translate(-$max*0.7 , $max*4.2) rotate(45deg);
 					  }
 					  100% {
-						background-position : $max*0.4 $max*0.6;
+						background-position : $max*0.4 $max*0.55;
 						transform			: translate(-$max*0.25 , $max*3.5) rotate(45deg);
 					  }
 					}
@@ -202,15 +202,15 @@ html {
 					}
 					
 					&.player7 {
-						background		: url(../img/top/nakanishi.jpg) no-repeat !important;
+						background		: url(../img/top/matsuda.jpg) no-repeat !important;
 						background-size : auto $max*1.2 !important;
-						animation		: right_left 10s infinite;
+						animation		: left_right 10s infinite;
 						
 						& > div {
-							background		: url(../img/top/junpei.jpg) no-repeat;
+							background		: url(../img/top/takuma.jpg) no-repeat;
 							
 							&.move {
-								animation: leftback 10s infinite;
+								animation: rightback 10s infinite;
 							}
 						}
 					}
@@ -222,6 +222,20 @@ html {
 						
 						& > div {
 							background		: url(../img/top/kazuhiko.jpg) no-repeat;
+							
+							&.move {
+								animation: rightback 10s infinite;
+							}
+						}
+					}
+					
+					&.player9 {
+						background		: url(../img/top/nagata.jpg) no-repeat !important;
+						background-size : auto $max*1.2 !important;
+						animation		: left_right 10s infinite;
+						
+						& > div {
+							background		: url(../img/top/ryouhei.jpg) no-repeat;
 							
 							&.move {
 								animation: rightback 10s infinite;

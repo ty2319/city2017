@@ -12,12 +12,12 @@ $(function() {
 		
 		pre = num;
 	
-		num = Math.floor(9*Math.random());
+		num = Math.floor(10*Math.random());
 		
 		if (pre == num) {
 			num = num + 1;
 			
-			if (num == 9) {
+			if (num == 10) {
 				num = 1;
 			}
 		}
