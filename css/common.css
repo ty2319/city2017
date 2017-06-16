@@ -5,7 +5,7 @@ html {
   font-family: 'ヒラギノ角ゴ Pro W3','Hiragino Kaku Gothic Pro','メイリオ',Meiryo,'ＭＳ Ｐゴシック',sans-serif;
   color: #333333; }
   html body {
-    background: center top no-repeat fixed;
+    background: center -250px no-repeat fixed;
     background-size: cover;
     line-height: 1.75em; }
     html body .menu_open {
@@ -45,12 +45,12 @@ html {
     html body.bg9 {
       background-image: url(../img/common/10.jpg); }
     html body[class*=bg] {
-      background-position: center -300px;
+      background-position: center 50px;
       transition: background-position 40s ease 1s; }
-    @media all and (max-width: 600px) {
-      html body[class*=bg] {
-        background-position: center;
-        transition: none; } }
+      @media all and (max-width: 600px) {
+        html body[class*=bg] {
+          background-size: 1000px auto;
+          background-position: right 0; } }
     html body a {
       color: #0033cc;
       text-decoration: none; }

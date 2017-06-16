@@ -6,6 +6,7 @@
 article {
 
 	&>.contents {
+		padding: 8em $max*0.03 !important;
 		
 		&>div {
 			width	: $max;
@@ -56,6 +57,7 @@ article {
 				@include media($six) {
 					position: static;
 					width	: $max;
+					display	: block;
 				}
 				
 				&> img {

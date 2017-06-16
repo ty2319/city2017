@@ -1,42 +1,46 @@
 ﻿[
   {
     "class" : "top",
-    "date" : "2017-05-25"
+    "date" : "2017-06-16"
   },
   {
     "class" : "tournament",
-    "date" : "2017-05-25"
+    "date" : "2017-06-16"
   },
   {
     "class" : "result",
-    "date" : "2017-05-25"
+    "date" : "2017-05-16"
   },
   {
     "class" : "gallery",
-    "date" : "2017-05-25"
+    "date" : "2017-05-16"
   },
   {
     "class" : "aid",
-    "date" : "2017-05-25"
+    "date" : "2017-05-16"
   },
   {
     "class" : "access",
-    "date" : "2017-05-25"
+    "date" : "2017-06-16"
+  },
+  {
+    "class" : "addition",
+    "date" : "2017-06-16"
   },
   {
     "class" : "mascot",
-    "date" : "2017-05-25"
+    "date" : "2017-05-16"
   },
   {
     "class" : "hero",
-    "date" : "2017-05-25"
+    "date" : "2017-05-16"
   },
   {
     "class" : "history",
-    "date" : "2017-05-25"
+    "date" : "2017-06-16"
   },
   {
     "class" : "past",
-    "date" : "2017-05-25"
+    "date" : "2017-06-16"
   }
 ]

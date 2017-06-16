@@ -21,14 +21,14 @@
 <body>
 <!--#include virtual="templates/header-nav.inc"-->
 <main role="main">
-	<article>
-		<header id="title">
-			<h3><span class="fa fa-sitemap"></span>Tournament Bracket</h3>
-			<p>トーナメント表</p>
-		</header>
-		<div id="minimal" style="padding-bottom: 10em !important;"></div>
-		<p id="pan">第88回都市対抗野球大会 ≫ トーナメント表</p>
-	</article>
+  <article>
+    <header id="title">
+      <h3><span class="fa fa-sitemap"></span>Tournament Bracket</h3>
+      <p>トーナメント表</p>
+    </header>
+    <div id="minimal" style="padding-bottom: 10em !important;"></div>
+    <p id="pan">第88回都市対抗野球大会 ≫ トーナメント表</p>
+  </article>
 </main>
 <!--#include virtual="templates/footer.inc"--> 
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script> 
@@ -37,34 +37,34 @@
 <script type="text/javascript">
 	var minimalData = {
 		teams : [
-			["NTT東日本", "トヨタ自動車"],
-			["新日鐵住金東海REX", "三菱重工広島"],
-			["<i>ビッグ開発ﾍﾞｰｽﾎﾞｰﾙｸﾗﾌﾞ</i>", "日本生命"],
-			["日本通運", "JR北海道"],
-			["JFE西日本", "パナソニック"],
-			["富士重工業", "JR東海"],
-			["日本新薬", "Honda熊本"],
-			["東芝", "王子"],
-			["日立製作所", "三菱重工長崎"],
-			["鷺宮製作所", "東邦ガス"],
-			["大阪ガス", "JR四国"],
-			["新日鐵住金広畑", "Honda鈴鹿"],
-			["フェデックス", "JR西日本"],
-			["JR東日本東北", "新日鐵住金鹿島"],
-			["NTT西日本", "JX-ENEOS"],
-			["東京ガス", "ヤマハ"]
+			["トヨタ自動車", "九州三菱自動車"],
+			["NTT東日本", "三菱重工神戸・高砂"],
+			["JR北海道<i>硬式野球ｸﾗﾌﾞ</i>", "新日鐵住金東海REX"],
+			["JR四国", "Honda"],
+			["日立製作所", "三菱重工名古屋"],
+			["JR東日本", "伏木海陸運送"],
+			["東芝", "日本新薬"],
+			["日本製紙石巻", "Honda熊本"],
+			["日本通運", "三菱重工広島"],
+			["三菱自動車岡崎", "パナソニック"],
+			["西部ガス", "東京ガス"],
+			["新日鐵住金鹿島", "西濃運輸"],
+			["日本生命", "三菱日立ﾊﾟﾜｰｼｽﾃﾑｽﾞ"],
+			["Honda鈴鹿", "きらやか銀行"],
+			["セガサミー", "東邦ガス"],
+			["NTT西日本", "JR西日本"]
 		],
 		results : [
 			[
-				[1,3],[3,4],[0,3],[1,0],[0,6],[7,5],[7,3],[1,2],[3,2],[5,1],[1,0],[0,2],[1,3],[2,0],[1,0],[3,11]
+				[,],[,],[,],[,],[,],[,],[,],[,],[,],[,],[,],[,],[,],[,],[,],[,]
 			],[
-				[4,3],[3,5],[2,1],[0,2],[0,2],[9,0],[5,0],[1,3]
+				[,],[,],[,],[,],[,],[,],[,],[,]
 			],[
-				[2,3],[1,3],[0,3],[4,5]
+				[,],[,],[,],[,]
 			],[
-			 	[5,4],[2,4]
+			 	[,],[,]
 			],[
-				[2,3]
+				[,]
 			]
 		]
 	}
@@ -74,8 +74,8 @@
           init: minimalData,
 		  skipConsolationRound: true
 		});		
-		$('div.jQBracket .round:nth-child(1) .match:nth-child(15) .team:nth-child(1),div.jQBracket .round:nth-child(2) .match:nth-child(8) .team:nth-child(1)').addClass('west');	
-		$('div.jQBracket .round:nth-child(1) .match:nth-child(1) .team:nth-child(1)').addClass('east');
+		$('div.jQBracket .round:nth-child(1) .match:nth-child(16) .team:nth-child(1)').addClass('west');	
+		$('div.jQBracket .round:nth-child(1) .match:nth-child(2) .team:nth-child(1)').addClass('east');
 	});
 </script>
 </body>

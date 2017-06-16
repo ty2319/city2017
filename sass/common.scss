@@ -9,7 +9,7 @@ html {
 	color		: lighten($black, 20%);
 	
 	body {
-		background		: center top no-repeat fixed;
+		background		: center -250px no-repeat fixed;
 		background-size : cover;
 		line-height		: 1.75em;
 		
@@ -46,14 +46,12 @@ html {
 		}
 		
 		&[class*=bg] {
-			background-position : center -300px;
+			background-position : center 50px;
 			transition			: background-position 40s ease 1s;
-		}
-		
-		@include media($six) {
-			&[class*=bg] {
-				background-position : center;
-				transition			: none;
+			
+			@include media($six) {
+				background-size		: 1000px auto;
+				background-position : right 0;
 			}
 		}
 

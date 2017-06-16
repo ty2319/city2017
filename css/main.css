@@ -195,32 +195,33 @@ article .quarter img {
 /* line 186, ../sass/main.scss */
 article div.contents, article .double {
   width: 100% !important;
+  padding: 0;
 }
-/* line 189, ../sass/main.scss */
+/* line 190, ../sass/main.scss */
 article div.contents .half, article .double .half {
   padding-top: 0 !important;
 }
-/* line 193, ../sass/main.scss */
+/* line 194, ../sass/main.scss */
 article div.contents h5, article .double h5 {
   margin-top: 5em;
 }
-/* line 197, ../sass/main.scss */
+/* line 198, ../sass/main.scss */
 article div.contents > img, article .double > img {
   height: auto;
   padding: 0 3% 5rem 0 !important;
   border: none;
 }
-/* line 204, ../sass/main.scss */
+/* line 205, ../sass/main.scss */
 article .double .one_third {
   padding-bottom: 5rem !important;
 }
-/* line 207, ../sass/main.scss */
+/* line 208, ../sass/main.scss */
 article .double .one_third p {
   overflow: hidden;
   background: url(/symbol/hp/baseball/games/2016/city/img/mascot/line.gif) left 55px;
   line-height: 28px;
 }
-/* line 214, ../sass/main.scss */
+/* line 215, ../sass/main.scss */
 article section header, article div.contents header {
   text-align: center;
   margin-bottom: 7em;
@@ -228,17 +229,17 @@ article section header, article div.contents header {
   width: 100%;
   transform: skewX(-10deg);
 }
-/* line 221, ../sass/main.scss */
+/* line 222, ../sass/main.scss */
 article section header h4, article div.contents header h4 {
   font-size: 2em;
   line-height: 100%;
 }
-/* line 226, ../sass/main.scss */
+/* line 227, ../sass/main.scss */
 article section header p, article div.contents header p {
   font-family: century;
   margin: 0.5em 0 0 !important;
 }
-/* line 232, ../sass/main.scss */
+/* line 233, ../sass/main.scss */
 article .contents {
   width: 100%;
   background: center top no-repeat fixed;
@@ -248,109 +249,108 @@ article .contents {
   display: flex;
   flex-flow: row wrap;
 }
-/* line 243, ../sass/main.scss */
+/* line 244, ../sass/main.scss */
 article .contents.bg0 {
   background-image: url(../img/common/10.png);
 }
-/* line 243, ../sass/main.scss */
+/* line 244, ../sass/main.scss */
 article .contents.bg1 {
   background-image: url(../img/common/11.png);
 }
-/* line 243, ../sass/main.scss */
+/* line 244, ../sass/main.scss */
 article .contents.bg2 {
   background-image: url(../img/common/12.png);
 }
-/* line 243, ../sass/main.scss */
+/* line 244, ../sass/main.scss */
 article .contents.bg3 {
   background-image: url(../img/common/13.png);
 }
-/* line 243, ../sass/main.scss */
+/* line 244, ../sass/main.scss */
 article .contents.bg4 {
   background-image: url(../img/common/14.png);
 }
-/* line 243, ../sass/main.scss */
+/* line 244, ../sass/main.scss */
 article .contents.bg5 {
   background-image: url(../img/common/15.png);
 }
-/* line 248, ../sass/main.scss */
+/* line 249, ../sass/main.scss */
 article .contents hr {
   width: 100%;
   display: block;
   border-top: 1px dotted gray;
   margin-bottom: 4em;
 }
-/* line 255, ../sass/main.scss */
+/* line 256, ../sass/main.scss */
 article .contents > p, article .contents > dl {
   width: 100%;
 }
-/* line 259, ../sass/main.scss */
+/* line 260, ../sass/main.scss */
 article .contents section {
   width: 100%;
   padding: 5em 0;
   background: none;
 }
-/* line 264, ../sass/main.scss */
+/* line 265, ../sass/main.scss */
 article .contents section:not(.half):not(.one_third):not(.quarter) {
   border-top: #666 1px dotted;
 }
-/* line 268, ../sass/main.scss */
+/* line 269, ../sass/main.scss */
 article .contents section.half {
   margin-bottom: 4em;
   padding: 1em 0;
 }
-/* line 272, ../sass/main.scss */
+/* line 273, ../sass/main.scss */
 article .contents section.half:nth-of-type(odd) {
   padding-right: 3%;
 }
-/* line 276, ../sass/main.scss */
+/* line 277, ../sass/main.scss */
 article .contents section.half:nth-of-type(even) {
   padding-left: 3%;
 }
 @media all and (max-width: 600px) {
-  /* line 276, ../sass/main.scss */
+  /* line 277, ../sass/main.scss */
   article .contents section.half:nth-of-type(even) {
     padding-top: 4em;
   }
 }
-/* line 285, ../sass/main.scss */
+/* line 286, ../sass/main.scss */
 article .contents section.one_third {
   padding: 7em 2em;
 }
-/* line 289, ../sass/main.scss */
+/* line 290, ../sass/main.scss */
 article .contents section > div {
   display: flex;
   flex-flow: row nowrap;
   margin: 1em 0;
 }
 @media all and (max-width: 940px) {
-  /* line 289, ../sass/main.scss */
+  /* line 290, ../sass/main.scss */
   article .contents section > div {
     flex-flow: row wrap;
   }
 }
-/* line 300, ../sass/main.scss */
+/* line 301, ../sass/main.scss */
 article .contents > div {
   margin-bottom: 4em;
 }
-/* line 303, ../sass/main.scss */
+/* line 304, ../sass/main.scss */
 article .contents > div:nth-of-type(odd) {
   padding-right: 3% !important;
 }
-/* line 307, ../sass/main.scss */
+/* line 308, ../sass/main.scss */
 article .contents > div:nth-of-type(even) {
   padding-left: 3% !important;
 }
-/* line 311, ../sass/main.scss */
+/* line 312, ../sass/main.scss */
 article .contents > div img {
   display: block;
   width: 100%;
   height: auto;
   margin-top: 1em;
 }
-/* line 319, ../sass/main.scss */
+/* line 320, ../sass/main.scss */
 article .contents > img:not(.one_third):not(.half) {
   width: 100%;
-  height: auto;
   margin-bottom: 2em;
 }
 /* line 325, ../sass/main.scss */
@@ -422,7 +422,7 @@ article .contents .box {
 article .contents .box dt {
   float: left;
   margin-top: 0;
-  width: 6em;
+  width: 7em;
   text-align: right;
 }
 /* line 396, ../sass/main.scss */
@@ -430,23 +430,27 @@ article .contents .box dd {
   text-align: left;
   margin: 0 0 0.5em 0;
   border-bottom: #666 1px dotted;
-  padding-left: 6em;
+  padding-left: 7em;
   overflow: visible;
 }
-/* line 406, ../sass/main.scss */
+/* line 403, ../sass/main.scss */
+article .contents .box dd:last-of-type {
+  border: none;
+}
+/* line 410, ../sass/main.scss */
 article dfn img {
   vertical-align: middle;
 }
-/* line 410, ../sass/main.scss */
+/* line 414, ../sass/main.scss */
 article .center {
   text-align: center;
 }
-/* line 414, ../sass/main.scss */
+/* line 418, ../sass/main.scss */
 article .zerofive {
   padding-top: 0.5rem !important;
   padding-top: 1rem !important;
 }
-/* line 419, ../sass/main.scss */
+/* line 423, ../sass/main.scss */
 article .bottom {
   padding-bottom: 1rem !important;
 }

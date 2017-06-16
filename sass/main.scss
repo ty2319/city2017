@@ -184,7 +184,8 @@ article {
 	}
 	
 	div.contents,.double {
-		width: $max !important;
+		width	: $max !important;
+		padding	: 0;
 				
 		.half {
 			padding-top: 0 !important;
@@ -318,7 +319,6 @@ article {
 		
 		&> img:not(.one_third):not(.half) {
 			width: $max;
-			height: auto;
 			margin-bottom: 2em;
 		}
 	
@@ -387,18 +387,22 @@ article {
 			margin: 3em 0 !important;
 			
 			dt {
-				float: left;
-				margin-top: 0;
-				width: 6em;
-				text-align: right;
+				float		: left;
+				margin-top	: 0;
+				width		: 7em;
+				text-align	: right;
 			}
 		
 			dd {
-				text-align: left;
-				margin: 0 0 0.5em 0;
-				border-bottom: #666 1px dotted;
-				padding-left: 6em;
-				overflow: visible;
+				text-align		: left;
+				margin			: 0 0 0.5em 0;
+				border-bottom	: #666 1px dotted;
+				padding-left	: 7em;
+				overflow		: visible;
+			
+				&:last-of-type {
+					border: none;
+				}
 			}
 		}
 	}
