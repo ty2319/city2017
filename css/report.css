@@ -68,13 +68,14 @@ article > .contents > div > .right {
   article > .contents > div > .right {
     position: static;
     width: 100%;
+    display: block;
   }
 }
-/* line 62, ../sass/report.scss */
+/* line 63, ../sass/report.scss */
 article > .contents > div > .right > img {
   padding: 0 !important;
 }
-/* line 67, ../sass/report.scss */
+/* line 68, ../sass/report.scss */
 article > .contents > div h5 {
   margin: 2.5em 0;
   padding: 1em;
@@ -82,15 +83,15 @@ article > .contents > div h5 {
   border-top: #012052 3px double;
   border-bottom: #012052 3px double;
 }
-/* line 75, ../sass/report.scss */
+/* line 76, ../sass/report.scss */
 article > .contents > div p {
   margin-bottom: 1em;
 }
-/* line 78, ../sass/report.scss */
+/* line 79, ../sass/report.scss */
 article > .contents > div p:last-of-type {
   margin-bottom: 4em;
 }
-/* line 83, ../sass/report.scss */
+/* line 84, ../sass/report.scss */
 article > .contents > div a button {
   display: block;
   text-decoration: none;
@@ -104,11 +105,11 @@ article > .contents > div a button {
   cursor: pointer;
   border: none;
 }
-/* line 96, ../sass/report.scss */
+/* line 97, ../sass/report.scss */
 article > .contents > div a button:hover {
   opacity: 0.8;
 }
-/* line 102, ../sass/report.scss */
+/* line 103, ../sass/report.scss */
 article > .contents ul {
   display: table;
   background-color: rgba(26, 26, 26, 0.8);
@@ -117,17 +118,17 @@ article > .contents ul {
   position: relative;
   z-index: 1;
 }
-/* line 110, ../sass/report.scss */
+/* line 111, ../sass/report.scss */
 article > .contents ul li {
   display: table-cell;
   padding: 1em 1.5em;
   font-weight: bold;
 }
-/* line 116, ../sass/report.scss */
+/* line 117, ../sass/report.scss */
 article > .contents ul li.show a {
   color: #2c7eff;
 }
-/* line 121, ../sass/report.scss */
+/* line 122, ../sass/report.scss */
 article > .contents ul li a {
   color: #fff;
 }

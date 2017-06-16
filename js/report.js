@@ -4,14 +4,12 @@ $(window).on('load resize', function() {
 	
 	if ($(window).width() < 600) {
 		$('.contents ul').hide();
-		$('.right').show();
+	} else {
+		$('.contents ul').show();
 	}
-});
-
-$(function() {
 	
 	var num2	= 0;
-	var num3	= 0; 
+	var num3	= 0;
 	
 	$('article > div > div').find('.right:first').show();
 		

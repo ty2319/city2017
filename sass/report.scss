@@ -57,6 +57,7 @@ article {
 				@include media($six) {
 					position: static;
 					width	: $max;
+					display	: block;
 				}
 				
 				&> img {
