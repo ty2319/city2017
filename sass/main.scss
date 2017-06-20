@@ -156,7 +156,7 @@ article {
 			}
 		}
 		
-		@include media($fh) {
+		@include media($six) {
 			width: $max !important;
 		
 			&:nth-of-type(even) {

@@ -5,7 +5,7 @@ html {
   font-family: 'ヒラギノ角ゴ Pro W3','Hiragino Kaku Gothic Pro','メイリオ',Meiryo,'ＭＳ Ｐゴシック',sans-serif;
   color: #333333; }
   html body {
-    background: center -250px no-repeat fixed;
+    background: center -200px no-repeat fixed;
     background-size: cover;
     line-height: 1.75em; }
     html body .menu_open {

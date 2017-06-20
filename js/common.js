@@ -135,17 +135,17 @@
 			$(json).each(function(i, data) {
 				var elem	= '.' + data.class, // class
 					date	= new Date( data.date ), // date
-					ago		= date.setDate(date.getDate() + 5); // 更新日 + 5日
+					ago		= date.setDate(date.getDate() + 3); // 更新日 + 3日
 		
 				if ( today < ago ) { // 今日(today)がago(更新日 + 7日)より前なら
-					$('#global').find(elem).append('<span class="new">N</span>'); // クラス「new」を付ける
+					$('#global').find(elem).not('.top').append('<span class="new">N</span>'); // クラス「new」を付ける
 					cnt++;
 				}
 		
 			});
 				
 			if (cnt > 0) {
-				$('.menu-trigger').append('<span class="new">' + cnt + '</span>');
+				$('.menu-trigger').append('<span class="new">' + (cnt-1) + '</span>');
 			}
 		});
 	},
@@ -187,7 +187,7 @@
 		var boxTop = new Array;
 		var current = -1;
 		var startPosition = 0;
-		var navtop = $('#global').offset().top;
+		var navtop = $('#header').offset().top;
 		
 		//各要素の位置
 		$(window).on("load resize", function(){

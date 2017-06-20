@@ -1,20 +1,14 @@
 $(window).on('load resize' , function() {
 	
-	if ($(window).width() > 940) {
-		$('div.half img').css({'width':$(window).width()/2, 'height':'auto' , 'min-width' : 630});
-	} else {
-		$('div.half img').css({'width':$(window).width()/2 , 'min-width': 630 , 'height':'auto'});
-	}
-	
 	$('article > .head').each(function() {
         $('table.quarter:eq(0)',this).addClass('blue');
-        $('table.quarter:eq(1)',this).addClass('border').css('margin-left','50%');
+        $('table.quarter:eq(1)',this).addClass('border');
 		$('table.battery tr:eq(0) th:eq(0)' , this).addClass('b_n');
 		$('table.battery tr:eq(1) th:eq(0)' , this).addClass('b_e');
     });	
 	$('article > .tail').each(function() {
         $('table.quarter:eq(0)',this).addClass('border');
-        $('table.quarter:eq(1)',this).addClass('blue').css('margin-left','50%');
+        $('table.quarter:eq(1)',this).addClass('blue');
 		$('table.battery tr:eq(0) th:eq(0)' , this).addClass('b_e');
 		$('table.battery tr:eq(1) th:eq(0)' , this).addClass('b_n');
     });
@@ -51,7 +45,7 @@ $(window).on('load resize' , function() {
 	$('.contents > .half').each(function() {
 		
 		$('div' , this).width($('section',this).length * $(this).parent().width());
-		$('div' , this).children().width($('.half').width()).css('margin-right' , $('.half').outerWidth() * 0.1);
+		$('div' , this).children().width($('.half').width()).css('margin-right' , $('.half').width() * 0.1);
 		
 		$('dl' , this).each(function(index, element) {
             $('dd' ,this).eq(0).append('　　　―');
