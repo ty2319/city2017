@@ -14,7 +14,8 @@
     #side li a {
       color: #fff;
       text-decoration: none;
-      margin-left: 0.2rem; }
+      margin-left: 0.2rem;
+      cursor: pointer; }
       #side li a span {
         display: none; }
   #side .on, #side .on a {

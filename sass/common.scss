@@ -56,8 +56,8 @@ html {
 		}
 
 		a {
-			color: #0033cc;
-			text-decoration: none;
+			color			: #0033cc;
+			text-decoration	: none;
 			
 			&:hover {
 				text-decoration: none;
@@ -74,7 +74,7 @@ html {
 			@include fixB(-50px,55px,1);
 			
 			@include media($fh) {
-				@include fixB(-50px,10px,1);
+				@include fixB(-50px,10px,5);
 			}
 			
 			a {

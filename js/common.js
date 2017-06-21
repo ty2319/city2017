@@ -137,7 +137,7 @@
 					date	= new Date( data.date ), // date
 					ago		= date.setDate(date.getDate() + 3); // 更新日 + 3日
 		
-				if ( today < ago ) { // 今日(today)がago(更新日 + 7日)より前なら
+				if ( today < ago ) { // 今日(today)がago(更新日 + 3日)より前なら
 					$('#global').find(elem).not('.top').append('<span class="new">N</span>'); // クラス「new」を付ける
 					cnt++;
 				}
@@ -173,7 +173,7 @@
 	// SmoothScroll
 	smoothScroll = function() {
 		
-		$('article #side li a[href^=#]').click(function(){
+		$('article #side li a[href^="#"]').click(function(){
 			var speed = 500;
 			var href= $(this).attr("href");
 			var target = $(href == "#" || href == "" ? 'html' : href);
@@ -184,14 +184,13 @@
 		});
 		
 		var set =  $('#global').height() + 1;//ウインドウ上部からどれぐらいの位置で変化させるか
-		var boxTop = new Array;
-		var current = -1;
-		var startPosition = 0;
-		var navtop = $('#header').offset().top;
+		var boxTop			= new Array;
+		var current			= -1;
+		var startPosition	= 0;
 		
 		//各要素の位置
 		$(window).on("load resize", function(){
-			$('article > section,article > div').each(function(i) {
+			$('.contents').each(function(i) {
 				boxTop[i] = $(this).offset().top;
 			});
 		});
@@ -200,7 +199,8 @@
 		//スクロールした時の処理
 		$(window).scroll(function(){
 			
-			var scrollPosition	= $(window).scrollTop();		
+			var scrollPosition	= $(window).scrollTop();	
+			var navtop			= $('header#top').offset().top;	
 				
 			for (var i = boxTop.length - 1 ; i >= 0; i--) {
 				if (scrollPosition >= boxTop[i] - set) {

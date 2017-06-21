@@ -17,9 +17,9 @@
 
 article {
 	width		: $max;
-	position	: $r;
 	background	: url(#{$ip}common/dot.png);
 	overflow	: hidden;
+	position	: $r;
 
 	#pan {
 		@include fixB(0,0,1);
@@ -28,6 +28,11 @@ article {
 		width			: $max;
 		color			: $white;
 		background-color: $modal4;
+	}
+	
+	a {
+		position: $r;
+		z-index	: 4;
 	}
 	
 		header#title {
@@ -61,8 +66,8 @@ article {
 				font-weight : normal;
 				
 				&#scroll {
-					margin: 5em 0 0 3em;
-					cursor: pointer;
+					margin	: 5em 0 0 3em;
+					cursor	: pointer;
 			
 					span {
 						display: block;
