@@ -59,19 +59,6 @@
 	},
 	
 	nav = function() {
-		
-		var path	= location.href.split('/');
-		var loc		= path[path.length-1];
-		
-		$('nav#global a').each(function(e,v){
-			href = $(this).attr('href');
-			if(loc == '') {
-				loc = 'index';
-			}
-			if(href.match('city') && href.match(loc)) {
-				$(this).addClass('active');
-			}
-		});
 			
 		$('h2').hover(function() {
 			$('#global > dl > dd').slideUp(500);
@@ -127,8 +114,12 @@
 		   }
 		});
 		
-		var today	= new Date( $.now() ); // 今日の日付を取得
-		var cnt		= 0;
+		var today	= new Date( $.now() ),
+			cnt		= 0,
+			path	= location.href.split('/'),
+			loc		= path[path.length-1];
+			
+			localStorage.setItem(loc, loc);
  
 		//JSONファイルを取得
 		$.getJSON('/symbol/hp/baseball/games/2017/city/js/update.json').done(function(json, status, request) {
@@ -137,16 +128,30 @@
 					date	= new Date( data.date ), // date
 					ago		= date.setDate(date.getDate() + 5); // 更新日 + 5日
 		
-				if ( today < ago ) { // 今日(today)がago(更新日 + 7日)より前なら
-					$('#global').find(elem).append('<span class="new">N</span>'); // クラス「new」を付ける
+				if ( today < ago ) { // 今日(today)がago(更新日 + 5日)より前なら
+					$('#global').find(elem).not('.top').append('<span class="new">N</span>'); // クラス「new」を付ける
 					cnt++;
 				}
 		
 			});
 				
 			if (cnt > 0) {
-				$('.menu-trigger').append('<span class="new">' + cnt + '</span>');
+				$('.menu-trigger').append('<span class="new">' + (cnt-1) + '</span>');
+			} else {
+				$('.menu-trigger').find('.new').remove();
 			}
+		
+			$('nav#global a').each(function(e,v){
+				var href = $(this).attr('href');
+				
+				if(loc == '') {
+					loc = 'index';
+				}
+				
+				if(href.match('city') && href.match(loc)) {
+					$(this).addClass('active');
+				}
+			});
 		});
 	},
 	
@@ -173,7 +178,7 @@
 	// SmoothScroll
 	smoothScroll = function() {
 		
-		$('article #side li a[href^=#]').click(function(){
+		$('article #side li a[href^="#"]').click(function(){
 			var speed = 500;
 			var href= $(this).attr("href");
 			var target = $(href == "#" || href == "" ? 'html' : href);
@@ -184,14 +189,13 @@
 		});
 		
 		var set =  $('#global').height() + 1;//ウインドウ上部からどれぐらいの位置で変化させるか
-		var boxTop = new Array;
-		var current = -1;
-		var startPosition = 0;
-		var navtop = $('#global').offset().top;
+		var boxTop			= new Array;
+		var current			= -1;
+		var startPosition	= 0;
 		
 		//各要素の位置
 		$(window).on("load resize", function(){
-			$('article > section,article > div').each(function(i) {
+			$('.contents').each(function(i) {
 				boxTop[i] = $(this).offset().top;
 			});
 		});
@@ -200,7 +204,8 @@
 		//スクロールした時の処理
 		$(window).scroll(function(){
 			
-			var scrollPosition	= $(window).scrollTop();		
+			var scrollPosition	= $(window).scrollTop();	
+			var navtop			= $('header#top').offset().top;	
 				
 			for (var i = boxTop.length - 1 ; i >= 0; i--) {
 				if (scrollPosition >= boxTop[i] - set) {
@@ -256,7 +261,6 @@
 		$('#side').hover(function() {
 			$('body').append('<div id="modal"></div>');
 			$('span',this).fadeIn('slow');
-			$('a',this).css('cursor','pointer');
 		},function() {
 			$('div#modal').remove();
 			$('span',this).fadeOut('slow');

@@ -9,7 +9,7 @@ html {
 	color		: lighten($black, 20%);
 	
 	body {
-		background		: center -250px no-repeat fixed;
+		background		: center -200px no-repeat fixed;
 		background-size : cover;
 		line-height		: 1.75em;
 		
@@ -56,8 +56,8 @@ html {
 		}
 
 		a {
-			color: #0033cc;
-			text-decoration: none;
+			color			: #0033cc;
+			text-decoration	: none;
 			
 			&:hover {
 				text-decoration: none;
@@ -74,7 +74,7 @@ html {
 			@include fixB(-50px,55px,1);
 			
 			@include media($fh) {
-				@include fixB(-50px,10px,1);
+				@include fixB(-50px,10px,5);
 			}
 			
 			a {
