@@ -53,12 +53,12 @@ $(function() {
 				Push.Permission.request();
 				
 				Push.create('都市対抗特設サイト', {
-				　　body	: 'マスコットのご紹介を公開しました。',
+				　　body	: 'マスコット、応援ガイドを公開しました。',
 				　　icon	: 'icon.gif',
 				　　timeout	: 8000, // 通知が消えるタイミング
 				　　vibrate	: [100, 100, 100], // モバイル端末でのバイブレーション秒数
 				　　onClick	: function() {
-				　　　　window.open('http://http://www.ntt-west.co.jp/symbol/hp/baseball/games/2017/city/mascot.html');
+				　　　　window.open('http://www.ntt-west.co.jp/symbol/hp/baseball/games/2017/city/mascot.html');
 				　　}
 				});
 			}

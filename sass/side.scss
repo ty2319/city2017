@@ -29,4 +29,8 @@
 	.on,.on a {
 		color: $blue;
 	}
+	
+	@include media($fh) {
+		display: none !important;
+	}
 }

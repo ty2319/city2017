@@ -30,9 +30,11 @@ article {
 		background-color: $modal4;
 	}
 	
-	a {
-		position: $r;
-		z-index	: 4;
+	@include media($fh) {
+		a {
+			position: $r;
+			z-index	: 5;
+		}
 	}
 	
 		header#title {

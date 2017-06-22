@@ -59,19 +59,6 @@
 	},
 	
 	nav = function() {
-		
-		var path	= location.href.split('/');
-		var loc		= path[path.length-1];
-		
-		$('nav#global a').each(function(e,v){
-			href = $(this).attr('href');
-			if(loc == '') {
-				loc = 'index';
-			}
-			if(href.match('city') && href.match(loc)) {
-				$(this).addClass('active');
-			}
-		});
 			
 		$('h2').hover(function() {
 			$('#global > dl > dd').slideUp(500);
@@ -127,17 +114,21 @@
 		   }
 		});
 		
-		var today	= new Date( $.now() ); // 今日の日付を取得
-		var cnt		= 0;
+		var today	= new Date( $.now() ),
+			cnt		= 0,
+			path	= location.href.split('/'),
+			loc		= path[path.length-1];
+			
+			localStorage.setItem(loc, loc);
  
 		//JSONファイルを取得
 		$.getJSON('/symbol/hp/baseball/games/2017/city/js/update.json').done(function(json, status, request) {
 			$(json).each(function(i, data) {
 				var elem	= '.' + data.class, // class
 					date	= new Date( data.date ), // date
-					ago		= date.setDate(date.getDate() + 3); // 更新日 + 3日
+					ago		= date.setDate(date.getDate() + 5); // 更新日 + 5日
 		
-				if ( today < ago ) { // 今日(today)がago(更新日 + 3日)より前なら
+				if ( today < ago ) { // 今日(today)がago(更新日 + 5日)より前なら
 					$('#global').find(elem).not('.top').append('<span class="new">N</span>'); // クラス「new」を付ける
 					cnt++;
 				}
@@ -146,7 +137,21 @@
 				
 			if (cnt > 0) {
 				$('.menu-trigger').append('<span class="new">' + (cnt-1) + '</span>');
+			} else {
+				$('.menu-trigger').find('.new').remove();
 			}
+		
+			$('nav#global a').each(function(e,v){
+				var href = $(this).attr('href');
+				
+				if(loc == '') {
+					loc = 'index';
+				}
+				
+				if(href.match('city') && href.match(loc)) {
+					$(this).addClass('active');
+				}
+			});
 		});
 	},
 	
@@ -256,7 +261,6 @@
 		$('#side').hover(function() {
 			$('body').append('<div id="modal"></div>');
 			$('span',this).fadeIn('slow');
-			$('a',this).css('cursor','pointer');
 		},function() {
 			$('div#modal').remove();
 			$('span',this).fadeOut('slow');

@@ -20,5 +20,8 @@
         display: none; }
   #side .on, #side .on a {
     color: #2c7eff; }
+  @media all and (max-width: 500px) {
+    #side {
+      display: none !important; } }
 
 /*# sourceMappingURL=side.css.map */
