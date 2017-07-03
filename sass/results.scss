@@ -4,9 +4,6 @@
 @import "settings";
 
 .contents {
-	@include media($nf) {
-		justify-content : space-around;
-	}
 
 	.half {
 		overflow	: hidden;
@@ -71,7 +68,7 @@
 		border-collapse : collapse;
 		border			: lighten($black,70%) solid 1px;
 		width			: $max;
-		padding: 0;
+		padding			: 0;
 		
 		&.quarter {
 			&:nth-of-type(1) {
@@ -79,6 +76,10 @@
 		
 				@include media($nf) {
 					order: 2;
+				}
+		
+				@include media($six) {
+					margin-bottom: 5em;
 				}
 			}
 			
