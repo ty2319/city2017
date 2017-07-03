@@ -114,44 +114,57 @@
 		   }
 		});
 		
-		var today	= new Date( $.now() ),
-			cnt		= 0,
-			path	= location.href.split('/'),
-			loc		= path[path.length-1];
+		var	path		= location.href.split('/'),
+			loc			= path[path.length-1];
 			
-			localStorage.setItem(loc, loc);
+			$.cookie('visit.' + loc , 1);
  
 		//JSONファイルを取得
 		$.getJSON('/symbol/hp/baseball/games/2017/city/js/update.json').done(function(json, status, request) {
 			$(json).each(function(i, data) {
-				var elem	= '.' + data.class, // class
+				
+				var today	= new Date( $.now() ),
+					cnt		= 0,
+					elem	= '.' + data.class, // class
 					date	= new Date( data.date ), // date
-					ago		= date.setDate(date.getDate() + 5); // 更新日 + 5日
+					ago		= date.setDate(date.getDate() + 4), // 更新日 + 5日
+					cont	= data.cont;
 		
-				if ( today < ago ) { // 今日(today)がago(更新日 + 5日)より前なら
+				if (today < ago && $.cookie('visit' + elem + '.html') != 1 || cont == 'yes') { // 今日(today)がago(更新日 + 5日)より前なら	
 					$('#global').find(elem).not('.top').append('<span class="new">N</span>'); // クラス「new」を付ける
-					cnt++;
 				}
-		
-			});
 				
-			if (cnt > 0) {
-				$('.menu-trigger').append('<span class="new">' + (cnt-1) + '</span>');
-			} else {
-				$('.menu-trigger').find('.new').remove();
+				if($.cookie('visit' + elem + '.html') == 1) {
+					$('#global').find(elem).children('.new').remove();
+					
+					if (today >= ago) {
+						$.cookie('visit' + elem + '.html' , null);						
+					}
+				}
+				
+				if (today >= ago && cont == 'yes') {
+					$('#global').find(elem).children('.new').remove();
+				}
+				
+				cnt = $('#global dd').find('.new').length;
+		
+				if (cnt > 0) {
+					$('.menu-trigger').append('<span class="new">' + cnt + '</span>');
+				}		
+			});
+		});
+		
+		$('nav#global a').each(function(e,v){
+			var links	= $(this);
+			var href	= links.attr('href');
+			
+			if(loc == '') {
+				loc = 'index';
 			}
-		
-			$('nav#global a').each(function(e,v){
-				var href = $(this).attr('href');
-				
-				if(loc == '') {
-					loc = 'index';
-				}
-				
-				if(href.match('city') && href.match(loc)) {
-					$(this).addClass('active');
-				}
-			});
+			
+			if(href.match('city') && href.match(loc)) {
+				$(this).addClass('active');
+			}
 		});
 	},
 	
