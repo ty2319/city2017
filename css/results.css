@@ -1,101 +1,198 @@
 /* CSS Document */
-@media all and (max-width: 940px) {
-  .contents {
-    justify-content: space-around; } }
+/* line 6, ../sass/results.scss */
+.contents {
+  justify-content: space-between;
+}
+/* line 9, ../sass/results.scss */
 .contents .half {
   overflow: hidden;
   text-align: center;
-  order: 2; }
-  @media all and (max-width: 940px) {
-    .contents .half {
-      order: 1;
-      width: 100% !important; } }
-  .contents .half h5 {
-    margin: 0; }
-  .contents .half div {
-    display: flex;
-    flex-flow: row nowrap; }
-    .contents .half div section {
-      padding: 0;
-      border: none !important; }
-      .contents .half div section p {
-        margin: 0; }
+  order: 2;
+}
+@media all and (max-width: 940px) {
+  /* line 9, ../sass/results.scss */
+  .contents .half {
+    order: 1;
+    width: 100% !important;
+  }
+}
+/* line 19, ../sass/results.scss */
+.contents .half h5 {
+  margin: 0;
+}
+/* line 23, ../sass/results.scss */
+.contents .half div {
+  display: flex;
+  flex-flow: row nowrap;
+}
+/* line 27, ../sass/results.scss */
+.contents .half div section {
+  padding: 0;
+  border: none !important;
+}
+@media all and (max-width: 940px) {
+  /* line 27, ../sass/results.scss */
+  .contents .half div section {
+    margin-left: 1.5em;
+  }
+}
+@media all and (max-width: 500px) {
+  /* line 27, ../sass/results.scss */
+  .contents .half div section {
+    margin-left: 1em;
+  }
+}
+/* line 39, ../sass/results.scss */
+.contents .half div section p {
+  margin: 0;
+}
+/* line 47, ../sass/results.scss */
+.contents .half ul .prev {
+  float: left;
+  margin: -25em 0 0 -2em;
+  display: none;
+}
+@media all and (max-width: 940px) {
+  /* line 47, ../sass/results.scss */
   .contents .half ul .prev {
-    float: left;
-    margin: -25em 0 0 -2em;
-    display: none; }
-    @media all and (max-width: 940px) {
-      .contents .half ul .prev {
-        margin-left: -1em; } }
+    margin-left: -1em;
+  }
+}
+/* line 57, ../sass/results.scss */
+.contents .half ul .next {
+  float: right;
+  margin: -25em -2em 0;
+}
+@media all and (max-width: 940px) {
+  /* line 57, ../sass/results.scss */
   .contents .half ul .next {
-    float: right;
-    margin: -25em -2em 0; }
-    @media all and (max-width: 940px) {
-      .contents .half ul .next {
-        margin-right: -1em; } }
-  .contents .half ul a {
-    color: #012052; }
-    .contents .half ul a:hover {
-      color: #035be9; }
+    margin-right: -1em;
+  }
+}
+/* line 66, ../sass/results.scss */
+.contents .half ul a {
+  color: #012052;
+}
+/* line 69, ../sass/results.scss */
+.contents .half ul a:hover {
+  color: #035be9;
+}
+/* line 76, ../sass/results.scss */
 .contents table {
   border-collapse: collapse;
   border: #b3b3b3 solid 1px;
   width: 100%;
-  padding: 0; }
+  padding: 0;
+}
+@media all and (max-width: 940px) {
+  /* line 82, ../sass/results.scss */
+  .contents table.quarter {
+    width: 48% !important;
+  }
+}
+@media all and (max-width: 500px) {
+  /* line 82, ../sass/results.scss */
+  .contents table.quarter {
+    width: 100% !important;
+  }
+}
+/* line 92, ../sass/results.scss */
+.contents table.quarter:nth-of-type(1) {
+  order: 1;
+}
+@media all and (max-width: 940px) {
+  /* line 92, ../sass/results.scss */
   .contents table.quarter:nth-of-type(1) {
-    order: 1; }
-    @media all and (max-width: 940px) {
-      .contents table.quarter:nth-of-type(1) {
-        order: 2; } }
-  .contents table.quarter:nth-of-type(2) {
-    order: 3; }
-  .contents table caption span {
-    font-size: 1.25em; }
-  .contents table thead th {
-    background-color: rgba(77, 77, 77, 0.8);
-    color: #fff; }
-  .contents table th, .contents table td {
-    border-right: #b3b3b3 dotted 1px;
-    padding: 0.7em 0.5em;
-    text-align: center;
-    width: auto; }
-  .contents table.battery {
-    border: none;
-    width: auto;
-    border-collapse: separate;
-    border-spacing: 0 0.5em;
-    margin-bottom: 5em !important; }
-    .contents table.battery th, .contents table.battery td {
-      border: none;
-      text-align: left;
-      padding: 0.4em;
-      line-height: 100%; }
-    .contents table.battery .b_n {
-      background-color: rgba(44, 126, 255, 0.8);
-      color: #fff; }
-    .contents table.battery .b_e {
-      background-color: rgba(77, 77, 77, 0.8);
-      color: #fff; }
-  .contents table.score thead th {
-    background-color: rgba(1, 32, 82, 0.9); }
-  .contents table .current {
-    background-color: rgba(26, 26, 26, 0.8) !important;
-    font-weight: bold; }
-    .contents table .current a {
-      color: #fff; }
-  .contents table.blue caption {
-    color: #2c7eff !important; }
-  .contents table.blue thead th {
-    background-color: rgba(44, 126, 255, 0.8); }
-  .contents table.border caption {
-    color: #666666 !important; }
-  .contents table .back_blue th, .contents table .back_blue td {
-    background-color: rgba(223, 235, 255, 0.8); }
+    order: 2;
+  }
+}
+@media all and (max-width: 600px) {
+  /* line 92, ../sass/results.scss */
+  .contents table.quarter:nth-of-type(1) {
+    margin-bottom: 5em;
+  }
+}
+/* line 104, ../sass/results.scss */
+.contents table.quarter:nth-of-type(2) {
+  order: 3;
+}
+/* line 109, ../sass/results.scss */
+.contents table caption span {
+  font-size: 1.25em;
+}
+/* line 113, ../sass/results.scss */
+.contents table thead th {
+  background-color: rgba(77, 77, 77, 0.8);
+  color: #fff;
+}
+/* line 118, ../sass/results.scss */
+.contents table th, .contents table td {
+  border-right: #b3b3b3 dotted 1px;
+  padding: 0.7em 0.5em;
+  text-align: center;
+  width: auto;
+}
+/* line 125, ../sass/results.scss */
+.contents table.battery {
+  border: none;
+  width: auto;
+  border-collapse: separate;
+  border-spacing: 0 0.5em;
+  margin-bottom: 5em !important;
+}
+/* line 132, ../sass/results.scss */
+.contents table.battery th, .contents table.battery td {
+  border: none;
+  text-align: left;
+  padding: 0.4em;
+  line-height: 100%;
+}
+/* line 139, ../sass/results.scss */
+.contents table.battery .b_n {
+  background-color: rgba(44, 126, 255, 0.8);
+  color: #fff;
+}
+/* line 144, ../sass/results.scss */
+.contents table.battery .b_e {
+  background-color: rgba(77, 77, 77, 0.8);
+  color: #fff;
+}
+/* line 150, ../sass/results.scss */
+.contents table.score thead th {
+  background-color: rgba(1, 32, 82, 0.9);
+}
+/* line 154, ../sass/results.scss */
+.contents table .current {
+  background-color: rgba(26, 26, 26, 0.8) !important;
+  font-weight: bold;
+}
+/* line 158, ../sass/results.scss */
+.contents table .current a {
+  color: #fff;
+}
+/* line 165, ../sass/results.scss */
+.contents table.blue caption {
+  color: #2c7eff !important;
+}
+/* line 169, ../sass/results.scss */
+.contents table.blue thead th {
+  background-color: rgba(44, 126, 255, 0.8);
+}
+/* line 175, ../sass/results.scss */
+.contents table.border caption {
+  color: #666666 !important;
+}
+/* line 180, ../sass/results.scss */
+.contents table .back_blue th, .contents table .back_blue td {
+  background-color: rgba(223, 235, 255, 0.8);
+}
+/* line 185, ../sass/results.scss */
 .contents .ntt thead th {
   background-color: rgba(44, 126, 255, 0.8);
-  color: #FFF; }
+  color: #FFF;
+}
+/* line 190, ../sass/results.scss */
 .contents .enemy thead th {
   background-color: rgba(77, 77, 77, 0.8);
-  color: #FFF; }
-
-/*# sourceMappingURL=results.css.map */
+  color: #FFF;
+}
