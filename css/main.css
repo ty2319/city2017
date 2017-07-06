@@ -82,7 +82,7 @@ article header#title p#scroll span {
 article .half {
   width: 50% !important;
   border-top: none;
-  padding: 2em 3% !important;
+  padding: 2em 3%;
 }
 /* line 87, ../sass/main.scss */
 article .half:nth-of-type(even) {
@@ -200,31 +200,27 @@ article .quarter img {
   padding: 0 1em;
 }
 /* line 193, ../sass/main.scss */
-article div.contents, article .double {
+article div.contents {
   width: 100% !important;
   padding: 0;
 }
 /* line 197, ../sass/main.scss */
-article div.contents .half, article .double .half {
-  padding-top: 0 !important;
-}
-/* line 201, ../sass/main.scss */
-article div.contents > img, article .double > img {
+article div.contents > img {
   height: auto;
-  padding: 0 3% 5rem 0 !important;
+  padding: 0 3% 5em 0 !important;
   border: none;
 }
-/* line 208, ../sass/main.scss */
+/* line 204, ../sass/main.scss */
 article .double .one_third {
   padding-bottom: 5rem !important;
 }
-/* line 211, ../sass/main.scss */
+/* line 207, ../sass/main.scss */
 article .double .one_third p {
   overflow: hidden;
   background: url(/symbol/hp/baseball/games/2016/city/img/mascot/line.gif) left 55px;
   line-height: 28px;
 }
-/* line 218, ../sass/main.scss */
+/* line 214, ../sass/main.scss */
 article section header, article div.contents header {
   text-align: center;
   margin-bottom: 7em;
@@ -232,16 +228,16 @@ article section header, article div.contents header {
   width: 100%;
   transform: skewX(-10deg);
 }
-/* line 225, ../sass/main.scss */
+/* line 221, ../sass/main.scss */
 article section header h4, article div.contents header h4 {
   font-size: 2em;
   line-height: 100%;
 }
-/* line 230, ../sass/main.scss */
+/* line 226, ../sass/main.scss */
 article section header p, article div.contents header p {
   margin: 0.5em 0 0 !important;
 }
-/* line 235, ../sass/main.scss */
+/* line 231, ../sass/main.scss */
 article .contents {
   width: 100%;
   background: center top no-repeat fixed;
@@ -251,130 +247,130 @@ article .contents {
   display: flex;
   flex-flow: row wrap;
 }
-/* line 246, ../sass/main.scss */
+/* line 242, ../sass/main.scss */
 article .contents.bg0 {
   background-image: url(../img/common/10.png);
 }
-/* line 246, ../sass/main.scss */
+/* line 242, ../sass/main.scss */
 article .contents.bg1 {
   background-image: url(../img/common/11.png);
 }
-/* line 246, ../sass/main.scss */
+/* line 242, ../sass/main.scss */
 article .contents.bg2 {
   background-image: url(../img/common/12.png);
 }
-/* line 246, ../sass/main.scss */
+/* line 242, ../sass/main.scss */
 article .contents.bg3 {
   background-image: url(../img/common/13.png);
 }
-/* line 246, ../sass/main.scss */
+/* line 242, ../sass/main.scss */
 article .contents.bg4 {
   background-image: url(../img/common/14.png);
 }
-/* line 246, ../sass/main.scss */
+/* line 242, ../sass/main.scss */
 article .contents.bg5 {
   background-image: url(../img/common/15.png);
 }
-/* line 251, ../sass/main.scss */
+/* line 247, ../sass/main.scss */
 article .contents hr {
   width: 100%;
   display: block;
   border-top: 1px dotted gray;
   margin-bottom: 4em;
 }
-/* line 258, ../sass/main.scss */
+/* line 254, ../sass/main.scss */
 article .contents > p, article .contents > dl {
   width: 100%;
 }
-/* line 262, ../sass/main.scss */
-article .contents section {
+/* line 258, ../sass/main.scss */
+article .contents > section, article .contents > div {
   width: 100%;
   padding: 5em 0;
   background: none;
 }
-/* line 267, ../sass/main.scss */
-article .contents section:not(.half):not(.one_third):not(.quarter) {
+/* line 263, ../sass/main.scss */
+article .contents > section:not(.half):not(.one_third):not(.quarter), article .contents > div:not(.half):not(.one_third):not(.quarter) {
   border-top: #666 1px dotted;
 }
-/* line 271, ../sass/main.scss */
-article .contents section.half {
+/* line 267, ../sass/main.scss */
+article .contents > section.half, article .contents > div.half {
   margin-bottom: 4em;
   padding: 1em 0;
 }
-/* line 275, ../sass/main.scss */
-article .contents section.half:nth-of-type(odd) {
+/* line 271, ../sass/main.scss */
+article .contents > section.half:nth-of-type(odd), article .contents > div.half:nth-of-type(odd) {
   padding-right: 3%;
 }
-/* line 279, ../sass/main.scss */
-article .contents section.half:nth-of-type(even) {
+/* line 275, ../sass/main.scss */
+article .contents > section.half:nth-of-type(even), article .contents > div.half:nth-of-type(even) {
   padding-left: 3%;
 }
 @media all and (max-width: 600px) {
-  /* line 279, ../sass/main.scss */
-  article .contents section.half:nth-of-type(even) {
+  /* line 275, ../sass/main.scss */
+  article .contents > section.half:nth-of-type(even), article .contents > div.half:nth-of-type(even) {
     padding-top: 5em !important;
   }
 }
-/* line 288, ../sass/main.scss */
-article .contents section.one_third {
+/* line 284, ../sass/main.scss */
+article .contents > section.one_third, article .contents > div.one_third {
   padding: 7em 2em;
 }
-/* line 292, ../sass/main.scss */
-article .contents section > div {
+/* line 288, ../sass/main.scss */
+article .contents > section > div, article .contents > div > div {
   display: flex;
   flex-flow: row nowrap;
   margin: 1em 0;
 }
 @media all and (max-width: 940px) {
-  /* line 292, ../sass/main.scss */
-  article .contents section > div {
+  /* line 288, ../sass/main.scss */
+  article .contents > section > div, article .contents > div > div {
     flex-flow: row wrap;
   }
 }
-/* line 303, ../sass/main.scss */
+/* line 299, ../sass/main.scss */
 article .contents > div {
   margin-bottom: 4em;
 }
-/* line 306, ../sass/main.scss */
+/* line 302, ../sass/main.scss */
 article .contents > div:nth-of-type(odd) {
   padding-right: 3% !important;
 }
-/* line 310, ../sass/main.scss */
+/* line 306, ../sass/main.scss */
 article .contents > div:nth-of-type(even) {
   padding-left: 3% !important;
 }
-/* line 314, ../sass/main.scss */
+/* line 310, ../sass/main.scss */
 article .contents > div img {
   display: block;
   width: 100%;
   height: auto;
   margin-top: 1em;
 }
-/* line 322, ../sass/main.scss */
+/* line 318, ../sass/main.scss */
 article .contents > img:not(.one_third):not(.half) {
   width: 100%;
   margin-bottom: 2em;
 }
-/* line 327, ../sass/main.scss */
+/* line 323, ../sass/main.scss */
 article .contents .back_gray, article .contents .back_gray th, article .contents .back_gray td {
   background-color: rgba(204, 204, 204, 0.8);
 }
-/* line 331, ../sass/main.scss */
+/* line 327, ../sass/main.scss */
 article .contents .back_white, article .contents .back_white th, article .contents .back_white td {
   background-color: rgba(255, 255, 255, 0.3);
 }
-/* line 335, ../sass/main.scss */
+/* line 331, ../sass/main.scss */
 article .contents figure {
   font-size: 0.8rem;
   line-height: 1rem;
   margin-bottom: 3rem;
   text-align: center;
 }
-/* line 341, ../sass/main.scss */
+/* line 337, ../sass/main.scss */
 article .contents figure figcaption {
   margin-top: 0.5rem;
 }
-/* line 346, ../sass/main.scss */
+/* line 342, ../sass/main.scss */
 article .contents h5, article .contents caption {
   color: #012052;
   margin-bottom: 1em;
@@ -382,7 +378,7 @@ article .contents h5, article .contents caption {
   font-size: 1.25em;
   text-align: center;
 }
-/* line 354, ../sass/main.scss */
+/* line 350, ../sass/main.scss */
 article .contents dl, article .contents .frame, article .contents .box {
   padding: 1em;
   border: #999 3px double !important;
@@ -391,7 +387,7 @@ article .contents dl, article .contents .frame, article .contents .box {
   background-color: rgba(255, 255, 255, 0.3);
   margin: 0.5em;
 }
-/* line 363, ../sass/main.scss */
+/* line 359, ../sass/main.scss */
 article .contents dt {
   color: #012052;
   font-weight: bold;
@@ -399,35 +395,35 @@ article .contents dt {
   text-align: center;
   margin-top: 2em;
 }
-/* line 370, ../sass/main.scss */
+/* line 366, ../sass/main.scss */
 article .contents dt:first-child {
   margin: 0;
 }
-/* line 375, ../sass/main.scss */
+/* line 371, ../sass/main.scss */
 article .contents dd {
   overflow: hidden;
   text-align: center;
 }
-/* line 379, ../sass/main.scss */
+/* line 375, ../sass/main.scss */
 article .contents dd a {
   color: #2c7eff;
 }
-/* line 382, ../sass/main.scss */
+/* line 378, ../sass/main.scss */
 article .contents dd a span {
   margin-right: 0.5em;
 }
-/* line 388, ../sass/main.scss */
+/* line 384, ../sass/main.scss */
 article .contents .box {
   margin: 3em 0 !important;
 }
-/* line 391, ../sass/main.scss */
+/* line 387, ../sass/main.scss */
 article .contents .box dt {
   float: left;
   margin-top: 0;
   width: 7em;
   text-align: right;
 }
-/* line 398, ../sass/main.scss */
+/* line 394, ../sass/main.scss */
 article .contents .box dd {
   text-align: left;
   margin: 0 0 0.5em 0;
@@ -435,23 +431,23 @@ article .contents .box dd {
   padding-left: 7em;
   overflow: visible;
 }
-/* line 405, ../sass/main.scss */
+/* line 401, ../sass/main.scss */
 article .contents .box dd:last-of-type {
   border: none;
 }
-/* line 412, ../sass/main.scss */
+/* line 408, ../sass/main.scss */
 article dfn img {
   vertical-align: middle;
 }
-/* line 416, ../sass/main.scss */
+/* line 412, ../sass/main.scss */
 article .center {
   text-align: center;
 }
-/* line 420, ../sass/main.scss */
+/* line 416, ../sass/main.scss */
 article .zerofive {
   padding-top: 0.5em !important;
 }
-/* line 424, ../sass/main.scss */
+/* line 420, ../sass/main.scss */
 article .bottom {
   padding-bottom: 1em !important;
 }
