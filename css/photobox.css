@@ -216,11 +216,22 @@
 	border		: 0.5px #FFF solid;
 	flex-align	: center;
 	overflow	: hidden;
+	transition	:.1s;
+}
+
+.half > ul > li:hover {
+	transform	: scale(1.5);
+	box-shadow	: 0 0 0 2px #FFF, 0 0 20px 5px #000;
 }
 
 .half > ul > li img {
-	width		: 200%;
-	height		: auto;
+	width : 200%;
+	height: auto;
+	transition:.3s ease-out;
+}
+
+.half > ul > li:hover img {
+	transform:scale(1.2);
 }
 
 @media all and (max-width:800px){
@@ -238,6 +249,11 @@
 	
 	#pbCloseBtn:before{
 		font-size: 3rem;
+	}
+	
+	.half > ul > li:hover img, .half > ul > li:hover{
+		transform:none;
+		position : static;
 	}
 }
 

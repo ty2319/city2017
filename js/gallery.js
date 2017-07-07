@@ -1,18 +1,31 @@
 $(document).ready(function(){
 	
-	if ($(window).width() < 600) {
+	var ua = navigator.userAgent.toLowerCase();
+	
+	// iPhone
+	var isiPhone = (ua.indexOf('iphone') > -1);
+	// iPad
+	var isiPad = (ua.indexOf('ipad') > -1);
+	// iPod
+	var isiPod = (ua.indexOf('ipod') > -1);
+	
+	if (isiPhone || isiPad || isiPod) {
 		$('.accordion').hide();
 	}
-	
-	$('.accordion').css('cursor','pointer');	
+
+	$('.accordion').css('cursor' , 'pointer');
 	$('.accordion + div').hide().css('margin-bottom','10em');
 	
-	$('.accordion').on('click', function(){
+	var _touch = ('ontouchstart' in document) ? 'touchstart' : 'click';
+	
+	$('.accordion').on(_touch , function(){
 		$(this).next('div').slideToggle('slow');
 	}).toggle(function() {
 		$('span' , this).text("※クリックすると上に閉じます。 ▲");
+		$('p' , this).css('display','block');
 	}, function() {
 		$('span' , this).text("※クリックすると下に開きます。 ▼");
+		$('p' , this).css('display','none');
 	});
 	
 	$("a[rel=game1],a[rel=game2],a[rel=game3],a[rel=game4],a[rel=game5]").fancybox({

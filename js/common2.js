@@ -1,49 +1,15 @@
 (function($) {
 
 	//ie css
-	ie = function() {
-		var ua = navigator.userAgent;
-		var isIE = ua.match(/msie/i),
-		isIE6 = ua.match(/msie [6.]/i),
-		isIE7 = ua.match(/msie [7.]/i),
-		isIE8 = ua.match(/msie [8.]/i),
-		isIE9 = ua.match(/msie [9.]/i),
-		isIE10 = ua.match(/msie [10.]/i),
-		isIE11 = ua.match(/msie [11.]/i);
-		if (isIE) {
-		$("html").addClass('ie');
-			if (isIE6) {
-				$("html").addClass('ie6');
-			} else if (isIE7) {
-				$("html").addClass('ie7');
-			} else if (isIE8) {
-				$("html").addClass('ie8');
-			} else if (isIE9) {
-				$("html").addClass('ie9');
-			} else if (isIE10) {
-				$("html").addClass('ie10');
-			} else if (isIE11) {
-				$("html").addClass('ie11');
-			}
-		}
+	set = function() {
 		
 		$('#topnavi li a,footer li a,#issues a').prepend('≫ ');
 		$('#side li a').append(' ●');
 		$('.box dt').not('#issues dt').append('：');
 		$('.dot dd').prepend('・');
 		$('.box2 dt').prepend('―　').append('　―');
-	},
-	
-	section = function() {
-		
-        $('section .quarter:nth-child(8n),section .quarter:nth-child(8n-2),section .quarter:nth-child(8n-3),section .quarter:nth-child(8n-5)').not('table').addClass('back_gray');
-		
-        $('section .quarter:nth-child(8n+1),section .quarter:nth-child(8n-1),section .quarter:nth-child(8n-4),section .quarter:nth-child(8n-6)').not('table').addClass('back_white');
-		
-		$('article').children('section:not(.half,.one_third,.quarter),div').addClass('contents');
-		
-		$('header#title').append('<p id="scroll">scroll<span class="fa fa-angle-down fa-2x"></span></p>');
-		
+		$('article').children('section:not(.half,.one_third,.quarter),div').addClass('contents');		
+		$('header#title').append('<p id="scroll">scroll<span class="fa fa-angle-down fa-2x"></span></p>');		
 		$('.contents:odd').css('background-color','#e9f2ff');
 		$('.contents:even').css('background-color','#FFFFFF');
 		$('.contents:eq(0)').css('border-top' , '#012052 7px solid');
@@ -51,12 +17,6 @@
 		$('.contents').each(function() {
 			var A = Math.floor(6*Math.random());
             $(this).addClass('bg'+A);
-        });
-	},
-	
-	font = function() {
-		$('.contents').each(function() {
-            $('.half:odd' , this).css('border-left-width' , $(window).width() * 0.001);
         });
 	},
 	
@@ -71,9 +31,16 @@
 			if ($(this).scrollTop() > 300) {
 				if (flag == false) {
 					flag = true;
-					pagetop.stop().animate({
-						'bottom': '50px'
-					}, 200);
+					
+					if ($(window).width() > 500) {
+						pagetop.stop().animate({
+							'bottom': '50px'
+						}, 200);
+					} else {
+						pagetop.stop().animate({
+							'bottom': '10px'
+						}, 200);
+					}
 				}
 			} else {
 				if (flag) {
@@ -92,29 +59,25 @@
 	},
 	
 	nav = function() {
-		
-		var path	= location.href.split('/');
-		var loc		= path[path.length-1];
-		
-		$('nav#global a').each(function(e,v){
-			href = $(this).attr('href');
-			if(loc == '') {
-				loc = 'index';
-			}
-			if(href.match('japan') && href.match(loc)) {
-				$(this).addClass('active');
-			}
+			
+		$('h2').hover(function() {
+			$('#global > dl > dd').slideUp(500);
+			$('#global > dl > dd > dl').slideUp(500);
+			$('#global .on').removeClass('on');
+			$('#global').nextAll().removeClass('menu_open');
+			$('.menu-trigger i').text('menu');
 		});
 			
 		$('.menu-trigger:not(.on)').hover(function() {
-			$('#global > dl > dd').slideDown(500).css('display' , 'table-cell');
+			$('#global > dl > dd').slideDown(500);
 			$('#global > dl > dd > dl').slideDown(500);
 			$(this).addClass('on');
 			$('i' , this).text('close');
+			$('.menu-trigger .new').hide();
 			$('#global').nextAll().addClass('menu_open');
 		} , function() {
 			
-			$('#global').hover(function() {
+			$('#global > dl').hover(function() {
 				$(this).show();
 				$('.menu-trigger i').text('close');
 			} , function() {
@@ -123,32 +86,101 @@
 				$('#global .on').removeClass('on');
 				$('#global').nextAll().removeClass('menu_open');
 				$('.menu-trigger i').text('menu');
+				$('.menu-trigger .new').show();
+			});
+			
+			$('h2').hover(function() {
+				$('#global > dl > dd').slideUp(500);
+				$('#global > dl > dd > dl').slideUp(500);
+				$('#global .on').removeClass('on');
+				$('#global').nextAll().removeClass('menu_open');
+				$('.menu-trigger i').text('menu');
+				$('.menu-trigger .new').show();
 			});
 		});
 		
 		$('.menu-trigger').on('click' , function() {
-			$('#global > dl > dd').slideToggle(500).css('display' , 'table-cell');
+			$('#global > dl > dd').slideToggle(500);
 			$('#global > dl > dd > dl').slideToggle(500)
 			$(this).toggleClass('on');
 			$('#global').nextAll().toggleClass('menu_open');
 			
 			if ($('i' , this).text() == 'close'){
 				$('i' , this).text('menu');
+				$('.menu-trigger .new').show();
 		   } else {
 			   $('i' , this).text('close');
+				$('.menu-trigger .new').hide();
 		   }
+		});
+		
+		var	path		= location.href.split('/'),
+			loc			= path[path.length-1];
+			
+			$.cookie('visit.' + loc , 1);
+ 
+		//JSONファイルを取得
+		$.getJSON('/symbol/hp/baseball/games/2017/city/js/update.json').done(function(json, status, request) {
+			$(json).each(function(i, data) {
+				
+				var today	= new Date( $.now() ),
+					cnt		= 0,
+					elem	= '.' + data.class, // class
+					date	= new Date( data.date ), // date
+					ago		= date.setDate(date.getDate() + 4), // 更新日 + 5日
+					cont	= data.cont;
+		
+				if (today < ago && $.cookie('visit' + elem + '.html') != 1 || cont == 'yes') { // 今日(today)がago(更新日 + 5日)より前なら	
+					$('#global').find(elem).not('.top').append('<span class="new">N</span>'); // クラス「new」を付ける
+				}
+				
+				if($.cookie('visit' + elem + '.html') == 1) {
+					$('#global').find(elem).children('.new').remove();
+					
+					if (today >= ago) {
+						$.cookie('visit' + elem + '.html' , null);						
+					}
+				}
+				
+				if (today >= ago && cont == 'yes') {
+					$('#global').find(elem).children('.new').remove();
+				}
+				
+				cnt = $('#global dd').find('.new').length;
+		
+				if (cnt > 0) {
+					$('.menu-trigger').append('<span class="new">' + cnt + '</span>');
+				}		
+			});
+		});
+		
+		$('nav#global a').each(function(e,v){
+			var links	= $(this);
+			var href	= links.attr('href');
+			
+			if(loc == '') {
+				loc = 'index';
+			}
+			
+			if(href.match('city') && href.match(loc)) {
+				$(this).addClass('active');
+			}
 		});
 	},
 	
 	//title
 	title = function() {
+		
+		if ($(window).width() < 500) {
+			$('h2 img').attr('src' , 'img/common/logo2.png');
+		} else {
+			$('h2 img').attr('src' , 'img/common/logo.png');
+		}
 			
 		var ct	= $('.contents:first').offset().top + 7;
 		var A	= Math.floor(9*Math.random());
 		
 		$('body').addClass('bg'+A);
-		
-		$('header#title').addClass('load');
 		
 		$('header#title #scroll').on('click' , function() {
 			$("html, body").stop(true).animate({scrollTop: ct}, 500, "swing");
@@ -159,7 +191,7 @@
 	// SmoothScroll
 	smoothScroll = function() {
 		
-		$('article #side li a[href^=#]').click(function(){
+		$('article #side li a[href^="#"]').click(function(){
 			var speed = 500;
 			var href= $(this).attr("href");
 			var target = $(href == "#" || href == "" ? 'html' : href);
@@ -170,14 +202,13 @@
 		});
 		
 		var set =  $('#global').height() + 1;//ウインドウ上部からどれぐらいの位置で変化させるか
-		var boxTop = new Array;
-		var current = -1;
-		var startPosition = 0;
-		var navtop = $('#global').offset().top;
+		var boxTop			= new Array;
+		var current			= -1;
+		var startPosition	= 0;
 		
 		//各要素の位置
 		$(window).on("load resize", function(){
-			$('article > section,article > div').each(function(i) {
+			$('.contents').each(function(i) {
 				boxTop[i] = $(this).offset().top;
 			});
 		});
@@ -186,7 +217,8 @@
 		//スクロールした時の処理
 		$(window).scroll(function(){
 			
-			var scrollPosition	= $(window).scrollTop();		
+			var scrollPosition	= $(window).scrollTop();	
+			var navtop			= $('header#top').offset().top;	
 				
 			for (var i = boxTop.length - 1 ; i >= 0; i--) {
 				if (scrollPosition >= boxTop[i] - set) {
@@ -242,27 +274,31 @@
 		$('#side').hover(function() {
 			$('body').append('<div id="modal"></div>');
 			$('span',this).fadeIn('slow');
-			$('a',this).css('cursor','pointer');
 		},function() {
 			$('div#modal').remove();
 			$('span',this).fadeOut('slow');
 		});
+		
+		$('#side').on('touchstart', function(){
+			$('body').append('<div id="modal"></div>');
+			$('span',this).fadeIn('slow');
+    	}).on('touchend', function(){
+        	$('div#modal').remove();
+			$('span',this).fadeOut('slow');
+    	});
 	}
 	
 	$(document).ready(function() {
-		ie();
-		section();
-		font();
+		set();
 		goTop();
 		nav();
 		title();
-		smoothScroll();
 		side();
+		smoothScroll();
 	});	
 	
 	$(window).resize(function() {
 		title();
-		font();
 	});
 	
 })($);

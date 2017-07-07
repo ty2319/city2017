@@ -82,7 +82,7 @@ article {
 	.half {
 		width		: $max / 2 !important;
 		border-top	: none;
-		padding		: 2em $max*0.03;
+		padding		: 2em $max*0.03 !important;
 		
 		&:nth-of-type(even) {
 			border-left : 1px dotted lighten($black,50%);
@@ -277,6 +277,14 @@ article {
 					
 					@include media($six) {
 						padding-top: 5em !important;
+				
+						&:nth-of-type(odd) {
+							padding-right: $max * 0.0075;
+						}
+					
+						&:nth-of-type(even) {
+							padding-left: $max * 0.0075;
+						}
 					}
 				}
 			}
@@ -285,7 +293,7 @@ article {
 				padding: 7em 2em;
 			}
 			
-			& > div {
+			& > div:not(.half > div) {
 				display		: flex;
 				flex-flow	: row nowrap;
 				margin		: 1em 0;
@@ -354,6 +362,10 @@ article {
 			zoom: 1;
 			background-color: $modal2;
 			margin: 0.5em;
+		}
+		
+		dl:not(.half dl) {
+			margin: 0;
 		}
 						
 		dt {

@@ -47,10 +47,6 @@ $(window).on('load resize' , function() {
 		$('div' , this).width($('section',this).length * $(this).parent().width());
 		$('div' , this).children().width($('.half').width()).css('margin-right' , $('.half').width() * 0.1);
 		
-		$('dl' , this).each(function(index, element) {
-            $('dd' ,this).eq(0).append('　　　―');
-        });
-		
 		$('.score a,.prev a,.next a' , this).click(function() {
 			
 			$(this).parents('.half').find('td').removeClass('current');

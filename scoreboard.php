@@ -48,7 +48,6 @@ $count_ini = pg_fetch_result($rs1,0,0);
 <link rel="stylesheet" href="css/import.css" />
 <link rel="stylesheet" href="css/results.css" media="screen" />
 <script src="//ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<script type="text/javascript" src="js/jquery.cookie.js"></script> 
 <script type="text/javascript" src="js/common2.js"></script>
 <script type="text/javascript" src="js/results2.js"></script>
 <script type="text/javascript">
@@ -88,6 +87,7 @@ $count_ini = pg_fetch_result($rs1,0,0);
         }, 60000);
 	});
 </script>
+<script type="text/javascript" src="js/jquery.cookie.js"></script> 
 
 <!--[if lt IE 7]>
 <script type="text/javascript" src="/symbol/hp/baseball/games/2012/city/js/jquery.exfixed-1.3.2.js" type="text/javascript"></script>
@@ -125,7 +125,6 @@ $(function(){
 
 ?>
 
-<p id="pan">第88回都市対抗野球大会 ≫ 試合経過</p>
 <article role="main">
   <header id="title">
     <h3>Live Broadcasting</h3>
@@ -509,6 +508,7 @@ $section_id = $section_id + 1 ;
 
 
   </section>
+  <p id="pan">第88回都市対抗野球大会 ≫ 試合経過</p>
 </article>
 
 <?php

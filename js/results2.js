@@ -2,13 +2,13 @@ $(window).on('load resize' , function() {
 	
 	$('article > .head').each(function() {
         $('table.quarter:eq(0)',this).addClass('blue');
-        $('table.quarter:eq(1)',this).addClass('border').css('margin-left','50%');
+        $('table.quarter:eq(1)',this).addClass('border');
 		$('table.battery tr:eq(0) th:eq(0)' , this).addClass('b_n');
 		$('table.battery tr:eq(1) th:eq(0)' , this).addClass('b_e');
     });	
 	$('article > .tail').each(function() {
-        $('table.quarter:eq(0)',this).addClass('blue');
-        $('table.quarter:eq(1)',this).addClass('border').css('margin-left','50%');
+        $('table.quarter:eq(0)',this).addClass('border');
+        $('table.quarter:eq(1)',this).addClass('blue');
 		$('table.battery tr:eq(0) th:eq(0)' , this).addClass('b_e');
 		$('table.battery tr:eq(1) th:eq(0)' , this).addClass('b_n');
     });
@@ -45,11 +45,7 @@ $(window).on('load resize' , function() {
 	$('.contents > .half').each(function() {
 		
 		$('div' , this).width($('section',this).length * $(this).parent().width());
-		$('div' , this).children().width($('.half').width()).css('margin-right' , $('.half').outerWidth() * 0.1);
-		
-		$('dl' , this).each(function(index, element) {
-            $('dd' ,this).eq(0).append('　　　―');
-        });
+		$('div' , this).children().width($('.half').width()).css('margin-right' , $('.half').width() * 0.1);
 		
 		$('.score a,.prev a,.next a' , this).click(function() {
 			
@@ -96,7 +92,7 @@ $(window).on('load resize' , function() {
 		var isEven = true;
 		// $("table tr").each(function() {
 		$('tbody tr' , this).each(function() {
-			if (numTh == $(this).children().length) {
+			if (numTh == $(this).children().length || $(this).children().length == 1) {
 			  isEven = !isEven;
 			}
 			$(this).addClass(isEven ? 'back_blue' : 'back_white');
@@ -108,7 +104,7 @@ $(window).on('load resize' , function() {
 		var isEven = true;
 		// $("table tr").each(function() {
 		$('tbody tr' , this).each(function() {
-			if (numTh == $(this).children().length) {
+			if (numTh == $(this).children().length || $(this).children().length == 1) {
 			  isEven = !isEven;
 			}
 			$(this).addClass(isEven ? 'back_gray' : 'back_white');
