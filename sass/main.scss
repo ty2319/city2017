@@ -104,8 +104,7 @@ article {
 	}
 		
 	.one_third {
-		width			: $max / 3 !important;
-		justify-content : space-around;
+		width : $max / 3 !important;
 		
 		&:nth-of-type(3n-1) {
 			border-left	 : lighten($black,50%) dotted 1px;
@@ -126,7 +125,7 @@ article {
 		}
 		
 		h5 {
-			margin-top: 0 !important;
+			margin-top: 5em !important;
 		}
 		
 		p {
@@ -200,16 +199,6 @@ article {
 			border: none;
 		}
 	}
-	
-	.double .one_third {
-		padding-bottom: 5rem !important;
-		
-		 p {
-			overflow: hidden;
-			background: url(/symbol/hp/baseball/games/2016/city/img/mascot/line.gif) left 55px;
-			line-height: 28px;
-		 }
-	}
 		
 	section header,div.contents header {
 		text-align	 : center;
@@ -255,7 +244,7 @@ article {
 			width: $max;
 		}
 		
-		& > section,& > div{
+		& > section,& > div {
 			width		: $max;
 			padding		: 5em 0;
 			background	: none;
@@ -287,13 +276,17 @@ article {
 						}
 					}
 				}
+				
+				& > div {
+					display: block;
+				}
 			}
 			
 			&.one_third {
 				padding: 7em 2em;
 			}
 			
-			& > div:not(.half > div) {
+			& > div {
 				display		: flex;
 				flex-flow	: row nowrap;
 				margin		: 1em 0;

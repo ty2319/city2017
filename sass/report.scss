@@ -5,13 +5,15 @@
 	
 article {
 
-	&>.contents {
+	& > .contents {
 		padding: 8em $max*0.03 !important;
 		
-		&>div {
+		& > div {
 			width	: $max;
 			position: $r;
 			overflow: hidden;
+			border	: none !important;
+			padding	: 0 !important;
 	
 			&> img {
 				margin	: 0 !important;
@@ -31,7 +33,7 @@ article {
 				overflow		: auto;
 				
 				&:not(.left):not(.right) {
-					width : $max / 2;
+					width : $max * 0.515 !important;
 				}
 				
 				@include media($six) {

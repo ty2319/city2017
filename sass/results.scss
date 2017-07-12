@@ -4,7 +4,6 @@
 @import "settings";
 
 .contents {
-	align-content: space-around;
 	
 	.half {
 		overflow	: hidden;
@@ -94,6 +93,7 @@
 		
 				@include media($nf) {
 					order		: 2;
+					margin-right: $max * 0.04;
 				}
 		
 				@include media($six) {
