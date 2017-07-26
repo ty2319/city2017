@@ -7,8 +7,8 @@ $(window).on('load resize' , function() {
 		$('table.battery tr:eq(1) th:eq(0)' , this).addClass('b_e');
     });	
 	$('article > .tail').each(function() {
-        $('table.quarter:eq(0)',this).addClass('border');
-        $('table.quarter:eq(1)',this).addClass('blue');
+        $('table.quarter:eq(0)',this).addClass('blue');
+        $('table.quarter:eq(1)',this).addClass('border');
 		$('table.battery tr:eq(0) th:eq(0)' , this).addClass('b_e');
 		$('table.battery tr:eq(1) th:eq(0)' , this).addClass('b_n');
     });

@@ -1,9 +1,10 @@
 /* jQuery Bracket | Copyright (c) Teijo Laine 2011-2013 | Licenced under the MIT licence */
 div.jQBracket{
 	position: relative;
-	margin: 5em auto 0 auto !important;
+	margin: 5em auto 10em auto !important;
 	z-index: 0;
 	line-height: 17px !important;
+	border: none !important;
 }
 
 	div.jQBracket .tools {

@@ -276,10 +276,6 @@ article {
 						}
 					}
 				}
-				
-				& > div {
-					display: block;
-				}
 			}
 			
 			&.one_third {
@@ -292,7 +288,11 @@ article {
 				margin		: 1em 0;
 					
 				@include media($nf) {
-					flex-flow: row wrap;
+					flex-flow		: row wrap;
+					
+					dl {
+						margin-top: 1em !important;
+					}
 				}
 			}
 		}
@@ -409,20 +409,7 @@ article {
 			}
 		}
 	}
-	
-	dfn img {
-		vertical-align: middle;
-	}
-		
 	.center {
 		text-align: center;
-	}	
-	
-	.zerofive {
-		padding-top: 0.5em !important;
-	}
-	
-	.bottom {
-		padding-bottom: 1em !important;
 	}
 }

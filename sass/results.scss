@@ -9,10 +9,15 @@
 		overflow	: hidden;
 		text-align	: center;
 		order		: 2;
+		position	: $r;
 		
 		@include media($nf) {
 			order: 1;
 			width: $max !important;
+		}
+		
+		@include media($nf) {
+			border-bottom: 1px dotted lighten($black , 30%);
 		}
 		
 		h5 {
@@ -20,12 +25,11 @@
 		}
 		
 		div {
-			display	 : flex;
-			flex-flow: row nowrap;
+			display	  : flex;
+			flex-flow : row nowrap;
 			
 			section {
 				padding : 0;
-				border	: none !important;
 				
 				@include media($nf) {
 					margin-left: 1.5em;
@@ -44,8 +48,7 @@
 		ul {
 		
 			.prev {
-				float	: left;
-				margin	: -25em 0 0 -2em;
+				@include abT(50em,1em,6);
 				display	: none;
 				
 				@include media($nf) {
@@ -54,8 +57,7 @@
 			}
 			
 			.next {
-				float : right;
-				margin: -25em -2em 0;
+				@include abR(50em,1em,6);
 				
 				@include media($nf) {
 					margin-right: -1em;

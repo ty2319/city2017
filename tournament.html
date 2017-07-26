@@ -26,7 +26,7 @@
       <h3><span class="fa fa-sitemap"></span>Tournament Bracket</h3>
       <p>トーナメント表</p>
     </header>
-    <div id="minimal" style="padding-bottom: 10em !important;"></div>
+    <div id="minimal"></div>
     <p id="pan">第88回都市対抗野球大会 ≫ トーナメント表</p>
   </article>
 </main>
@@ -55,15 +55,15 @@
 		],
 		results : [
 			[
-				[,],[,],[,],[,],[,],[,],[,],[,],[,],[,],[,],[,],[,],[,],[,],[,]
+				[5,1],[7,5],[0,2],[0,10],[3,5],[3,0],[4,2],[0,4],[5,3],[2,3],[4,7],[5,6],[4,5],[3,2],[8,4],[4,5]
 			],[
-				[,],[,],[,],[,],[,],[,],[,],[,]
+				[3,6],[3,0],[0,3],[4,1],[2,0],[2,8],[1,0],[6,8]
 			],[
-				[,],[,],[,],[,]
+				[6,5],[4,5],[2,0],[12,3]
 			],[
-			 	[,],[,]
+			 	[1,0],[5,3]
 			],[
-				[,]
+				[10,4]
 			]
 		]
 	}
@@ -74,7 +74,7 @@
 		  skipConsolationRound: true
 		});		
 		$('div.jQBracket .round:nth-child(1) .match:nth-child(16) .team:nth-child(1)').addClass('west');	
-		$('div.jQBracket .round:nth-child(1) .match:nth-child(2) .team:nth-child(1)').addClass('east');
+		$('div.jQBracket .round:nth-child(1) .match:nth-child(2) .team:nth-child(1) , div.jQBracket .round:nth-child(2) .match:nth-child(1) .team:nth-child(2) , div.jQBracket .round:nth-child(3) .match:nth-child(1) .team:nth-child(1) , div.jQBracket .round:nth-child(4) .match:nth-child(1) .team:nth-child(1) , div.jQBracket .round:nth-child(5) .match:nth-child(1) .team:nth-child(1)').addClass('east');
 	});
 </script>
 <script type="text/javascript" src="js/jquery.cookie.js"></script>

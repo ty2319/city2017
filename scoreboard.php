@@ -55,7 +55,8 @@ $count_ini = pg_fetch_result($rs1,0,0);
 		$("html, body").stop().animate({scrollTop: $('article > section').offset().top}, 500, "linear");
 		
 		var cnt = $('.half div section').length;
-		var w = $('.half').outerWidth() - $('.contents').outerWidth()*0.0095;
+		var w = $('.half').outerWidth() - $('.contents').width()*0.0165;
+		var w2 = $('.half').outerWidth();
 		var now = $('.half div section').eq(cnt-1).attr('id');
 		var pre = $('.half div section').eq(cnt-2).attr('id');
 		
@@ -72,7 +73,13 @@ $count_ini = pg_fetch_result($rs1,0,0);
 			$('.prev').show();
 		}
 		
-		$('.half').children('div').css('margin-left' , w * -(cnt-1));
+		if ($(window).width() > 940) {
+			$('.half div section').width(w);
+			$('.half').children('div').css('margin-left' , w * -(cnt-1));
+		} else {
+			$('.half div section').width(w2);
+			$('.half').children('div').css('margin-left' , w2 * -(cnt-1));
+		}
 		$('.next').hide();
 		$('.prev a').attr('href' , '#' + pre);
 		

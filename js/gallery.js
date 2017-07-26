@@ -19,13 +19,12 @@ $(document).ready(function(){
 	var _touch = ('ontouchstart' in document) ? 'touchstart' : 'click';
 	
 	$('.accordion').on(_touch , function(){
-		$(this).next('div').slideToggle('slow');
+		$(this).next('div').slideToggle('slow').css('display' , 'block');
 	}).toggle(function() {
 		$('span' , this).text("※クリックすると上に閉じます。 ▲");
-		$('p' , this).css('display','block');
+		$(this).next('div').css('display','block');
 	}, function() {
 		$('span' , this).text("※クリックすると下に開きます。 ▼");
-		$('p' , this).css('display','none');
 	});
 	
 	$("a[rel=game1],a[rel=game2],a[rel=game3],a[rel=game4],a[rel=game5]").fancybox({

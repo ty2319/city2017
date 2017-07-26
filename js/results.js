@@ -102,7 +102,7 @@ $(window).on('load resize' , function() {
 	$('.enemy table').each(function(){
 		var numTh = $('thead th' , this).length;
 		var isEven = true;
-		// $("table tr").each(function() {
+		
 		$('tbody tr' , this).each(function() {
 			if (numTh == $(this).children().length || $(this).children().length == 1) {
 			  isEven = !isEven;
@@ -111,13 +111,11 @@ $(window).on('load resize' , function() {
 		});
 	});
 	
-	$('.half > div tr').hover(function(){
+	$('.half div tbody tr , .quarter tbody tr').hover(function(){
 		$(this).css('color','#F90');},
 	function(){
 		$(this).css('color','#666');
 	});
-	
-　　$('img.half').css('height','auto');
 	
 	$('article > section').each(function() {
         $(this).find('.half:eq(0) > table:eq(2)').css('margin-right', 0 );

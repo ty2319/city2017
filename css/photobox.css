@@ -200,10 +200,6 @@
 	.pbThumbs li.active a img{ min-height:96%; }
 }
 
-.half p {
-	display: block !important;
-}
-
 .half > ul {
 	display		 : flex;
 	align-content: space-between;

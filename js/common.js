@@ -114,45 +114,12 @@
 		   }
 		});
 		
-		var	path		= location.href.split('/'),
-			loc			= path[path.length-1];
+		var	path	= location.href.split('/'),
+			loc		= path[path.length-1],
+			visit	= new Date(),
+			visited = visit.getFullYear() + "-" + "0" + (visit.getMonth() + 1) + "-" + visit.getDate();
 			
-			$.cookie('visit.' + loc , 1);
- 
-		//JSONファイルを取得
-		$.getJSON('/symbol/hp/baseball/games/2017/city/js/update.json').done(function(json, status, request) {
-			$(json).each(function(i, data) {
-				
-				var today	= new Date( $.now() ),
-					cnt		= 0,
-					elem	= '.' + data.class, // class
-					date	= new Date( data.date ), // date
-					ago		= date.setDate(date.getDate() + 4), // 更新日 + 5日
-					cont	= data.cont;
-		
-				if (today < ago && $.cookie('visit' + elem + '.html') != 1 || cont == 'yes') { // 今日(today)がago(更新日 + 5日)より前なら	
-					$('#global').find(elem).not('.top').append('<span class="new">N</span>'); // クラス「new」を付ける
-				}
-				
-				if($.cookie('visit' + elem + '.html') == 1) {
-					$('#global').find(elem).children('.new').remove();
-					
-					if (today >= ago) {
-						$.cookie('visit' + elem + '.html' , null);						
-					}
-				}
-				
-				if (today >= ago && cont == 'yes') {
-					$('#global').find(elem).children('.new').remove();
-				}
-				
-				cnt = $('#global dd').find('.new').length;
-		
-				if (cnt > 0) {
-					$('.menu-trigger').append('<span class="new">' + cnt + '</span>');
-				}		
-			});
-		});
+		$.cookie('visit.' + loc , visited);
 		
 		$('nav#global a').each(function(e,v){
 			var links	= $(this);
@@ -165,6 +132,32 @@
 			if(href.match('city') && href.match(loc)) {
 				$(this).addClass('active');
 			}
+		});
+ 
+		//JSONファイルを取得
+		$.getJSON('/symbol/hp/baseball/games/2017/city/js/update.json').done(function(json, status, request) {
+			$(json).each(function(i, data) {
+				
+				var today	= new Date( $.now() ),
+					cnt		= 0,
+					elem	= '.' + data.class, // class
+					date	= new Date( data.date ), // date
+					ago		= date.setDate(date.getDate() + 4); // 更新日 + 5日
+		
+				if (today < ago) { // 今日(today)がago(更新日 + 5日)より前なら
+					if ($.cookie('visit' + elem + '.html') == null || $.cookie('visit' + elem + '.html') < data.date) {
+						$('#global').find(elem).not('.top').append('<span class="new">N</span>'); // クラス「new」を付ける
+					}
+				} else {
+					$.cookie('visit' + elem + '.html' , null);						
+				}
+				
+				cnt = $('#global dd').find('.new').length;
+		
+				if (cnt > 0) {
+					$('.menu-trigger').append('<span class="new">' + cnt + '</span>');
+				}		
+			});
 		});
 	},
 	

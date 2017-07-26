@@ -48,17 +48,17 @@ $(function() {
 				date	= new Date( data.date ), // date
 				ago		= date.setDate(date.getDate() + 1); // 更新日 + 1日
 	
-			if (elem == '.top' && today < ago && !isiPhone && !isiPad && !isiPod) { // 今日(today)がago(更新日 + 1日)より前なら
+			if (elem == '.index' && today < ago && !isiPhone && !isiPad && !isiPod) { // 今日(today)がago(更新日 + 1日)より前なら
 					
 				Push.Permission.request();
 				
 				Push.create('都市対抗特設サイト', {
-				　　body	: 'マスコット、応援ガイドを公開しました。',
+				　　body	: '1回戦のマスコットリポートを公開しました。',
 				　　icon	: 'icon.gif',
 				　　timeout	: 8000, // 通知が消えるタイミング
 				　　vibrate	: [100, 100, 100], // モバイル端末でのバイブレーション秒数
 				　　onClick	: function() {
-				　　　　window.open('http://www.ntt-west.co.jp/symbol/hp/baseball/games/2017/city/mascot.html');
+				　　　　window.open('http://www.ntt-west.co.jp/symbol/hp/baseball/games/2017/city/gallery.html');
 				　　}
 				});
 			}
@@ -69,7 +69,7 @@ $(function() {
 
 $(window).on('load resize' , function() {
 	
-	if ($(window).width() > 500) {
+	if ($(window).width() > 600) {
 		$('main,article').outerHeight($(window).height() - $('header#top').outerHeight() - $('footer').outerHeight());
 		$('article').css('padding-top' , $('#global').outerHeight() - 1);
 	} else {

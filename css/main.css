@@ -308,24 +308,24 @@ article .contents > section.half:nth-of-type(even), article .contents > div.half
     padding-left: 0.75%;
   }
 }
-/* line 280, ../sass/main.scss */
-article .contents > section.half > div, article .contents > div.half > div {
-  display: block;
-}
-/* line 285, ../sass/main.scss */
+/* line 281, ../sass/main.scss */
 article .contents > section.one_third, article .contents > div.one_third {
   padding: 7em 2em;
 }
-/* line 289, ../sass/main.scss */
+/* line 285, ../sass/main.scss */
 article .contents > section > div, article .contents > div > div {
   display: flex;
   flex-flow: row nowrap;
   margin: 1em 0;
 }
 @media all and (max-width: 940px) {
-  /* line 289, ../sass/main.scss */
+  /* line 285, ../sass/main.scss */
   article .contents > section > div, article .contents > div > div {
     flex-flow: row wrap;
+  }
+  /* line 293, ../sass/main.scss */
+  article .contents > section > div dl, article .contents > div > div dl {
+    margin-top: 1em !important;
   }
 }
 /* line 300, ../sass/main.scss */
@@ -440,19 +440,7 @@ article .contents .box dd {
 article .contents .box dd:last-of-type {
   border: none;
 }
-/* line 413, ../sass/main.scss */
-article dfn img {
-  vertical-align: middle;
-}
-/* line 417, ../sass/main.scss */
+/* line 412, ../sass/main.scss */
 article .center {
   text-align: center;
-}
-/* line 421, ../sass/main.scss */
-article .zerofive {
-  padding-top: 0.5em !important;
-}
-/* line 425, ../sass/main.scss */
-article .bottom {
-  padding-bottom: 1em !important;
 }

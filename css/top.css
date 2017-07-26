@@ -27,7 +27,7 @@ html body main article {
   height: 100%;
   overflow: hidden;
 }
-@media all and (max-width: 500px) {
+@media all and (max-width: 600px) {
   /* line 22, ../sass/top.scss */
   html body main article {
     display: block;
@@ -41,7 +41,7 @@ html body main article .contents {
   padding: 0;
   border: none !important;
 }
-@media all and (max-width: 500px) {
+@media all and (max-width: 600px) {
   /* line 36, ../sass/top.scss */
   html body main article .contents {
     width: 100% !important;
@@ -54,7 +54,7 @@ html body main article > div {
   height: 100%;
   flex-grow: 1;
 }
-@media all and (max-width: 500px) {
+@media all and (max-width: 600px) {
   /* line 47, ../sass/top.scss */
   html body main article > div {
     position: absolute;
@@ -63,9 +63,10 @@ html body main article > div {
     z-index: 0;
     height: 300px;
     display: block;
+    background-size: 150%;
   }
 }
-/* line 58, ../sass/top.scss */
+/* line 59, ../sass/top.scss */
 html body main article > div > div {
   width: 200%;
   height: 22.22222%;
@@ -109,147 +110,169 @@ html body main article > div > div {
     transform: translate(27%, 350%) rotate(-45deg);
   }
 }
-/* line 106, ../sass/top.scss */
+@media all and (max-width: 600px) {
+  @keyframes leftback {
+    0% {
+      background-position: 150%;
+      transform: translate(-70%, 420%) rotate(45deg);
+    }
+    100% {
+      background-position: 70% 80%;
+      transform: translate(-40%, 200%) rotate(45deg);
+    }
+  }
+  @keyframes rightback {
+    0% {
+      background-position: -60%;
+      transform: translate(80%, 350%) rotate(-45deg);
+    }
+    100% {
+      background-position: 30% 90%;
+      transform: translate(40%, 200%) rotate(-45deg);
+    }
+  }
+}
+/* line 131, ../sass/top.scss */
 html body main article > div.player0 {
   background: url(../img/top/ohshiro.jpg) no-repeat !important;
   background-size: auto 120% !important;
   animation: right_left 10s infinite;
 }
-/* line 111, ../sass/top.scss */
+/* line 136, ../sass/top.scss */
 html body main article > div.player0 > div {
   background: url(../img/top/takumi.jpg) no-repeat;
 }
-/* line 114, ../sass/top.scss */
+/* line 139, ../sass/top.scss */
 html body main article > div.player0 > div.move {
   animation: leftback 10s infinite;
 }
-/* line 120, ../sass/top.scss */
+/* line 145, ../sass/top.scss */
 html body main article > div.player1 {
   background: url(../img/top/umetsu.jpg) no-repeat !important;
   background-size: auto 120% !important;
   animation: left_right 10s infinite;
 }
-/* line 125, ../sass/top.scss */
+/* line 150, ../sass/top.scss */
 html body main article > div.player1 > div {
   background: url(../img/top/masataka.jpg) no-repeat;
 }
-/* line 128, ../sass/top.scss */
+/* line 153, ../sass/top.scss */
 html body main article > div.player1 > div.move {
   animation: rightback 10s infinite;
 }
-/* line 134, ../sass/top.scss */
+/* line 159, ../sass/top.scss */
 html body main article > div.player2 {
   background: url(../img/top/akamine.jpg) no-repeat !important;
   background-size: auto 120% !important;
   animation: left_right 10s infinite;
 }
-/* line 139, ../sass/top.scss */
+/* line 164, ../sass/top.scss */
 html body main article > div.player2 > div {
   background: url(../img/top/shin.jpg) no-repeat;
 }
-/* line 142, ../sass/top.scss */
+/* line 167, ../sass/top.scss */
 html body main article > div.player2 > div.move {
   animation: rightback 10s infinite;
 }
-/* line 148, ../sass/top.scss */
+/* line 173, ../sass/top.scss */
 html body main article > div.player3 {
   background: url(../img/top/kariya.jpg) no-repeat !important;
   background-size: auto 120% !important;
   animation: left_right 10s infinite;
 }
-/* line 153, ../sass/top.scss */
+/* line 178, ../sass/top.scss */
 html body main article > div.player3 > div {
   background: url(../img/top/yuuto.jpg) no-repeat;
 }
-/* line 156, ../sass/top.scss */
+/* line 181, ../sass/top.scss */
 html body main article > div.player3 > div.move {
   animation: rightback 10s infinite;
 }
-/* line 162, ../sass/top.scss */
+/* line 187, ../sass/top.scss */
 html body main article > div.player4 {
   background: url(../img/top/takamoto.jpg) no-repeat !important;
   background-size: auto 120% !important;
   animation: left_right 10s infinite;
 }
-/* line 167, ../sass/top.scss */
+/* line 192, ../sass/top.scss */
 html body main article > div.player4 > div {
   background: url(../img/top/yasuhiro.jpg) no-repeat;
 }
-/* line 170, ../sass/top.scss */
+/* line 195, ../sass/top.scss */
 html body main article > div.player4 > div.move {
   animation: rightback 10s infinite;
 }
-/* line 176, ../sass/top.scss */
+/* line 201, ../sass/top.scss */
 html body main article > div.player5 {
   background: url(../img/top/kageyama.jpg) no-repeat !important;
   background-size: auto 120% !important;
   animation: right_left 10s infinite;
 }
-/* line 181, ../sass/top.scss */
+/* line 206, ../sass/top.scss */
 html body main article > div.player5 > div {
   background: url(../img/top/takuya.jpg) no-repeat;
 }
-/* line 184, ../sass/top.scss */
+/* line 209, ../sass/top.scss */
 html body main article > div.player5 > div.move {
   animation: leftback 10s infinite;
 }
-/* line 190, ../sass/top.scss */
+/* line 215, ../sass/top.scss */
 html body main article > div.player6 {
   background: url(../img/top/nakamura.jpg) no-repeat !important;
   background-size: auto 120% !important;
   animation: right_left 10s infinite;
 }
-/* line 195, ../sass/top.scss */
+/* line 220, ../sass/top.scss */
 html body main article > div.player6 > div {
   background: url(../img/top/atsuto.jpg) no-repeat;
 }
-/* line 198, ../sass/top.scss */
+/* line 223, ../sass/top.scss */
 html body main article > div.player6 > div.move {
   animation: leftback 10s infinite;
 }
-/* line 204, ../sass/top.scss */
+/* line 229, ../sass/top.scss */
 html body main article > div.player7 {
   background: url(../img/top/matsuda.jpg) no-repeat !important;
   background-size: auto 120% !important;
   animation: left_right 10s infinite;
 }
-/* line 209, ../sass/top.scss */
+/* line 234, ../sass/top.scss */
 html body main article > div.player7 > div {
   background: url(../img/top/takuma.jpg) no-repeat;
 }
-/* line 212, ../sass/top.scss */
+/* line 237, ../sass/top.scss */
 html body main article > div.player7 > div.move {
   animation: rightback 10s infinite;
 }
-/* line 218, ../sass/top.scss */
+/* line 243, ../sass/top.scss */
 html body main article > div.player8 {
   background: url(../img/top/yoshimoto.jpg) no-repeat !important;
   background-size: auto 120% !important;
   animation: left_right 10s infinite;
 }
-/* line 223, ../sass/top.scss */
+/* line 248, ../sass/top.scss */
 html body main article > div.player8 > div {
   background: url(../img/top/kazuhiko.jpg) no-repeat;
 }
-/* line 226, ../sass/top.scss */
+/* line 251, ../sass/top.scss */
 html body main article > div.player8 > div.move {
   animation: rightback 10s infinite;
 }
-/* line 232, ../sass/top.scss */
+/* line 257, ../sass/top.scss */
 html body main article > div.player9 {
   background: url(../img/top/nagata.jpg) no-repeat !important;
   background-size: auto 120% !important;
   animation: left_right 10s infinite;
 }
-/* line 237, ../sass/top.scss */
+/* line 262, ../sass/top.scss */
 html body main article > div.player9 > div {
   background: url(../img/top/ryouhei.jpg) no-repeat;
 }
-/* line 240, ../sass/top.scss */
+/* line 265, ../sass/top.scss */
 html body main article > div.player9 > div.move {
   animation: rightback 10s infinite;
 }
-/* line 247, ../sass/top.scss */
+/* line 272, ../sass/top.scss */
 html body main article section {
   color: #fff;
   height: 10%;
@@ -257,21 +280,21 @@ html body main article section {
   flex-grow: 1;
   transition: flex-grow 1s;
 }
-@media all and (max-width: 500px) {
-  /* line 247, ../sass/top.scss */
+@media all and (max-width: 600px) {
+  /* line 272, ../sass/top.scss */
   html body main article section {
     height: auto;
   }
 }
-/* line 258, ../sass/top.scss */
+/* line 283, ../sass/top.scss */
 html body main article section:nth-of-type(1) {
   background-image: url(../img/top/back1.jpg) !important;
 }
-/* line 262, ../sass/top.scss */
+/* line 287, ../sass/top.scss */
 html body main article section:nth-of-type(2) {
   background-image: url(../img/top/back2.jpg) !important;
 }
-/* line 266, ../sass/top.scss */
+/* line 291, ../sass/top.scss */
 html body main article section header {
   color: #fff;
   margin-bottom: 2em;
@@ -279,53 +302,54 @@ html body main article section header {
   text-shadow: -1px -1px 3px #000, 1px 1px 3px #000;
   transform: skewX(-10deg);
 }
-@media all and (max-width: 500px) {
-  /* line 266, ../sass/top.scss */
+@media all and (max-width: 600px) {
+  /* line 291, ../sass/top.scss */
   html body main article section header {
     margin-top: 2em;
   }
 }
-/* line 277, ../sass/top.scss */
+/* line 302, ../sass/top.scss */
 html body main article section header h3 {
   font-size: 2em;
   padding-right: 1em;
   display: inline;
   font-weight: normal;
 }
-/* line 284, ../sass/top.scss */
+/* line 309, ../sass/top.scss */
 html body main article section header p {
   font-size: 0.9em;
   display: inline;
 }
-/* line 290, ../sass/top.scss */
+/* line 315, ../sass/top.scss */
 html body main article section div, html body main article section dl {
   transition: all 1s;
   margin: 0 auto;
   display: none;
   text-shadow: -1px -1px 3px #000, 1px 1px 3px #000;
+  border: none !important;
 }
-@media all and (max-width: 500px) {
-  /* line 290, ../sass/top.scss */
+@media all and (max-width: 600px) {
+  /* line 315, ../sass/top.scss */
   html body main article section div, html body main article section dl {
     display: block;
   }
 }
-/* line 300, ../sass/top.scss */
+/* line 326, ../sass/top.scss */
 html body main article section div ul, html body main article section dl ul {
   display: flex;
   justify-content: space-around;
   flex-flow: row wrap;
 }
-/* line 305, ../sass/top.scss */
+/* line 331, ../sass/top.scss */
 html body main article section div ul li, html body main article section dl ul li {
   flex: 0 0 250px;
 }
-/* line 311, ../sass/top.scss */
+/* line 337, ../sass/top.scss */
 html body main article section dl {
   background: none !important;
   margin: 2em auto !important;
 }
-/* line 315, ../sass/top.scss */
+/* line 341, ../sass/top.scss */
 html body main article section dl dt {
   color: #fff !important;
   float: left;
@@ -334,7 +358,7 @@ html body main article section dl dt {
   padding: 0 1em;
   text-align: right !important;
 }
-/* line 324, ../sass/top.scss */
+/* line 350, ../sass/top.scss */
 html body main article section dl dd {
   margin: 0 0 1em 0;
   padding: 0 0 1em 9em;
@@ -342,49 +366,49 @@ html body main article section dl dd {
   text-align: left !important;
   overflow: visible !important;
 }
-/* line 331, ../sass/top.scss */
+/* line 357, ../sass/top.scss */
 html body main article section dl dd:last-of-type {
   border: none;
 }
-/* line 337, ../sass/top.scss */
+/* line 363, ../sass/top.scss */
 html body main article section:hover {
   flex-grow: 5;
   overflow: auto;
 }
-@media all and (max-width: 500px) {
-  /* line 337, ../sass/top.scss */
+@media all and (max-width: 600px) {
+  /* line 363, ../sass/top.scss */
   html body main article section:hover {
     flex-grow: 1;
   }
 }
-/* line 345, ../sass/top.scss */
+/* line 371, ../sass/top.scss */
 html body main article section:hover:nth-of-type(1) {
   background-image: url(../img/common/dot.png), url(../img/top/back1.jpg) !important;
   background-repeat: repeat , no-repeat;
   background-size: auto , cover;
 }
-/* line 351, ../sass/top.scss */
+/* line 377, ../sass/top.scss */
 html body main article section:hover:nth-of-type(2) {
   background-image: url(../img/common/dot.png), url(../img/top/back2.jpg) !important;
   background-repeat: repeat , no-repeat;
   background-size: auto , cover;
 }
-/* line 357, ../sass/top.scss */
+/* line 383, ../sass/top.scss */
 html body main article section:hover div, html body main article section:hover dl, html body main article section:hover a {
   display: block;
 }
-/* line 362, ../sass/top.scss */
+/* line 388, ../sass/top.scss */
 html body main article section a {
   display: none;
   margin: 2em auto 0 auto;
 }
-@media all and (max-width: 500px) {
-  /* line 362, ../sass/top.scss */
+@media all and (max-width: 600px) {
+  /* line 388, ../sass/top.scss */
   html body main article section a {
     display: block;
   }
 }
-/* line 370, ../sass/top.scss */
+/* line 396, ../sass/top.scss */
 html body main article section a button {
   color: #333333;
   background-color: #fff;
@@ -399,15 +423,15 @@ html body main article section a button {
   min-width: 250px;
   transition: all 1s;
 }
-/* line 384, ../sass/top.scss */
+/* line 410, ../sass/top.scss */
 html body main article section a button:hover {
   opacity: 1;
 }
-/* line 388, ../sass/top.scss */
+/* line 414, ../sass/top.scss */
 html body main article section a button span {
   margin-right: 1rem;
 }
-/* line 398, ../sass/top.scss */
+/* line 424, ../sass/top.scss */
 html #exam {
   position: fixed;
   bottom: 0;
@@ -415,7 +439,7 @@ html #exam {
   z-index: 11;
   margin-bottom: 0.8rem;
 }
-/* line 403, ../sass/top.scss */
+/* line 429, ../sass/top.scss */
 html #hero {
   position: absolute;
   top: 75%;
